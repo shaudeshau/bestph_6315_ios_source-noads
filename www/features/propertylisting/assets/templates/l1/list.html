@@ -1,0 +1,157 @@
+<ion-view cache-view="false"
+          class="listing listing-list"
+          sb-page-background>
+    <ion-nav-title>  {{ ::"My listing" | translate:"propertylisting" }}</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+        <button
+            ng-if="!is_loading && islogin && collectionBy_user.length < listing_settings.max_listing_each_user"
+            class="button button-clear header-item"
+            ui-sref="propertylisting-add-basicinfo({value_id: value_id})">
+            <i class="icon ion-plus"></i>
+        </button>
+    </ion-nav-buttons>
+
+    <div class="loader"
+         ng-show="is_loading">
+        <ion-spinner class="spinner-custom"></ion-spinner>
+    </div>
+
+    <ion-content id="listing-content"
+                 ng-hide="is_loading"
+                 scrollbar-y="false"
+                 overflow-scroll="false"
+                 delegate-handle="mainScroll">              
+     
+        <div class="list"
+        ng-if="islogin && (collectionBy_user.length >= listing_settings.max_listing_each_user)">
+            <div class="item text-center item-custom item-body">
+               <p class="util assertive assertive-custom"> 
+               {{ ::"You have reached the max limit of add listing!" | translate:"propertylisting" }}
+             </p>
+            </div>
+        </div>         
+                   
+       <!--  <div class="list list-inset">
+            <label class="item item-input item-button-right" ng-show="collectionBy_user.length">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text"  ng-model="search_txt"
+                       placeholder="{{ forTranslate('Search property') }}" />
+            </label>
+        </div> -->
+
+        <div class="list listing-list" ng-if="islogin">
+           <div ng-repeat="value in collectionBy_user"
+                 class="listingBounceInUp"
+                 ui-sref="propertylisting-edit({value_id: value_id,property_id:value.id})" >
+                <div class="item item-custom  listing-header">
+                    
+                    <h2 class="listingedit-headlineedit-name">{{value.headline}}
+                        <span class="listingedit-property-status pull-right">{{ value.status | uppercase }}</span>
+                    </h2>
+                    <h5 class="listingedit-post-time">{{ convertDate(value.created_at) }}
+                        <span  ng-if="value.approval_status == 'pending'" class="listingedit-property-status pull-right util positive positive-custom">{{ ::"PENDING" | translate:"propertylisting" }}</span>
+                        <span  ng-if="value.approval_status == 'rejected'" class="listingedit-property-status pull-right util assertive assertive-custom">{{ ::"REJECTED" | translate:"propertylisting" }}</span>
+                    </h5>
+                </div>
+                <div 
+                 class="item item-custom item-body listing-body">
+                    <span class="badge badge-assertive badge-assertive-custom listing-listing-for"> {{value.listing_for == 'NewProject' ? 'Project':  value.listing_for | translate:"propertylisting" }} </span>
+                    <img class="full-image listing-feature-img"
+                         ng-src="{{ lisingFeaturesImages(value.feature_image) }}">
+
+                    <div class="property-listing-image-overlay-content"
+                         ng-if="listing_settings.enable_view_count || listing_settings.enable_favorite || value.total_images > 1">
+                        <div class="row">
+                            <div class="col col-33">
+                                <span ng-if="listing_settings.enable_view_count">
+                                    <i class="icon ion-eye"></i> {{value.views_count}}
+                                </span>
+                            </div>
+                            <div class="col col-33">
+                                <span ng-if="listing_settings.enable_favorite">
+                                    <i class="icon ion-android-favorite">
+
+                                    </i> {{value.favorite_count}}</span>
+                            </div>
+                            <div class="col col-33">
+                                <span ng-if="value.total_images > 1">
+                                    <i class="icon ion-ios-photos"></i> +{{value.total_images-1}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="listing-other-info">
+                        <div class="row">
+                            <div class="col col-25 listing-plotsize">
+                                <span> {{value.property_sqft}} {{ :: listing_settings.area_unit | translate:"propertylisting" }} </span>
+                            </div>
+                            <div class="col col-20 listing-bedroom">
+                                <span ng-if="value.bedrooms">
+                                    <img width="15px"
+                                         height="15px"
+                                         src="./features/propertylisting/assets/media/bedroom.png" /> {{value.bedrooms}}
+                                </span>
+                            </div>
+                            <div class="col col-20 listing-bathroom">
+                                <span ng-if="value.bathrooms">
+                                    <img width="15px"
+                                         height="15px"
+                                         src="./features/propertylisting/assets/media/bathroom.png" /> {{value.bathrooms}}
+                                </span>
+                            </div>
+                            <div class="col col-33 listing-price">
+                                <span class="icon-active-custom"
+                                      ng-if="value.rental_amount">{{value.currency_symbol}} {{value.rental_amount}}</span>
+                                <span class="icon-active-custom"
+                                      ng-if="value.selling_price">{{value.currency_symbol}} {{value.selling_price}}</span>
+                                <span class="icon-active-custom"
+                                      ng-if="value.starting_price">{{value.currency_symbol}} {{value.starting_price}}</span>
+                                <span class="icon-active-custom"
+                                      ng-if="value.minimum_selling_price">{{value.currency_symbol}} {{value.minimum_selling_price}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-60 listing-location">
+                                <span ng-if="value.taman_area">
+                                  <i class="icon ion-location icon-active-custom"></i>    
+                                   {{value.taman_area}}
+                                </span>
+                            </div>
+                            <div class="col col-40 listing-type">
+                                <span> {{value.property_type}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+      
+        
+        <div class="list"
+        ng-if="!is_loading && !collectionBy_user.length && islogin">
+            <div class="item text-center item-custom">
+                {{ ::"No items found" | translate:"propertylisting" }}
+            </div>
+        </div>
+    
+        <div class="list"
+        ng-if="!islogin">
+        <div class="item item-body item-custom">
+           <button class="button button-block button-positive button-positive-custom" ng-click="checkLogin()">
+            {{ ::" Please login for Add Listing!" | translate:"propertylisting" }}
+          </button>
+        </div>       
+        </div>
+
+       
+        <ion-infinite-scroll ng-if="can_load_older_posts_list"
+                             on-infinite="loadMorelisting()"
+                             immediate-check="false"
+                             distance="50%"
+                             class="spinner-custom">
+        </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,125 @@
+.layout.layout_videone {
+  color: #fff;
+  background: #333;
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.layout.layout_videone .videone-logo{
+    position:fixed;
+    left: 40%;
+    top: 46%;
+    margin-top:-61px;
+    margin-left:-130px;
+    float:right;
+}
+
+.layout.layout_videone .videone-logo img{
+    display:block;
+    width:130px;
+    height:130px;
+}
+
+.layout.layout_videone .videone-left{
+    width:35%;
+    float:left;
+}
+
+.layout.layout_videone .videone-right{
+    width:65%;
+    float:left;
+}
+
+.layout.layout_videone .vertical-decoration{
+    position:fixed;
+    width:1px;
+    background-color:rgba(255,255,255,0.1);
+    height:100%;
+    margin-left:45%;
+    top:0px;
+    bottom:0px;
+}
+
+.layout.layout_videone .videone-menu{
+    position:fixed;
+    left:50%;
+    margin-left:0px;
+    top:50%;
+    height:360px;
+    margin-top:-180px
+}
+
+.layout.layout_videone .videone-menu li{
+    height:55px;
+    line-height:65px;
+    font-size:14px;
+    list-style:none;
+    padding-left:40px;
+}
+
+.layout.layout_videone .videonetitle{
+  font-size: 20px;
+}
+
+.layout.layout_videone .videone-menu li img {
+    position:absolute;
+    margin-left:-40px;
+    margin-top:18px;
+    font-size:18px;
+    width:30px;
+    margin-right:10px;
+}
+
+
+
+.layout.layout_videone .label {
+  color: #fff;
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.layout.layout_videone #video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+.layout.layout_videone article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  margin: 20px;
+}
+
+.layout.layout_videone h1 {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  font-size: 36px;
+  letter-spacing: 3px;
+  color: #fff;
+  text-align: center;
+}
+
+.layout.layout_videone h1 span {
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}

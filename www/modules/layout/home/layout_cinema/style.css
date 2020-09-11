@@ -1,0 +1,273 @@
+.layout.layout_cinema .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout.layout_cinema * {
+    box-sizing: border-box;
+    font-weight: 300;
+}
+
+.layout.layout_cinema a,
+.layout.layout_cinema a:visited,
+.layout.layout_cinema a:hover,
+.layout.layout_cinema a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.layout.layout_cinema h1 {
+    font-weight: 400;
+    font-size: 3em;
+    text-align: center;
+}
+
+.layout.layout_cinema.outer-menu {
+    position: fixed;
+    top: 0;
+    right: 60px;
+    z-index: 1;
+}
+
+.layout.layout_cinema.outer-menu .checkbox-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+}
+
+.layout.layout_cinema.outer-menu .checkbox-toggle:checked + .hamburger {
+    background: transparent !important;
+}
+
+.layout.layout_cinema.outer-menu .checkbox-toggle:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+.layout.layout_cinema.outer-menu .checkbox-toggle:checked + .hamburger > div:before,
+.layout.layout_cinema.outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.layout.layout_cinema.outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+    opacity: 0;
+}
+
+.layout.layout_cinema.outer-menu .checkbox-toggle:checked ~ .menu {
+    visibility: visible;
+}
+
+.layout.layout_cinema.outer-menu .checkbox-toggle:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: .75s;
+}
+
+.layout.layout_cinema.outer-menu .checkbox-toggle:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+}
+
+.layout.layout_cinema.outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+.layout.layout_cinema.outer-menu .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: .5em 1em;
+    border-radius: 0 0.12em 0.12em 0;
+    cursor: pointer;
+    transition: box-shadow 0.4s ease;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout.layout_cinema.outer-menu .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout.layout_cinema.outer-menu .hamburger > div:before,
+.layout.layout_cinema.outer-menu .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+    transition: all 0.4s ease;
+}
+
+.layout.layout_cinema.outer-menu .hamburger > div:after {
+    top: 10px;
+}
+
+.layout.layout_cinema.outer-menu .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    backface-visibility: hidden;
+    outline: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent !important;
+}
+
+.layout.layout_cinema.outer-menu .menu > div {
+    width: 250vh;
+    height: 250vh;
+    border-radius: 50%;
+    transition: all 400ms ease;
+    flex: none;
+    transform: scale(0);
+    backface-visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout.layout_cinema.outer-menu .menu > div > div {
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    overflow-y: auto;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout.layout_cinema.outer-menu .menu ul.list-item {
+    list-style: none;
+    padding: 0 1em;
+    margin: 0;
+    display: block;
+    max-height: 100vh;
+}
+
+.layout.layout_cinema.outer-menu .menu li.menu-item {
+    padding: 0;
+    margin: 1em;
+    font-size: 24px;
+    display: block;
+}
+
+.layout.layout_cinema.outer-menu .menu a.item {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.layout.layout_cinema.outer-menu .menu a.item:hover:after {
+    width: 100%;
+}
+
+.layout.layout_cinema.outer-menu .menu a.item:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: -0.15em;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.4s ease;
+}
+
+.layout_cinema li.menu-item img {
+    height: 100%;
+    float: left;
+    padding-right: 1em;
+}
+
+.layout.layout_cinema ion-content {
+    position: absolute;
+    width: 90vw;
+    height: 74vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 black;
+}
+
+.layout_cinema p {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.layout.layout_cinema.outer-menu.left {
+    left: 0;
+}
+
+.layout.layout_cinema.outer-menu.right {
+    right: 60px;
+}
+
+.layout.layout_cinema p.titlehidden {
+    text-indent: 999px;
+}
+
+.layout.layout_cinema p.titlevisible {
+    text-indent: initial;
+}
+
+.layout.layout_cinema .iconhidden {
+    display: none;
+}
+
+.layout.layout_cinema .iconvisible {
+    display: block;
+}
+
+.layout.layout_cinema .title-lowcase {
+    text-transform: inherit;
+}
+
+.layout.layout_cinema .title-uppercase {
+    text-transform: uppercase;
+}
+
+.layout.layout_cinema p.titlehidden {
+    width: 100%;
+    background-position: center;
+    left: 0;
+    height: auto;
+}
+
+.layout.layout_cinema a.item {
+    border: none;
+}
+
+.layout.layout_cinema a.item p.titlehidden {
+    display: block;
+}
+
+.layout.layout_cinema a.item.cinema-container {
+    background: transparent !important;
+}

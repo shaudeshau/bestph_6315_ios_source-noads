@@ -1,0 +1,60 @@
+<div class="layout layout_baguera_14" ng-controller="LayoutBaguera14Controller">
+
+	<ion-content  scrollbar-y="false">
+		<div id="banner_container" ng-if="!vm.state.skipped && !vm.state.opened && vm.banner_enabled" style="direction: {{ vm.style.text_direction }}; background-color: {{ vm.style.banner_background_color }}; background-image: url( {{ vm.style.banner_background_image }});">
+			<ul id="banner_header-container" style=" {{ vm.style.banner_header_text_align }}">
+				<li>
+					<p id="banner_header-text" ng-if="vm.banner_header_text" style="color: {{ vm.style.banner_header_text_color }};">
+						{{ vm.banner_header_text }}
+					</p>
+				</li>
+			</ul>
+			<ul id="banner_footer">
+				<li class="banner_footer_item">
+					<!-- <button id="banner_see-more" class="button" option="featured" go-to-url="goTo(featured);" style="color: {{ vm.style.banner_see_more_text_color }}; background-color: {{ vm.style.banner_see_more_background_color }};"> -->
+					<button id="banner_see-more" class="button" ng-click="clickOnSeeMore()" style="color: {{ vm.style.banner_see_more_text_color }}; background-color: {{ vm.style.banner_see_more_background_color }};">
+						{{ vm.banner_see_more_text }}
+					</button>
+				</li>
+				<li class="banner_footer_item">
+					<button id="banner_skip" class="button" ng-click="clickOnSkip()" style="color: {{ vm.style.banner_skip_text_color }}; background-color: {{ vm.style.banner_skip_background_color }};">
+						{{ vm.banner_skip_text }}
+					</button>
+				</li>
+			</ul>
+		</div>
+
+		<div id="homepage_container" ng-if="vm.state.skipped || vm.state.opened || !vm.banner_enabled" style="direction: {{ vm.style.text_direction }};">
+			<ul id="homepage_wrapper" class="homepage-custom">
+				<li class="homepage_wrapper-item" ng-if="vm.homepage_header_text != ''" style="color: {{ vm.style.homepage_header_text_color }};">
+					<ul id="homepage_header-flex-container">
+						<li id="homepage_header">
+							{{ vm.homepage_header_text }}
+						</li>
+					</ul>
+				</li>
+				<li id="homepage_content">
+					<ul id="homepage_menu-flex-container">
+						<li class="homepage_menu-flex-item" ng-repeat="feature in vm.features">
+							<ul class="section-separator_container" id="{{ 'section-separator_container-' + $index }}" ng-if="getSection($index)" style="{{ vm.style.homepage_section_align }} background-color: {{ vm.style.homepage_sections_background_color }};">
+								<li class="{{ vm.style.homepage_section_style }}" style="background-color: inherit; color: {{ vm.style.homepage_sections_text_color }};">
+									<h1 class="section-text" id="{{ 'section-text-' + $index }}" style="color: {{ vm.style.homepage_sections_text_color }};">
+										{{ getSection($index).name }}
+									</h1>
+								</li>
+							</ul>
+							<ul class="menu-item_flex-container" ng-class="{ first: getSection($index), last: getSection($index + 1)}" style="{{ vm.style.homepage_menu_align }}">
+								<li class="menu-item_flex-item" id="{{ 'menu-item_feature-' + $index }}" tabbar-items  option="feature" go-to-url="goTo(feature);">
+									<img ng-src="{{ feature.icon_url }}" class="menu-icon" ng-if="vm.style.homepage_display_icons" />
+									<h2 class="menu-text" >
+										{{ feature.name }}
+									</h2>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</ion-content>
+</div>

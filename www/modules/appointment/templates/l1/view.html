@@ -1,0 +1,108 @@
+<!-- <ion-view  sb-page-background class="view_appointment"> -->
+<ion-view   sb-page-background class="view_appointment" >
+    <div>
+        <ion-content   class="appointment" >
+            
+            <div class="loader" ng-show="is_loading">
+                <ion-spinner class="spinner-custom"></ion-spinner>
+            </div>
+
+            <!-- List style -->
+            <div class="list" ng-show="!is_loading" ng-if="!settings.design_style || settings.design_style == 'list'">
+
+                <div class="cover_image">
+                    <img ng-if="settings.cover_image" ng-src="{{ settings.cover_image }}" />
+                </div>
+                <!-- Appointment section-->
+                <div class="item item-custom" ng-if="!widget && display_appointments == 1" ng-click="gotoAppointment()">
+                    <div class="row">
+                        <div class="col col-90">
+                          {{ "View booked appointments" | translate }}
+                        </div>
+                        <div class="col col-10">
+                            <i class="item-note ion-chevron-right arrow-center"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item-custom" ng-click="gotoBookAppointment()" ng-if="display_appointments == 1">
+                    <div class="row">
+                        <div class="col col-90">
+                            {{ "Book appointment" | translate }}
+                        </div>
+                        <div class="col col-10">
+                            <i class="item-note ion-chevron-right arrow-center"></i>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- /appointment section-->
+                
+                <!-- section for Classes -->
+                <div class="item item-custom" ng-if="!widget && display_classes ==1" ng-click="gotoClassesSessions()">
+                    <div class="row">
+                        <div class="col col-90">
+                            {{ "View booked classes" | translate }}
+                        </div>
+                        <div class="col col-10">
+                            <i class="item-note ion-chevron-right arrow-center"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item-custom" ng-click="gotoBookClassSession()" ng-if="display_classes == 1">
+                    <div class="row">
+                        <div class="col col-90">
+                            {{ "Book class" | translate }}
+                        </div>
+                        <div class="col col-10">
+                            <i class="item-note ion-chevron-right arrow-center"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- /section for classes-->
+            </div>
+            <!-- /List style -->
+
+            <!-- Card style -->
+            <div ng-if="settings.design_style == 'card'">
+
+                <div class="card cover_image">
+                    <img ng-if="settings.cover_image" ng-src="{{ settings.cover_image }}" />
+                </div>
+
+                <div class="card">
+                    <button class="button button-block button-custom" ng-if="!widget &&display_appointments == 1" ng-click="gotoAppointment()">
+                        {{ "View booked appointments" | translate }}
+                    </button>
+
+                    <button class="button button-block button-custom" ng-click="gotoBookAppointment()" ng-if="display_appointments == 1">
+                        {{ "Book appointment" | translate }}
+                    </button>
+                </div>
+                <div class="card">
+                    <button class="button button-block button-custom" ng-if="!widget && display_classes ==1" ng-click="gotoClassesSessions()">
+                         {{ "View booked classes" | translate }}
+                    </button>
+
+                    <button  ng-if="display_classes == 1" class="button button-block button-custom" ng-click="gotoBookClassSession()">
+                          {{ "Book class" | translate }}
+                    </button>
+                </div>
+            </div>
+            <!-- /Card style -->
+
+        </ion-content>
+    </div>
+    <style>
+        /* CSS to change page content   */
+        {{COLOR_BACKGROUND}}
+        /* CSS to change header-bar color change    */
+        {{COLOR_HEADER}}
+        /* CSS to change button color   */
+        {{COLOR_BUTTON}}
+        /* CSS to change icon color*/
+        {{COLOR_ICON}}
+    </style>
+</ion-view>

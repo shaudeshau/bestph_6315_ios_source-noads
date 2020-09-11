@@ -1,0 +1,13 @@
+<ion-modal-view class="tc-view" ng-controller="ProgressiveLoyaltyCardsViewController">
+    <ion-header-bar class="bar-custom">
+    <button class="button button-clear button-secondary back-button header-item" ng-click="closeTCModal()"> <i class="ion-chevron-left"></i> {{'Back' | translate}}</button>
+        <h1 class="title">{{'Terms & Conditions' | translate }}</h1>       
+    </ion-header-bar>
+    <ion-content class="tc-view">
+
+        <div class="list"">
+            <div class="padding" ng-bind-html="term_conditions | trusted_html"></div>
+        </div>
+
+    </ion-content>
+</ion-modal-view>

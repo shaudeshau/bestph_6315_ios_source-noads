@@ -1,0 +1,32 @@
+<ion-modal-view cache-view="false"
+                 ng-controller="PropertylistingEditController"
+                class="listing propertylisting propertylisting-edit amenities">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeEditAmenitiesModal()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ ::"Edit amenities" | translate:"propertylisting" }}</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header ">
+        <form name="edit_amenities" ng-if="listingAmenitiesData">
+            <div class="list">
+               <ion-list class="amenities-list">
+                    <ion-checkbox ng-model = "amenitiesId"
+                                  ng-value = "ameniti.id"
+                                  ng-checked = {{checkAmenities(ameniti.id)}}
+                                  class = "item-custom checkbox-custom"
+                                  ng-repeat = "ameniti in listingAmenitiesData"
+                                  ng-change = saveAmenities(ameniti.id)>{{ameniti.name}}
+                    </ion-checkbox>
+                </ion-list>
+              </div>
+         </form>
+
+    </ion-content>
+
+</ion-modal-view>

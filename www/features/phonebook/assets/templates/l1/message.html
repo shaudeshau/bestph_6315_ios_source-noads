@@ -1,0 +1,87 @@
+<ion-view sb-page-background
+          class="phonebook phonebook-messages">
+  <ion-nav-title>{{ messages_page_title }}</ion-nav-title>
+   
+  <ion-content class="has-header has-footer"
+                 delegate-handle="messageScroll">
+
+  <div class="loader" ng-show="is_loading">
+        <ion-spinner class="spinner-custom"></ion-spinner>
+    </div>
+
+
+        <div class="list">
+
+            <div ng-if="messages.length"  class="item item-body item-custom phonebook-message-item" id="item-{{msg.id}}"
+                 ng-class="sentmessages.sender_id == msg.sender_id ? 'text-right':'text-left'"
+                 ng-repeat="(key, msg)  in messages">
+               
+                <p ng-if="displayMessage(msg)" ng-bind-html="msg.message"></p>               
+                <p class="deleted-message" ng-if="displaySenderDeleteMessage(msg)">
+                <em>{{ ::"You deleted this message." | translate:"phonebook" }}</em> </p>
+                <p class="deleted-message" ng-if="displayReceiverDeleteMessage(msg)">
+                <em>{{ ::"This message was deleted." | translate:"phonebook" }} </em></p>          
+                
+                <span ng-if="displayMessage(msg)" class="item-note" id="option-{{msg.id}}" ng-click="deleteOption(msg.id, msg.sender_id, key)" ng-class="sentmessages.sender_id == msg.sender_id ? 'pull-left':'pull-right'">
+                   <i class="icon ion-more icon-custom"></i> 
+                </span>
+                <p>
+                <a class="subdued" id="date-{{msg.id}}" 
+                       ng-class="sentmessages.sender_id == msg.sender_id ? 'text-right':'text-left'">
+                        {{ convertMessageDate(msg.created_at) }}
+                </a>
+                </p>
+            </div>
+            <div ng-if="!messages.length && !is_loading"
+                 class="item item-body item-custom">
+                <p class="text-center">{{ ::"No messages yet!" | translate:"phonebook" }}</p>
+            </div>
+
+        </div>
+
+    </ion-content>
+
+    <form name="sendMessageForm"
+          ng-submit="sendMessage()"
+          novalidate>
+        <ion-footer-bar class="bar-custom item-input-inset item item-divider item-divider-custom footer-barmessage-footer" keyboard-attach>
+            <label class="item-input-wrapper">
+                <input id="msg-input"
+                       ng-model="sentmessages.message"
+                       class="input-message"
+                       type="text"
+                       ng-minlength="1" 
+                       ng-maxlength="1023" 
+                       maxlength="1023" 
+                       ng-required="true"
+                       placeholder="{{ forTranslate('Type a message') }}"
+                       ng-disabled="sending_message"  autocomplete="off" />
+            </label>
+            <div class="footer-btn-wrap">
+                <button class="button button-icon icon ion-ios-paperplane footer-btn"
+                        type="submit"
+                        ng-disabled="!sentmessages.message || sentmessages.message === '' || sending_message">
+                </button>
+            </div>
+        </ion-footer-bar>
+    </form>
+
+    <style type="text/css">
+        a.subdued:last-child {
+            font-size: 10px;
+        }
+        span.pull-left.item-note {
+            float: left;
+            opacity: .3;
+        }
+        span.pull-right.item-note {
+            float: right;
+            opacity: .3;
+        }
+        p.deleted-message {
+            font-style: italic;
+            opacity: .7;
+        }
+    </style>
+
+</ion-view >

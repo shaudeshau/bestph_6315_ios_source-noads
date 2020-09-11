@@ -1,0 +1,124 @@
+<div class="layout intro" ng-controller="INTROController">
+<div id="sldr">
+    <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide>
+		  <div class="slide1">
+		  <img src="{{ features.layoutOptions.img1 }}">
+		  <h3>{{ features.layoutOptions.title1 }}</h3>
+		  <h4>{{ features.layoutOptions.desc1 }}</h4>
+		  </div> 
+          <div class="skipbtn" onclick="toggle_div_fun('sldr');"><div class="stbtn" onclick="toggle_div_fun('main');">
+		  <h2>{{ features.layoutOptions.skipbtntext }}</h2></div></div>		  
+          </ion-slide>
+          <ion-slide>
+		  <div class="slide2">
+		  <img src="{{ features.layoutOptions.img2 }}">
+		  <h3>{{ features.layoutOptions.title2 }}</h3>
+		  <h4>{{ features.layoutOptions.desc2 }}</h4>
+		  </div>
+		  </ion-slide>
+          <ion-slide>
+          <div class="slide3">
+		  <img src="{{ features.layoutOptions.img3 }}">
+		  <h3>{{ features.layoutOptions.title3 }}</h3>
+		  <h4>{{ features.layoutOptions.desc3 }}</h4>
+		   </div>
+		  <div class="stbtn" onclick="toggle_div_fun('sldr');"><div class="stbtn" onclick="toggle_div_fun('main');">
+		  <h2>{{ features.layoutOptions.startbtntext }}</h2></div></div>
+          </ion-slide>
+    </ion-slide-box>
+</div>
+
+<div id="main">
+<div id="lyt3"><div ng-include="'templates/home/l3/view.html'"></div></div>
+<div id="lyt4"><div ng-include="'templates/home/l4/view.html'"></div></div>
+<div id="lyt5"><div ng-include="'templates/home/l5/view.html'"></div></div>
+<div id="lyt6"><div ng-include="'templates/home/l6/view.html'"></div></div>
+
+<div id="restore">{{ features.layoutOptions.restorebtntext }}</div>
+</div>
+</div>
+<style>
+{{ features.layoutOptions.label1 }} {
+display: none;
+}
+
+.layout.intro .stbtn {
+bottom: {{ features.layoutOptions.btm }}
+}
+
+.layout.intro .skipbtn {
+bottom: {{ features.layoutOptions.btm1 }}
+}
+
+.layout.intro .slide1 { 
+background: {{ features.layoutOptions.slide1bgclr }};  
+width: 100%; 
+height: 100%;
+}
+
+.layout.intro .slide2 { 
+background: {{ features.layoutOptions.slide2bgclr }};  
+width: 100%; 
+height: 100%;
+}
+
+.layout.intro .slide3 { 
+background: {{ features.layoutOptions.slide3bgclr }};  
+width: 100%; 
+height: 100%;
+}
+
+.layout.intro .slide1 h3, .layout.intro .slide1 h4 { 
+color: {{ features.layoutOptions.slide1textclr }}; 
+}
+
+.layout.intro .slide2 h3, .layout.intro .slide2 h4 { 
+color: {{ features.layoutOptions.slide2textclr }}; 
+}
+
+.layout.intro .slide3 h3, .layout.intro .slide3 h4 { 
+color: {{ features.layoutOptions.slide3textclr }}; 
+}
+
+.layout.intro .slider-pager .slider-pager-page {
+color: {{ features.layoutOptions.sliderpagerclr }};
+}
+
+.layout.intro .slider-pager {
+background-color: transparent;
+bottom: 10px;	
+}
+
+.layout.intro .stbtn h2 {
+color: {{ features.layoutOptions.startbtntextclr }};
+background: {{ features.layoutOptions.startbtnbgclr }};
+padding: 5px;
+}
+
+.layout.intro .skipbtn h2 {
+color: {{ features.layoutOptions.skipbtntextclr }};
+background: {{ features.layoutOptions.skipbtnbgclr }};
+padding: 5px;
+}
+
+.layout.intro #restore {
+display: {{ features.layoutOptions.label2 }}; 
+color: {{ features.layoutOptions.restorebtntextclr }};
+font-size: {{ features.layoutOptions.fontsize }};
+margin-top: 50px; 
+}
+
+.layout.intro #sldr img { 
+width: {{ features.layoutOptions.imgwidth }}; 
+height: {{ features.layoutOptions.imgheight }};
+}
+
+.layout.intro .slide1, .layout.intro .slide2, .layout.intro .slide3 {
+padding-top: {{ features.layoutOptions.padtop }};  
+}
+
+.layout.intro .skipbtn { 
+display: {{ features.layoutOptions.label3 }};
+}
+</style>

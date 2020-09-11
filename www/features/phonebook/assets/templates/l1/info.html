@@ -1,0 +1,194 @@
+<ion-view sb-page-background
+          class="phonebook phonebook-info">     
+   <ion-nav-title>{{customer_info.customer.firstname}} {{customer_info.customer.lastname}}</ion-nav-title>
+   <ion-nav-buttons side="secondary">
+      <a  ng-click="privacySettings()"  ng-if="is_loggedIn_customers" class="button button-clear header-item phonebook-header-item">
+           <i class="ion-gear-a"></i>
+     </a>
+    </ion-nav-buttons>
+
+   <ion-content class="has-header">
+       <div class="loader" ng-show="isLoading">
+          <ion-spinner class="spinner-custom"></ion-spinner>
+      </div>
+
+        <div class="list"  ng-hide="isLoading">
+          <div ng-if="phonebook_settings.display_cover_photo == 1">
+            <div class="item item-image phonebook-cover-image" ng-hide="is_loggedIn_customers">
+              <img id="cover-photo-id"  ng-src="{{cover_url}}" zoom-view zoom-src="{{cover_url}}" >
+            </div>
+          <!-- Cover Photos -->
+           <div class="item item-image phonebook-cover-image" ng-show="is_loggedIn_customers" ng-click="takeCoverPicture()">
+                <img ng-src="{{cover_url}}">
+           </div>
+         </div>
+         <!-- Name and Email display -->
+          <div class="item item-avatar phonebook-profile-image" ng-class="{'mp-0' : phonebook_settings.display_cover_photo == 0}">
+             <img zoom-view zoom-src="{{ customer_avatar(customer_info.customer.image) }}" src="{{ customer_avatar(customer_info.customer.image) }}">
+            <p class="phonebook-about-me" ng-click="loginModal()" ng-show="is_loggedIn_customers">{{customer_info.customer.firstname}} {{customer_info.customer.lastname}}
+            </p>
+            <p class="phonebook-about-me" ng-hide="is_loggedIn_customers">{{customer_info.customer.firstname}} {{customer_info.customer.lastname}}
+            </p>
+          </div>
+       
+         <!-- Counter Box -->
+          <div class="item phonebook-social-box">
+            <div class="tabs tabs-icon-top phonebook-social-count">
+                <a class="tab-item followers-box" ng-click="customerFollowModal(1)" ng-if="phonebook_settings.follow_up == 1">
+                 <h2 class="phonebook-social-count-values">{{customer_info.followerCount}}</h2>
+                   {{ ::"Followers" | translate:"phonebook" }} 
+                </a>
+                <a class="tab-item" ng-if="phonebook_settings.gallery == 1">
+                  <h2 class="phonebook-social-count-values" >{{gallery_images.length}}</h2>
+                  {{ ::"Photos" | translate:"phonebook" }}
+                </a>
+                <a class="tab-item" ng-click="findAllCustomerFeed()" ng-if="phonebook_settings.display_fanwall_post_count == 1">
+                  <h2 class="phonebook-social-count-values" >{{customer_info.fanwall_post}}</h2>
+                  {{ ::"Social Post" | translate:"phonebook" }}
+                </a>                
+                 <a class="tab-item" ng-click="customerFollowModal(2)" ng-if="phonebook_settings.follow_up == 1">
+                   <h2 class="phonebook-social-count-values" >{{customer_info.followingCount}}</h2>
+                   {{ ::"Following" | translate:"phonebook" }}
+                </a>
+              </div>
+          </div>
+
+           <!--  Follow buttons  -->
+          <div class="item follow-item text-center" ng-hide="is_loggedIn_customers" ng-if="phonebook_settings.follow_up == 1">
+                <button ng-hide="following_status.status >= 0" class="button button-positive-custom follow-button" ng-click="FollowingNow()"  ng-disabled="is_submitting"> {{ ::"Follow" | translate:"phonebook" }}</button>
+          </div>
+
+            <!-- Un Follow buttons  -->
+          <div class="item follow-item text-center" ng-hide="is_loggedIn_customers" ng-if="phonebook_settings.follow_up == 1 && following_status.status >= 0">
+            <div class="row">              
+              <div class="col-50"> 
+                <button class="button button-light-custom follow-button" ng-click="FollowingCancel(following_status.phonebook_follower_following_id)" ng-disabled="is_submitting">{{ ::"Unfollow" | translate:"phonebook" }}</button>
+              </div>
+              <div class="col-50">
+                 <button class="button button-light-custom message-button" ui-sref="phonebook-messages-view({value_id: value_id, friend_id: customer_info.customer.id  })">
+                 {{ ::"Message" | translate:"phonebook" }}</button>
+               </div>
+            </div>
+             
+          </div>
+
+          <!-- About me -->
+           <div class="about-me-div item item-divider item-divider-custom item-icon-right">
+              {{ ::"About" | translate:"phonebook" }}
+              <i class="icon ion-compose" ng-click="editInfo()" ng-show="is_loggedIn_customers"></i>
+            </div>
+            <a class="item item-custom">
+              <p ng-if="customer_info.info.about_me!=''" style="white-space: normal;">
+                {{customer_info.info.about_me}}
+              </p>
+              <span ng-if="customer_info.info.about_me =='' || customer_info.info.about_me == null">
+                -
+              </span>
+             </a>
+
+            <!-- Personal Info -->
+          <div class="is-personal-info-grid"  ng-if="displayPersonalInfo(is_loggedIn_customers, following_status.status)" > 
+            <div class="about-me-div item item-divider item-divider-custom item-icon-right">
+                {{ ::"Personal Info" | translate:"phonebook" }}
+                <i class="icon ion-compose" ng-click="editInfo()" ng-show="is_loggedIn_customers"></i>
+            </div>
+            
+             <a  ng-if="phonebook_settings.enable_email == 1" ng-show="privacysettings.display_email || is_loggedIn_customers" class="item item-custom item-icon-left" href="mailto:{{customer_info.customer.email}}">
+                <i class="icon ion-email"></i>
+                  {{customer_info.customer.email}} 
+                <span class="item-note">
+                  {{ ::"Email" | translate:"phonebook" }} 
+                </span>
+            </a>
+
+             <a ng-show="customer_info.info.mobile_number != null && (privacysettings.display_number || is_loggedIn_customers)" class="item item-custom item-icon-left" href="tel:  +{{customer_info.info.mobile_number}}" ng-if="phonebook_settings.enable_phone == 1">
+                <i class="icon ion-ios-telephone-outline"></i>
+                  {{customer_info.info.mobile_number}}
+                <span class="item-note">
+                  {{ ::"Phone" | translate:"phonebook" }} 
+                </span>
+            </a>
+
+             <a ng-show="customer_info.info.date_of_brith != null && (privacysettings.display_dob || is_loggedIn_customers)" class="item item-custom item-icon-left" ng-if="phonebook_settings.enable_dob == 1">
+                <i class="icon ion-calendar"></i>
+                {{ dobDate(customer_info.info.date_of_brith) }}
+                <span class="item-note">
+                  {{ ::"DOB" | translate:"phonebook" }} 
+                </span>
+            </a>
+
+        </div>
+     
+      <!-- Photos -->
+       <div ng-show="phonebook_settings.is_use_imagegallery == 0" class="is-photos-grid" ng-if="displayPersonalInfo(is_loggedIn_customers, following_status.status)">
+         <div  class="item item-divider item-divider-custom item-icon-right photo-upload" ng-if="phonebook_settings.gallery == 1">
+               {{ ::"Photos" | translate:"phonebook" }}
+               <i class="icon ion-plus" ng-click="addGalleryPhoto()" ng-show="is_loggedIn_customers"></i>
+         </div>
+ 
+          <div  class="item gallery-item" id="photos-grid"  ng-if="phonebook_settings.gallery == 1">
+            <div class="row" ng-repeat="image in gallery_images" ng-if="$index % 3 === 0"> 
+                 <div class="col col-33"  ng-if="$index < gallery_images.length">
+                      <img ng-src="{{ gallery_basePath+gallery_images[$index].photo_thumbnail}}" width="100%" zoom-view zoom-src="{{ gallery_basePath+gallery_images[$index].photo_thumbnail }}"  />
+                      <p class="delete-gallery" ng-click="deleteGallery(gallery_images[$index].phonebook_customers_gallery_id)" ng-show="is_loggedIn_customers"> {{ ::"Delete" | translate:"phonebook" }} </p>
+                  </div>
+                  <div class="col col-33" ng-if="$index + 1 < gallery_images.length">
+                      <img ng-src="{{gallery_basePath+gallery_images[$index + 1].photo_thumbnail}}" width="100%" zoom-view zoom-src="{{gallery_basePath+gallery_images[$index + 1].photo_thumbnail }}"/>
+                       <p class="delete-gallery" ng-click="deleteGallery(gallery_images[$index + 1].phonebook_customers_gallery_id)" ng-show="is_loggedIn_customers">{{ ::"Delete" | translate:"phonebook" }}</p>
+                  </div>
+                  <div class="col col-33" ng-if="$index + 2 < gallery_images.length">
+                      <img ng-src="{{gallery_basePath+gallery_images[$index + 2].photo_thumbnail}}" width="100%" zoom-view zoom-src="{{gallery_basePath+gallery_images[$index + 2].photo_thumbnail }}"/>
+                       <p class="delete-gallery" ng-click="deleteGallery(gallery_images[$index + 2].phonebook_customers_gallery_id)" ng-show="is_loggedIn_customers">{{ ::"Delete" | translate:"phonebook" }}</p>
+                  </div>
+               </div>
+
+           <div class="row text-center" ng-if="gallery_images.length == 0">
+              <div class="col text-center">
+                <p> {{ ::"No photos uploaded yet" | translate:"phonebook" }}!</p>
+              </div>
+            </div>
+         </div>
+      </div>
+
+
+      <!-- Photos -->
+       <div ng-show="phonebook_settings.is_use_imagegallery == 1" class="is-photos-grid" ng-if="displayPersonalInfo(is_loggedIn_customers, following_status.status)">
+         <div  class="item item-divider item-divider-custom item-icon-right photo-upload" ng-if="phonebook_settings.gallery == 1">
+               {{ ::"Photos" | translate:"phonebook" }}
+         </div>
+ 
+          <div  class="item gallery-item" id="photos-grid"  ng-if="phonebook_settings.gallery == 1">
+            <div class="row" ng-repeat="image in imageGalleryImages" ng-if="$index % 3 === 0"> 
+                 <div class="col col-33"  ng-if="$index < imageGalleryImages.length">
+                      <img ng-src="{{ image_gallery_basePath+imageGalleryImages[$index].image_path}}" width="100%" zoom-view zoom-src="{{ image_gallery_basePath+imageGalleryImages[$index].image_path }}"  />
+                  </div>
+                  <div class="col col-33" ng-if="$index + 1 < imageGalleryImages.length">
+                      <img ng-src="{{image_gallery_basePath+imageGalleryImages[$index + 1].image_path}}" width="100%" zoom-view zoom-src="{{image_gallery_basePath+imageGalleryImages[$index + 1].image_path }}"/>
+                  </div>
+                  <div class="col col-33" ng-if="$index + 2 < imageGalleryImages.length">
+                      <img ng-src="{{image_gallery_basePath+imageGalleryImages[$index + 2].image_path}}" width="100%" zoom-view zoom-src="{{image_gallery_basePath+imageGalleryImages[$index + 2].image_path }}"/>
+                  </div>
+               </div>
+
+           <div class="row text-center" ng-if="imageGalleryImages.length == 0">
+              <div class="col text-center">
+                <p> {{ ::"No photos uploaded yet" | translate:"phonebook" }}!</p>
+              </div>
+            </div>
+         </div>
+      </div>
+
+       <div class="item item-custom item-body item-icon-left" ng-hide="displayPersonalInfo(is_loggedIn_customers, following_status.status)">
+        <i class="icon ion-lock-combination"></i>  
+        <p style="padding-left: 54px;">{{ ::"Follow this account to see their photos and other information!" | translate:"phonebook" }}
+       </p>
+       </div>
+
+      </div>
+     </ion-content>
+     <style type="text/css">
+       .item.phonebook-profile-image.mp-0{
+          margin-top: 0px !important;
+       }
+     </style>
+</ion-view>

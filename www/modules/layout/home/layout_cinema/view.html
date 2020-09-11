@@ -1,0 +1,40 @@
+<div class="layout layout_cinema outer-menu {{ features.layoutOptions.positionleft + ' ' }}"
+     ng-style="{'margin-top': features.layoutOptions.menuposition + 'vh'}">
+    <input class="checkbox-toggle"
+           type="checkbox"/>
+    <div class="hamburger homepage-custom">
+        <div class="checkbox-custom"></div>
+    </div>
+
+    <div class="menu">
+        <div class="homepage-custom">
+            <div>
+                <ion-content direction="y"
+                             scrollbar-y="false"
+                             class="scroll-view ionic-scroll">
+                    <ul class="list-item">
+                        <li ng-repeat="feature in features.options"
+                            class="menu-item">
+                            <a tabbar-items
+                               class="item translucent cinema-container"
+                               ng-show="tabbar_is_visible"
+                               option="feature"
+                               go-to-url="goTo(feature)">
+                                <div ng-if="feature.code == 'push_notification' && push_badge"
+                                     class="badge-custom">{{ push_badge }}
+                                </div>
+                                <p class="{{ features.layoutOptions.title + ' ' + features.layoutOptions.textTransform }}"
+                                   ng-style="{'line-height': features.layoutOptions.lineheight + 'px','font-size': features.layoutOptions.fontsize + 'px'}">
+                                    <img ng-src="{{ feature.icon_url }}"
+                                         ng-style="{'height': features.layoutOptions.height + 'px', 'padding-left': features.layoutOptions.padding + 'px'}"
+                                         class="{{ features.layoutOptions.icon + ' ' }}"/>{{ feature.name }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </ion-content>
+            </div>
+        </div>
+    </div>
+
+</div>
+

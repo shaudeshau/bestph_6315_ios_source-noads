@@ -1,0 +1,127 @@
+.layout.l35 .sbox {
+    width: 100%;
+    height: 50%;
+}
+
+.layout.l35 .slider {
+  height: 250px;
+  top:0;
+}
+
+.layout.l35 .slider-slide {
+  padding-top: 20px;
+  text-align: center;
+} 
+
+.layout.l35 .slider-pager { 
+height: 20px; 
+bottom: 10px; 
+background-color: transparent; 
+}
+
+.layout.l35 .sbox .sicon {
+	display: none;
+}
+
+.layout.l35 .sbox .stext h2 {
+	display: none;
+}
+
+.layout.l35 .sbox1 ion-content {
+position: absolute; 
+width: 100%;
+height: 50%;
+bottom: 0;
+top: initial;
+}
+
+.layout.l35 .sbox1 .inner-scroll {
+width: 100%; 
+height: 100%;
+}
+
+.layout.l35 .sbox2 ion-content {
+position: absolute; 
+width: 100%;
+height: 50%;
+bottom: 0;
+top: initial;
+}
+
+.layout.l35 .sbox2 .inner-scroll {
+width: 100%; 
+height: 100%;
+}
+
+.layout.l35 .sbox1 ul {
+padding-left: 10px; 
+padding-top: 4px;
+}
+
+.layout.l35 .sbox2 ul {
+padding-left: 0;
+padding-top: 4px;
+}
+
+.layout.l35 .sbox1 li {
+float: left;  
+width: 27%; 
+height: 110px;  
+margin: 0 2% 5px 3%;
+}
+
+.layout.l35 .sbox2 li {
+float: left;  
+width: 45%; 
+height: 135px;  
+margin: 0 2% 5px 2.9%;
+}
+
+.layout.l35 .sbox1 li .item {
+height: 85px; 
+padding: 15px; 
+border-width: 1px; 
+border-style: solid;
+}
+
+.layout.l35 .sbox2 li .item {
+width: 100%;	
+height: auto; 
+padding: 15px; 
+border-width: 1px; 
+border-style: solid;
+}
+
+.layout.l35 .sbox1 li img {
+width: 55px; 
+height: 55px; 
+height: 100%; 
+max-width: 100%;
+}
+
+.layout.l35 .sbox2 li img {
+width: 70px; 
+height: 70px; 
+height: 100%; 
+max-width: 100%;
+}
+
+.layout.l35 .sbox1 li p {
+text-transform: uppercase; 
+line-height: 20px; 
+height: 20px; 
+overflow: hidden; 
+font-size: 12px;
+}
+
+.layout.l35 .sbox1 li p {
+text-transform: uppercase; 
+line-height: 36px; 
+height: 30px; 
+overflow: hidden; 
+font-size: 12px;
+}
+
+.layout.l35 .sbox1 .no-border{
+border:none !important
+}

@@ -1,0 +1,48 @@
+<ion-view cache-view="false"
+                class="listing propertylisting propertylisting-add images">
+
+    <ion-nav-title>{{ ::"Add images" | translate:"propertylisting" }} </ion-nav-title>
+    <div class="loader"
+    ng-show="is_loading">
+    <ion-spinner class="spinner-custom"></ion-spinner>
+    </div>
+    <div class="bar bar-subheader">
+      
+            <span class="col assertive assertive-custom"><i class="icon ion-home"></i></span>
+            <span class="col assertive assertive-custom"><i class="icon ion-location"></i></span>
+            <span class="col assertive assertive-custom"><i class="icon ion-pricetag"></i></span>
+            <span class="col assertive assertive-custom"><i class="icon ion-image"></i></span>
+            <span class="col calm calm-custom"><i class="icon ion-images"></i></i></span>
+            <span class="col light light-custom"><i class="icon ion-android-done-all"></i></span>
+     
+      </div>
+    <ion-content class="has-subheader ">
+      <form name="add_property_images">
+        <div class="list">
+            
+          <div class="item item-custom item-body" ng-if="addpropertyValues.property_image!=''">
+             <ol>
+              <li ng-repeat="img in addpropertyValues.property_image" class="propertylisting-add-images-box">
+                 <img ng-src="{{img}}" class="full-image" style="margin-bottom: 2%;">
+                 <i class="icon ion-close propertylisting-add-images-box-icon" ng-click="removeImage(img)" ></i>
+              </li>
+           </ol> 
+          </div>
+
+          <div ng-if="addpropertyValues.property_image.length < listing_settings.max_photo_each_listing" class="item item-icon-left item-custom" ng-click="addPicture()">
+            <i class="icon ion-camera" ></i> {{ "Upload Photo" | translate:"propertylisting" }}
+             <p> {{ ::"Best size of slider image is 600*320 pixel" | translate:"propertylisting" }} </p>
+          </div>
+           
+            <button ng-disabled="add_property_images.$invalid" class="button button-block button-positive button-positive-custom"
+            ng-click="addImages(addpropertyValues)">
+                {{ ::"Next" | translate:"propertylisting" }}
+            </button>
+            
+          </div>
+        </form>
+    </ion-content>
+
+   
+
+</ion-view>

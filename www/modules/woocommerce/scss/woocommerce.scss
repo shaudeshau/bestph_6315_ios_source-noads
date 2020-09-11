@@ -1,0 +1,21 @@
+/** WooCommerce specific SCSS */
+.cart-badge {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    font-size: 10px;
+    padding: 4px;
+    line-height: 8px;
+}
+
+.wc-icon {
+    &.icon-custom {
+        &.ion-ios-cart,
+        &.ion-home {
+            &:before {
+                font-size: 26px !important;
+                line-height: 30px !important;
+            }
+        }
+    }
+}

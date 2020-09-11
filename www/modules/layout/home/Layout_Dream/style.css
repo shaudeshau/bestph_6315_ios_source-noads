@@ -1,0 +1,57 @@
+.layout_dream_main {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.layout_dream_main .overlay {
+    background: rgba(0, 0, 0, .8);
+    height: 100%;
+    width: 100%;
+}
+.layout_dream_main .overlay img {
+    width: 250px;
+    margin-top: 100px;
+}
+.layout_dream_main .overlay h2 {
+    font-weight: 100;
+    font-size: 50px;
+    color:white;
+    margin-top: 0px;
+}
+.layout_dream_main .overlay h2 span {
+    font-weight: bold
+}
+.layout_dream_main .overlay h4 {
+    font-weight: 100;
+    font-size: 30px;
+    margin-top: 0px;
+}
+.layout_dream {
+    /*margin-top: 10px;*/
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 102%;
+}
+.layout_dream .dream_child {
+    background-size: cover;
+    width: 49%;
+    /*margin-right: 1%;*/
+    height: 200px;
+    /*margin-top: 20px;*/
+    background-position: center;
+    border: solid #ffffff 1px;
+}
+.layout_dream .dream_child p {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color:white;
+}
+.layout_dream .dream_child .overlay {
+    height: 100%;
+}

@@ -1,0 +1,144 @@
+/* Content */
+ .layout_meem {
+     padding: 15px;
+}
+ .layout_meem .meem_col {
+     width: 23%;
+     height: 210px;
+     float: left;
+     margin: 1%;
+}
+ @media (max-width: 575.98px) {
+     .layout_meem .meem_col {
+         width: 100%;
+         margin: 2% 1%;
+    }
+}
+ @media (min-width: 576px) and (max-width: 767.98px) {
+     .layout_meem .meem_col {
+         width: 48%;
+         margin: 2% 1%;
+    }
+}
+ @media (min-width: 768px) and (max-width: 991.98px) {
+     .layout_meem .meem_col {
+         width: 48%;
+         margin: 2% 1%;
+    }
+}
+ @media (min-width: 992px) and (max-width: 1199.98px) {
+     .layout_meem .meem_col {
+         width: 31%;
+         margin: 1%;
+    }
+}
+ .layout_meem .meem_content {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     border-radius: 10px;
+     -webkit-box-shadow: 0 0 5px 0 #00000050;
+     box-shadow: 0 0 5px 0 #00000050;
+}
+ .layout_meem .meem_content::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border-radius: 10px;
+     background-color: rgba(0, 0, 0, 0.45);
+     z-index: 1;
+}
+ .layout_meem .meem_content .meem_img {
+     width: 100%;
+     height: 100%;
+     border-radius: 10px;
+}
+ .layout_meem .meem_content .meem_img img {
+     width: 100%;
+     height: 100%;
+     border-radius: 10px;
+}
+ .layout_meem .meem_content .meem_info {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 99;
+}
+ .layout_meem .meem_content .meem_info > .meem_btn {
+     position: absolute;
+     top: 20px;
+     left: 15px;
+     font-size: 17px;
+     color: #fff;
+     cursor: pointer;
+}
+ .layout_meem .meem_content .meem_info .meem_text h3 {
+     position: absolute;
+     bottom: 20px;
+     left: 15px;
+     font-size: 30px;
+     color: #fff;
+}
+ .layout_meem .meem_content .meem_info .meem_btn {
+   background-color: transparent;
+   border: none;
+   color: white;
+ }
+ .layout_meem .meem_content .meem_info .meem_text > .meem_btn {
+     position: absolute;
+     bottom: 20px;
+     right: 15px;
+     width: 50px;
+     height: 50px;
+     /*line-height: 50px;*/
+     text-align: center;
+     font-size: 20px;
+     background-color: #ff393b;
+     border-radius: 50%;
+     color: #fff;
+     font-weight: bold;
+}
+.layout_meem .meem_content .meem_tooltip {
+  position: relative;
+  display: inline-block;
+  margin:10px;
+}
+.layout_meem .meem_content .meem_tooltip .meem_btn {
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.layout_meem .meem_content .meem_tooltip .tooltiptext {
+  visibility: hidden;
+      width: 120px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      padding: 7px;
+      border-radius: 6px;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s;
+}
+.layout_meem .meem_content .meem_tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.layout_meem .meem_content .meem_tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

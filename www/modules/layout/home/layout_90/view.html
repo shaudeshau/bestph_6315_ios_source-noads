@@ -1,0 +1,98 @@
+<div class="layout l90" ng-controller="R90Controller">
+
+<div id="myNav" class="sidenav homepage-custom">
+  <ion-content class="homepage-custom" scrollbar-y="false">
+  <span href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="icon ion-close-round"></i></span>
+  <ul class="items homepage-custom">
+            <li ng-repeat="feature in features.options" class="border-custom" tabbar-items option="feature" id="feature-{{ $index }}" go-to-url="goTo(feature)">
+                <img ng-src="{{ feature.icon_url }}"/>
+                <p>{{ feature.name }}</p>
+                <div ng-if="feature.code == 'push_notification' && push_badge" class="badge-custom">{{ push_badge }}</div>
+            </li>
+  </ul>
+  </ion-content>
+</div>
+
+<div id="main">
+
+<ul class="row homepage-custom">
+<li class="col col-20"><span class="navbtn" onclick="openNav()"><i class="icon ion-navicon-round"></i></span></li>
+<li class="col col-60"><p class="title">{{ features.layoutOptions.titletext }}</p></li>
+</ul>
+
+<div class="slider90">
+<ion-slide-box show-pager="{{ features.layoutOptions.pagervisibility }}" auto-play="true" does-continue="true" slide-interval="3000">
+<ion-slide tabbar-items ng-repeat="feature in features.overview.options | limitTo : 3" option="feature" go-to-url="goTo(feature);">
+    <div class="sbox">
+		<div class="sicon">
+			<img ng-src="{{ feature.icon_url }}">
+		</div>
+        <div class="stext">
+            <h2>{{ feature.name }}</h2>
+        </div>
+    </div>
+</ion-slide>
+</ion-slide-box>
+</div>
+
+
+</div>
+
+</div>
+
+<style>
+ion-slide:nth-child(1) {
+ background-image: url("{{ features.layoutOptions.slide1 }}"); 
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+}
+
+ion-slide:nth-child(2) {
+ background-image: url("{{ features.layoutOptions.slide2 }}"); 
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+}
+
+ion-slide:nth-child(3) {
+ background-image: url("{{ features.layoutOptions.slide3 }}"); 
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+}
+
+
+@media screen and (min-width: 737px) {
+ion-slide:nth-child(1) {
+ background-image: url("{{ features.layoutOptions.slide4 }}"); 
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+}
+
+ion-slide:nth-child(2) {
+ background-image: url("{{ features.layoutOptions.slide5 }}"); 
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+}
+
+ion-slide:nth-child(3) {
+ background-image: url("{{ features.layoutOptions.slide6 }}"); 
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+}
+}
+
+.layout.l90 .sidenav ul.items li:nth-child({{ features.layoutOptions.visibility }}) {
+display: none;
+}
+
+.layout.l90 #main .slider90 {
+display: {{ features.layoutOptions.slidervisibility }};
+}
+
+.layout.l90 .slider-pager .slider-pager-page {
+ color: {{ features.layoutOptions.pagercolor }}; 
+}
+
+.layout.l90 #main .row {
+background-color: {{ features.layoutOptions.titlebgcolor }};
+}
+</style>

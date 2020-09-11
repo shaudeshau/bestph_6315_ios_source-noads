@@ -1,0 +1,29 @@
+<div class="layout layout_videone">
+
+<article>
+  <h1>
+    {{ features.layoutOptions.videonetitletext }}
+    <br />
+		<span tabbar-items ng-repeat="feature in features.overview.options" option="feature" go-to-url="goTo(feature);">{{ features.layoutOptions.videonemenutext }}</span>
+	</h1>
+</article>
+
+<video autoplay loop id="video-background" plays-inline>
+  <source src="{{ features.layoutOptions.videoneurl.replace('http', 'https') | trustUrl }}" type="video/mp4">
+</video>
+
+</div>
+
+
+<style>
+.layout.layout_videone h1 {
+  color: {{ features.layoutOptions.titleTextColor }} !important;
+	text-transform: {{ features.layoutOptions.textTransform }} !important;
+}
+
+.layout.layout_videone h1 span {
+  color: {{ features.layoutOptions.menuTextColor }} !important;
+	text-transform: {{ features.layoutOptions.textTransform }} !important;
+}
+
+</style>

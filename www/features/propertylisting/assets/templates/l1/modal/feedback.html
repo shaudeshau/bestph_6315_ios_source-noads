@@ -1,0 +1,73 @@
+<ion-modal-view cache-view="false"
+                sb-page-background
+                ng-controller="PropertylistingHomeController"
+                class="propertylisting propertylisting-feedback listing">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeFeedbackModal()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ listing_deails.property_name }}</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header has-footer">
+
+        <div class="">
+            <div class="item item-divider item-divider-custom">
+                <p>{{ ::"What wasn't correct in the listing?" | translate:"propertylisting" }}
+                </p>
+            </div>
+        </div>
+
+        <ion-list>
+            <ion-radio ng-model="feedbackFrom.feedbackChoice"
+                       ng-value="'Property Sold/Rented Out'"
+                       class="listingBounceInUp item-custom">{{ ::"Property Sold/Rented Out" |
+                translate:"propertylisting" }}
+            </ion-radio>
+            <ion-radio ng-model="feedbackFrom.feedbackChoice"
+                       ng-value="'Fake/Incorrect Photos'"
+                       class="listingBounceInUp item-custom">{{ ::"Fake/Incorrect Photos" | translate:"propertylisting" }}
+            </ion-radio>
+            <ion-radio ng-model="feedbackFrom.feedbackChoice"
+                       ng-value="'Incorrect Price'"
+                       class="listingBounceInUp item-custom">{{ ::"Incorrect Price" | translate:"propertylisting" }}
+            </ion-radio>
+            <ion-radio ng-model="feedbackFrom.feedbackChoice"
+                       ng-value="'Incorrect Location/Address'"
+                       class="listingBounceInUp item-custom">{{ ::"Incorrect Location/Address" | translate:"propertylisting" }}
+            </ion-radio>
+            <ion-radio ng-model="feedbackFrom.feedbackChoice"
+                       ng-value="'Incorrect Sale/Rent Type'"
+                       class="listingBounceInUp item-custom">{{ ::"Incorrect Sale/Rent Type" | translate:"propertylisting" }}
+            </ion-radio>
+            <ion-radio ng-model="feedbackFrom.feedbackChoice"
+                       ng-value="'Other'"
+                       class="listingBounceInUp item-custom">{{ ::"Other" | translate:"propertylisting" }}
+            </ion-radio>
+
+        </ion-list>
+
+        <div class="list listingBounceInUp">
+            <label class="item item-input item-custom">
+              <textarea ng-model="feedbackFrom.reportMessages"
+                        placeholder='{{ ::"Share it here (Optional)" | translate:"propertylisting" }}'></textarea>
+            </label>
+        </div>
+
+    </ion-content>
+
+
+    <div class="bar bar-footer  bar-footer-custom">
+        <div class="title">
+            <button ng-click="sendFeedback(feedbackFrom)"
+                    class="button button-block  button-positive button-positive-custom">
+                {{ ::"Send" | translate:"propertylisting" }}
+            </button>
+        </div>
+    </div>
+
+</ion-modal-view>

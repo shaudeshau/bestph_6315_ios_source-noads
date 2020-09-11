@@ -1,0 +1,59 @@
+.layout.l99 {
+position: absolute;  
+top: 0;  
+left: 0;  
+bottom: 0;  
+width: 100%;  
+border: 0;
+}
+
+.layout.l99 ion-content.homepage-custom.scroll-content.ionic-scroll {
+background-position: center;
+background-attachment: fixed;
+background-repeat:no-repeat;
+}
+
+.layout.l99 ul.items li {
+display: -webkit-flex;
+display: flex;
+-webkit-align-items: center;
+align-items:center;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+width: 100%;
+height: 70px;
+padding: 10px 5px;
+}
+
+.layout.l99 li img {
+width: 30px;
+height: 30px;	
+margin: 0 0 0 10px;
+max-height: 100%;
+}
+
+.layout.l99 li p {
+font-size: 10px; 
+line-height: 20px; 
+height: 20px; 
+overflow: hidden; 
+}
+
+.layout.l99 ul.items li p {
+font-size: 13px;	
+margin: 0 0 0 10px;
+}
+
+.layout.l99 .mylogo {
+   display: block;	
+   width:100%; /*width of logo*/
+   height:auto; /*height of logo*/
+   margin:0; /* If you want no margin */
+}
+
+.layout.l99 .mylogo img{
+    display:block;
+    width:100%; /*width of logo*/
+    height:auto; /*height of logo*/
+    margin:0; /* If you want no margin */
+}

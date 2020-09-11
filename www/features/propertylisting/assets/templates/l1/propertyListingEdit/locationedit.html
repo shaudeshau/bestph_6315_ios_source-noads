@@ -1,0 +1,107 @@
+<ion-modal-view cache-view="false"
+                ng-controller="PropertylistingEditController"
+                class="listing propertylisting propertylisting-edit location">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeeditlocationModal()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ ::"Edit location" | translate:"propertylisting" }}</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header ">
+        <form name="edit_property_location" novalidate ng-submit="edit_property_location.$valid && editPropertyLocation(edit_listing_value)">
+            <div class="list">
+                
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">
+                    {{ :: feildsSettings.country.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.country.field_required == 1">*</span>
+
+                  </span>
+                  <input name="country" ng-required="feildsSettings.country.field_required == 1 ? true : false"  type="text" placeholder="{{ forTranslate(feildsSettings.country.label_name) }}" ng-model="edit_listing_value.country">
+                  <div ng-if="edit_property_location.$submitted">
+                    <div class="assertive assertive-custom" ng-show="edit_property_location.country.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">
+                    {{ :: feildsSettings.state.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.state.field_required == 1">*</span>
+                  </span>
+                  <input name="state" type="text" placeholder="{{ forTranslate(feildsSettings.state.label_name) }}" ng-model="edit_listing_value.state">
+                  <div ng-if="edit_property_location.$submitted">
+                    <div class="assertive assertive-custom" ng-show="edit_property_location.state.$invalid">
+                               {{ ::"This field is required." | translate:"propertylisting" }}
+                    </div>
+                  </div>
+                </label>
+               
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">
+                    {{ :: feildsSettings.city.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.city.field_required == 1">*</span>
+                </span>
+                  <input name="city" ng-required="feildsSettings.city.field_required == 1 ? true : false" 
+                  type="text" placeholder="{{ forTranslate(feildsSettings.city.label_name) }}" ng-model="edit_listing_value.city">
+                  <div ng-if="edit_property_location.$submitted">
+                    <div class="assertive assertive-custom" ng-show="edit_property_location.city.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                      {{ :: feildsSettings.post_code.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.post_code.field_required == 1">*</span>
+
+                  </span>
+                    <input name="post_code"  ng-required="feildsSettings.post_code.field_required == 1 ? true : false"  type="text" placeholder="{{ forTranslate(feildsSettings.post_code.label_name) }}" ng-model="edit_listing_value.post_code">
+                    <div ng-if="edit_property_location.$submitted">
+                      <div class="assertive assertive-custom" ng-show="edit_property_location.post_code.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                    </div>
+                </label>
+    
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                      {{ :: feildsSettings.area_Landmark.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.area_Landmark.field_required == 1">*</span>
+                  </span>
+                <input type="text"
+                       name="taman_area"
+                       placeholder="{{ forTranslate(feildsSettings.area_Landmark.label_name) }}"
+
+                       ng-model="edit_listing_value.taman_area"
+                       ng-required="feildsSettings.area_Landmark.field_required == 1 ? true : false" 
+                       sb-google-autocomplete
+                       location="location"
+                       place="edit_listing_value.place"
+                       on-address-change="updateAddress()"
+                       ng-focus="disableTap()"
+                       id="pac-input"/>
+
+                  <div ng-if="edit_property_location.$submitted">
+                  <div class="assertive assertive-custom" ng-show="edit_property_location.taman_area.$invalid">
+                  {{ ::"This field is required." | translate:"propertylisting" }}</div>
+                </div>
+
+                </label>
+                
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                      {{ :: feildsSettings.address.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.address.field_required == 1">*</span>
+                  </span>
+                    <input name="address" ng-required="feildsSettings.address.field_required == 1 ? true : false"  type="text" placeholder="{{ forTranslate(feildsSettings.address.label_name) }}" ng-model="edit_listing_value.address">
+                    <div ng-if="edit_property_location.$submitted">
+                      <div class="assertive assertive-custom" ng-show="edit_property_location.address.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                    </div>
+                </label>
+    
+               
+                <button class="button button-block button-positive button-positive-custom"
+                type="submit">
+                    {{ ::"Save" | translate:"propertylisting" }}
+                </button>
+                
+              </div>
+            </form>
+
+    </ion-content>
+
+</ion-modal-view>

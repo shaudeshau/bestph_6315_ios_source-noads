@@ -1,0 +1,44 @@
+<ion-content delegate-handle="mainScroll"
+             ng-class="{'has-subheader': displaySubHeader()}">
+    
+    <div class="loader"
+         ng-show="isLoading">
+        <ion-spinner class="spinner-custom"></ion-spinner>
+    </div>
+    
+    <div class="customer-image" ng-show="!isLoading">
+            <div style="font-size: 15px; text-align: center; padding: 8px 8px;">
+                <span ng-if="settings.profile_description_text">{{ settings.profile_description_text }}</span>
+                <span ng-if="!settings.profile_description_text">{{ ::"Follow and Chat with other users on the platform" | translate:"socialnetworks" }}</span>
+            </div>
+    </div>
+    
+    
+    <div style="margin: 0 auto; padding: 10px 25%;" ng-show="!isLoading"> 
+        <input type="text" ng-change="searchByFunc(searchPlaces)" ng-model="searchPlaces" style="margin: auto; padding: 10px; width: 100%;" placeholder="Search" />
+    </div>
+    
+    <ion-list ng-if="!isLoading && collection.length > 0"
+              class="list-posts">
+        <socialnetworks-profile-item repeat-done="listDidRender()"
+                           id="{{ post.id }}"
+                           ng-repeat="(key, post) in collection track by post.id"></socialnetworks-profile-item>
+    </ion-list>
+    <div style="text-align: center;">
+        <a ng-click="movePage('prev')" ng-show="previous_link" >{{ ::"Previous" | translate:"socialnetworks" }}</a>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-click="movePage('next')" ng-if="next_link"  >{{ ::"Next"| translate:"socialnetworks"}}</a>
+    </div>
+
+    <ion-list ng-if="!isLoading && !collection.length">
+        <ion-item ng-class="{'card' : getCardDesign()}"
+                  class="item-custom text-center no-post">
+            <p>{{ ::"There is no profiles." | translate:"socialnetworks" }}</p>
+        </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll ng-if="!isLoading && hasMore"
+                         on-infinite="loadMore()"
+                         immediate-check="false"
+                         distance="20%"
+                         class="spinner-custom">
+    </ion-infinite-scroll>
+</ion-content>

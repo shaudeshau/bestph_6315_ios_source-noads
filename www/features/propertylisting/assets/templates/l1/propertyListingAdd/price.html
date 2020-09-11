@@ -1,0 +1,196 @@
+<ion-view cache-view="false"
+                 class="listing propertylisting propertylisting-add price">
+
+    <ion-nav-title>{{ ::"Add price" | translate:"propertylisting" }} </ion-nav-title>
+    <div class="loader"
+            ng-show="is_loading">
+        <ion-spinner class="spinner-custom"></ion-spinner>
+    </div>
+
+    <div class="bar bar-subheader">
+      
+            <span class="col assertive assertive-custom"><i class="icon ion-home"></i></span>
+            <span class="col assertive assertive-custom"><i class="icon ion-location"></i></span>
+            <span class="col calm calm-custom"><i class="icon ion-pricetag"></i></span>
+            <span class="col light light-custom"><i class="icon ion-image"></i></span>
+            <span class="col light light-custom"><i class="icon ion-images"></i></i></span>
+            <span class="col light light-custom"><i class="icon ion-android-done-all"></i></span>
+     
+      </div>
+    <ion-content class="has-subheader ">
+      <form name="add_property_price" novalidate ng-submit="add_property_price.$valid && addprice(addpropertyValues)">
+        <div class="list">
+            <!-- for rent -->
+            <div ng-if="addpropertyValues.propertyFor == 'Rent'">
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.rental_amount.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.rental_amount.field_required == 1">*</span>
+                </span>
+                <input name="rental_amount" ng-required="feildsSettings.rental_amount.field_required == 1 ? true : false" 
+                type="number" placeholder="{{ forTranslate(feildsSettings.rental_amount.label_name) }}" ng-model="addpropertyValues.rental_amount">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.rental_amount.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.minimum_rent_tenure.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.minimum_rent_tenure.field_required == 1">*</span>
+
+                </span>
+                <input name="minimum_rent_tenure" ng-required="feildsSettings.minimum_rent_tenure.field_required == 1 ? true : false" 
+                type="number" placeholder="{{ forTranslate(feildsSettings.minimum_rent_tenure.label_name) }}" ng-model="addpropertyValues.minimum_rent_tenure">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.minimum_rent_tenure.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+            </div>
+            <!-- for sale -->
+            <div ng-if="addpropertyValues.propertyFor =='Sales'">
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.down_payment.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.down_payment.field_required == 1">*</span>
+                </span>
+                <input name="down_payment" ng-required="feildsSettings.down_payment.field_required == 1 ? true : false" type="number" placeholder="{{ forTranslate(feildsSettings.down_payment.label_name) }}"
+                ng-model="addpropertyValues.down_payment">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.down_payment.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.selling_price.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.selling_price.field_required == 1">*</span>
+
+                </span>
+                <input name="selling_price" ng-required="feildsSettings.selling_price.field_required == 1 ? true : false" type="number" placeholder="{{ forTranslate(feildsSettings.selling_price.label_name) }}" ng-model="addpropertyValues.selling_price">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.selling_price.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+                <ion-list >
+                    <ion-checkbox ng-model="addpropertyValues.full_loan"
+                                  ng-value=1
+                                  class=" item-custom checkbox-custom"
+                                  name="full_loan"
+                                  > {{ ::"Full Loan" | translate:"propertylisting" }}
+                    </ion-checkbox>
+                </ion-list>
+                
+            </div>
+             <!-- for Auction -->
+             <div ng-if="addpropertyValues.propertyFor == 'Auction'">
+                <label class="item item-input item-stacked-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.auction_date.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.auction_date.field_required == 1">*</span>
+
+                </span>
+                <input name="auction_date" ng-required="feildsSettings.auction_date.field_required == 1 ? true : false"  type="date" placeholder="{{ forTranslate(feildsSettings.auction_date.label_name) }}" ng-model="addpropertyValues.auction_date">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.auction_date.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.auction_venue.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.auction_venue.field_required == 1">*</span>
+                </span>
+                <input name="auction_venue" ng-required="feildsSettings.auction_venue.field_required == 1 ? true : false"  type="text" placeholder="{{ forTranslate(feildsSettings.auction_venue.label_name) }}" ng-model="addpropertyValues.auction_venue">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.auction_venue.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.auction_by.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.auction_by.field_required == 1">*</span>
+                </span>
+                <input name="auction_by" ng-required="feildsSettings.auction_by.field_required == 1 ? true : false"  type="text" placeholder="{{ forTranslate(feildsSettings.auction_by.label_name) }}" ng-model="addpropertyValues.auction_by">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.auction_by.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.starting_price.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.starting_price.field_required == 1">*</span>
+                </span>
+                <input name="starting_price" ng-required="feildsSettings.starting_price.field_required == 1 ? true : false"  type="number" placeholder="{{ forTranslate(feildsSettings.starting_price.label_name) }}" ng-model="addpropertyValues.starting_price">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.starting_price.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+            </div>
+             <!-- for new project  -->
+             <div ng-if="addpropertyValues.propertyFor == 'NewProject'">
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.project_developer.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.project_developer.field_required == 1">*</span>
+                </span>
+                <input name="project_developer" ng-required="feildsSettings.project_developer.field_required == 1 ? true : false"  type="text" placeholder="{{ forTranslate(feildsSettings.project_developer.label_name) }}" ng-model="addpropertyValues.project_developer">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.project_developer.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.available_units.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.available_units.field_required == 1">*</span>
+                </span>
+                <input name="available_units" 
+                ng-required="feildsSettings.available_units.field_required == 1 ? true : false"  type="number" placeholder="{{ forTranslate(feildsSettings.available_units.label_name) }}" ng-model="addpropertyValues.available_units">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.available_units.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.minimum_selling_price.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.minimum_selling_price.field_required == 1">*</span>
+                </span>
+                <input name="minimum_selling_price" ng-required="feildsSettings.minimum_selling_price.field_required == 1 ? true : false" type="number" placeholder="{{ forTranslate(feildsSettings.minimum_selling_price.label_name) }}" ng-model="addpropertyValues.minimum_selling_price">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.minimum_selling_price.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                <span class="input-label">
+                  {{ :: feildsSettings.maximum_selling_price.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.maximum_selling_price.field_required == 1">*</span>
+                </span>
+                <input name="maximum_selling_price" ng-required="feildsSettings.maximum_selling_price.field_required == 1 ? true : false" type="number" placeholder="{{ forTranslate(feildsSettings.maximum_selling_price.label_name) }}" ng-model="addpropertyValues.maximum_selling_price">
+                <div ng-if="add_property_price.$submitted">
+                    <div class="assertive assertive-custom" ng-show="add_property_price.maximum_selling_price.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+                <div class="item item-divider item-divider-custom listing-filter-divider">
+                  {{ :: feildsSettings.project_description.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.project_description.field_required == 1">*</span>
+                </div>
+                <label class="item item-input item-floating-label">
+                    <textarea name="project_desciptions" ng-required="feildsSettings.project_description.field_required == 1 ? true : false" placeholder="{{ forTranslate(feildsSettings.project_description.label_name) }}" rows="5" cols="10" ng-model="addpropertyValues.project_desciptions">
+                    </textarea>
+                    <div ng-if="add_property_price.$submitted">
+                        <div class="assertive assertive-custom" ng-show="add_property_price.project_desciptions.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                      </div>
+                </label>
+            </div>
+            <button class="button button-block button-positive button-positive-custom"
+            >
+                {{ ::"Next" | translate:"propertylisting" }}
+            </button>
+           
+          </div>
+        </form>
+    </ion-content>
+
+   <style type="text/css">
+        .assertive.assertive-custom {
+            font-size: 12px;
+        }
+        .padding16 {
+          padding: 0px 16px;
+        }        
+    </style>
+   
+
+</ion-view>

@@ -1,0 +1,136 @@
+.layout.royal .royal_card {
+width: 100vw;
+height: 100vh;
+margin: 0 auto;
+position: relative;
+overflow: hidden;
+}
+
+.layout.royal .royal_card  .royal_up {
+position: absolute;
+width: 100%;
+background-position: 50%;
+background-size: cover;
+z-index: 3;
+text-align: center;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-ms-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;    
+}
+
+.layout.royal .royal_card .royal_down {
+position: absolute;
+bottom: 0px;
+width: 100%;
+z-index: 2;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-ms-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+.layout.royal .royal_card  .royal_up .royal_add {
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 50%;
+position: absolute;
+left: 0;
+right: 0;
+margin: auto;
+width: 88px;
+height: 88px;
+cursor: pointer;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-ms-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+.layout.royal .royal_on  .royal_up .royal_add {
+-webkit-transform: rotate(315deg) scale(.5);
+-moz-transform: rotate(315deg) scale(.5);
+-ms-transform: rotate(315deg) scale(.5);
+-o-transform: rotate(315deg) scale(.5);
+transform: rotate(315deg) scale(.5);
+top: calc(85vh - 44px) !important;
+}
+
+.layout.royal .royal_card  .royal_up .royal_add i {
+font-size: 88px;
+}
+
+.layout.royal .royal_card .royal_back {
+text-align: center;
+position: absolute;
+left: 0;
+right: 0;
+top: 18vh;    
+margin-top: 0;
+z-index: 1;
+}
+
+.layout.royal .royal_card .royal_back { display: none; }
+.layout.royal .royal_on .royal_back { display: block; }
+
+.layout.royal .royal_on  .royal_up {
+height: 15vh !important;
+}
+
+.layout.royal .royal_card  .royal_up .royal_text {
+position: absolute;
+left: 0;
+right: 0;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-ms-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+.layout.royal .royal_on .royal_down {
+height: 15vh !important;
+bottom: 0;
+}
+
+.layout.royal .royal_card .royal_down div {
+width: 33.333%;
+float: left;
+text-align: center;
+font-size: 50px;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-ms-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+.layout.royal .royal_on .royal_down div {
+margin-top: 10px !important;
+}
+
+.layout.royal #royal ion-content {
+position: absolute; 
+width: 100%;
+height: 88vh;
+top: initial; 
+bottom: 15vh; 
+}
+
+.layout.royal .royal_back div { 
+width: 50.0%;
+float: left;
+height: 115px;
+text-align: center;
+margin-top: 10px;
+font-size: 18px;
+}
+
+.layout.royal .royal_back div img {     
+margin-top: 10px;
+}

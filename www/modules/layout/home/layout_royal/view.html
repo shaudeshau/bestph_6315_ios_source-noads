@@ -1,0 +1,115 @@
+<div class="layout royal" ng-controller="ROYALController">
+<div id="myDIV" class="royal_card">
+    <div class="royal_up">
+        <div class="royal_text">
+            <h2>{{ features.layoutOptions.title }}</h2>
+            <p>{{ features.layoutOptions.subtitle }}</p>
+        </div>
+                
+        <div class="royal_add" onclick="myFunction()">
+	    <i class="icon ion-android-add"></i>
+	    </div>
+    </div>
+            
+    <div class="royal_down">
+        <div>
+        <a ng-href="tel:{{ features.layoutOptions.phonenumber }}">
+		<i class="{{ features.layoutOptions.phoneicon }}"></i></a>   
+        </div>
+        <div></div>
+	    <div id="royal1">
+        <a ng-href="{{ features.layoutOptions.weblink }}" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
+		<i class="{{ features.layoutOptions.weblinkicon }}"></i></a> 
+        </div>
+		<div id="royal2">
+        <a ng-href="https://api.whatsapp.com/send?phone={{ features.layoutOptions.whatsappnumber }}" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
+		<i class="{{ features.layoutOptions.whatsappicon }}"></i></a> 
+        </div>
+    </div>
+            
+    <div id="royal">
+	<ion-content>
+	<div class="royal_back">
+	<div class="homepage-custom" ng-repeat="feature in features.options" tabbar-items option="feature" go-to-url="goTo(feature)">
+    <img ng-src="{{ feature.icon_url }}" />
+	<p>{{ feature.name }}</p>
+    </div></div> 
+    <ion-content>
+    </div>	
+	
+</div>
+</div>
+
+<style>
+.layout.royal .royal_card  .royal_up .royal_add {
+background-color: {{ features.layoutOptions.tglbgclr }};
+}
+
+.layout.royal .royal_card {
+background-color: {{ features.layoutOptions.menubgclr }};
+}
+
+.layout.royal .royal_card  .royal_up {
+background-image: url({{ features.layoutOptions.bgimg }});
+}
+
+.layout.royal .royal_card .royal_down {
+background-color: {{ features.layoutOptions.ftrbgclr }};
+color: {{ features.layoutOptions.ftrclr }};
+}
+
+.layout.royal .royal_back div img {
+width: {{ features.layoutOptions.imgsize }};
+height: {{ features.layoutOptions.imgsize }};
+}
+
+.layout.royal .royal_card  .royal_up .royal_add i, .layout.royal .royal_on  .royal_up .royal_add i {
+color: {{ features.layoutOptions.tglclr }};
+} 
+
+.layout.royal .royal_card .royal_up .royal_text h2 {
+color: white; 
+font-size: {{ features.layoutOptions.titletextsize }};
+font-weight: 600;
+}
+
+.layout.royal .royal_card  .royal_up .royal_text p { 
+font-size: {{ features.layoutOptions.subtitletextsize }};
+font-weight: 400;
+}
+
+.layout.royal .royal_card .royal_up .royal_text h2, .layout.royal .royal_card .royal_up .royal_text p {
+margin: 0;
+color: {{ features.layoutOptions.titlesubtitletexclr }};
+}
+
+.layout.royal {{ features.layoutOptions.label }} { display: none; }
+
+.layout.royal .royal_card  .royal_up .royal_text {
+top: {{ features.layoutOptions.titletopfront }};
+}
+
+.layout.royal .royal_on  .royal_up .royal_text {
+top: {{ features.layoutOptions.titletopback }};;
+}
+
+.layout.royal .royal_card  .royal_up .royal_add  {
+top: {{ features.layoutOptions.tgltop }};
+}
+
+.layout.royal .royal_card  .royal_up {
+height: {{ features.layoutOptions.uprheight }};
+}
+
+.layout.royal .royal_card .royal_down {
+height: {{ features.layoutOptions.ftrheight }};
+}
+
+.layout.royal .royal_card .royal_down div {
+margin-top: {{ features.layoutOptions.ftricontop }};
+}
+
+.layout.royal .royal_back p {
+ text-transform: {{ features.layoutOptions.textTransform }}; 
+}
+</style>

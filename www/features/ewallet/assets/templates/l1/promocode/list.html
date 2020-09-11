@@ -1,0 +1,39 @@
+<ion-view sb-page-background
+          class="ewallet ewallet-promoce">
+        <ion-nav-title></ion-nav-title>
+
+    <ion-content id="history-content"
+                 class="has-header"
+                 ng-hide="is_loading"
+                 scrollbar-y="false"
+                 overflow-scroll="false"
+                 delegate-handle="mainScroll">
+
+        <div class="loader" ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>   
+
+        
+        <div class="list remove-margin-bottom" ng-if="!is_loading">
+            <a  class="item item-custom remove-border">
+              <h2>
+                {{ ::"Apply Promocode" | translate:"ewallet" }}
+              </h2>
+            </a>
+        </div>
+
+        <div class="list promocode-enter-box">
+          
+          <label class="item item-input item-custom">
+             <input class="promocode-enter-input" ng-init="cart.promocode" autocomplete="off" ng-model="cart.promocode" type="text" placeholder='{{ ::"Enter Promocode" | translate:"ewallet" }}'>
+          </label>          
+          <label class="item item-custom remove-border margintop-20">
+                 <button ng-disabled="(cart.promocode =='') ? true : false" class="button button-full button-positive-custom" ng-click="applyPromocode()">
+                    {{ ::"Apply Now" | translate:"ewallet" }}
+                </button>
+          </label>
+      
+        </div>
+   
+    </ion-content>
+ </ion-view>

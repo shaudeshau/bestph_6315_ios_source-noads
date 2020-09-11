@@ -1,0 +1,31 @@
+<ion-view sb-page-background
+          class="ewallet ewallet-transfer-plc">
+        <ion-nav-title></ion-nav-title>
+   
+    <ion-content class="has-header">
+        
+        <div class="list" ng-if="!is_loading">
+            <a  class="item item-custom remove-border">
+                <h2>{{ ::"Transfer Money to a PLC" | translate:"ewallet" }}</h2>
+                 <p class="display-available-balnce">
+                  {{ ::"Available Balance" | translate:"ewallet" }} : <i>{{cart.currency_code}}</i>{{current_balance}}
+                </p>
+            </a>
+        </div>
+
+        <div class="list amount-enter-box">
+
+          <label class="item item-input item-custom remove-border amount-enter-item">
+             <input class="amount-enter-input" ng-init="cart.amount" autocomplete="off" ng-model="cart.amount" type="number" placeholder='{{ ::"Enter Amount" | translate:"ewallet" }}'>
+          </label>          
+          
+          <label class="item item-custom remove-border margintop-20">
+                 <button ng-disabled="(cart.amount > 0) ? false : true" class="button button-full button-positive-custom" ng-click="transferPlcNow()">
+                    {{ ::"Transfer Now" | translate:"ewallet" }}
+                </button>
+          </label>
+      
+        </div>
+
+    </ion-content> 
+</ion-view>

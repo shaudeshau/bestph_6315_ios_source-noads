@@ -1,0 +1,93 @@
+<ion-view sb-page-background
+          class="woocommerce woocommerce-products">
+
+    <ion-nav-title>{{ page_title }}</ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-custom button-icon icon"
+                ng-click="goTo('cart')">
+            <i class="wc-icon icon icon-custom ion-ios-cart"></i>
+            <span class="badge badge-assertive badge-assertive-custom cart-badge">{{ cart_qty }}</span>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="secondary">
+        <button ng-click="refresh()"
+                class="button button-clear header-item">
+            <i class="wc-icon icon icon-custom ion-sb-refresh"></i>
+        </button>
+        <button class="button button-custom button-icon icon"
+                ng-click="goTo('home')">
+            <i class="wc-icon icon icon-custom ion-home"></i>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <div class="loader"
+             ng-show="isLoading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+
+        <ion-list ng-if="!isLoading">
+            <div ng-if="products.length > 0"
+                 sb-products
+                 products="products"
+                 value-id="value_id"></div>
+
+            <ion-item ng-if="products.length == 0"
+                      class="item-custom item-text-wrap">
+                {{ ::"No products for now." | translate }}
+            </ion-item>
+        </ion-list>
+
+        <ion-infinite-scroll ng-if="!isLoading && hasMore"
+                             on-infinite="loadMore()"
+                             immediate-check="false"
+                             distance="20%"
+                             class="spinner-custom">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+    <style type="text/css">
+        .product-name {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding: 5px;
+        }
+
+        .product-price {
+            padding: 5px;
+        }
+
+        .card {
+            margin: 0;
+            position: relative;
+        }
+
+        .sale-badge {
+            font-size: 50px;
+            position: absolute;
+            right: 15px;
+            top: -15px;
+            color: #FFC107;
+        }
+
+        .out-of-stock {
+            font-size: 20px;
+            width: 100%;
+            position: absolute;
+            top: 15px;
+            color: #FFFFFF;
+            background-color: #FF0000;
+        }
+
+        .cart-badge {
+            background-color: #F44336;
+            color: #ffffff;
+        }
+    </style>
+
+</ion-view>

@@ -1,0 +1,34 @@
+.layout.intro #sldr {
+width: 100%;
+height: 100%;
+text-align: center;
+display: none;
+}
+
+.layout.intro #sldr img { 
+display: block;
+margin: 0 auto;  
+}
+
+.layout.intro .slider {
+height: 100vh;
+}
+
+.layout.intro .stbtn {
+display: block;
+position: absolute;
+width: 100%;
+top: initial;	
+}
+
+.layout.intro .skipbtn {
+position: absolute;
+width: 100%;
+top: initial;	
+}
+
+.layout.intro #restore {
+position: absolute;
+width: 100%;
+text-align: center;
+}

@@ -1,0 +1,37 @@
+<ion-item ng-class="{'card' : getCardDesign()}"
+          class="item-custom">
+    
+    <div class="item-avatar post-author">
+        <img ng-src="{{ customerImagePath() }}" ng-click="showProfile()" />
+        <h2 ng-click="showProfile()">
+            {{ customerName() }}
+            
+        </h2>
+        <p class="post-date" style="font-size: 11px;">
+            <span ng-class="{'link': 
+                        hasFollowers()
+            }" ng-click="goToFollowersOrFriendsList('followers')" ng-if="followEnable()" >Followers({{ post.followers_count }}) |</span>
+            <span ng-class="{'link': 
+                        hasFriends()
+            }" ng-click="goToFollowersOrFriendsList('friends' )" >Friends({{ post.friends }})</span>
+        </p>
+    </div>
+    <div class="post-body" style="padding: 0px !important;">
+        &nbsp;
+    </div>
+    
+    <div class="post-actions" ng-if="canChatOrFollow()">
+        <div class="row">
+            <div class="text-center col-50" ng-if="canChat()" ng-click="openChatWindow()">
+                <i class="icon ion-sb-comment post-action-icon"></i> 
+                <span ng-show="settings.chat_text" >{{ settings.chat_text }}</span>
+                <span ng-if="!settings.chat_text">{{ ::"Chat" | translate:"socialnetworks" }}</span>
+            </div>
+            <div class="text-center col-50" ng-click="followCustomer()"  ng-if="canFollow()" >
+                <i class="ionicons ion-android-person-add"></i>
+                <span ng-show="settings.follow_text" >{{ settings.follow_text }}</span>
+                <span ng-if="!settings.follow_text">{{ ::"Follow" | translate:"socialnetworks" }}</span>
+            </div>
+        </div>
+    </div>
+</ion-item>

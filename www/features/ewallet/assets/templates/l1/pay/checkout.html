@@ -1,0 +1,48 @@
+<ion-view sb-page-background
+          class="ewallet ewallet-checkout" ng-controller="EwalletPayCheckoutController">
+        <ion-nav-title></ion-nav-title>
+   
+    <ion-content class="has-header">
+        
+        <div class="list card remove-margin-bottom" ng-if="!is_loading">
+            <a  class="item item-custom remove-border">
+                <span class="item-note icon-custom font-bold">
+                    <i>{{cart.currency_code}}</i>{{cart.amount}}
+                </span>
+                <p>{{ ::"Total amount to be paid" | translate:"ewallet" }}</p>
+                <h2 class="customer_name">{{cart.firstname}}</h2>
+            </a>
+        </div>
+
+    <div class="list card wallet-checkout-balance-list">
+        <div class="item item-custom wallet-checkout-balance-item">
+            <span class="item-note icon-custom font-bold">
+                <i>-{{cart.currency_code}}</i>{{cart.amount_debit_from_wallet}}
+            </span>
+            <h2 class="wallet-name">{{application.app_name}} {{ ::"Wallet" | translate:"ewallet" }}</h2>
+            <p class="display-wallet-balance">({{ ::"Available Balance" | translate:"ewallet" }} {{cart.currency_code}} {{cart.current_balance}})</p>
+         </div>
+
+         <div class="item item-custom">
+            <button ng-disabled='is_low_balance || is_submiting' ng-click="payToCustomerNow()" class="button button-full button-positive-custom">
+              {{ ::"Pay Now" | translate:"ewallet" }}
+          </button>
+         </div>
+  </div>
+
+
+   <div class="list card wallet-checkout-low-balance-list" ng-if="is_low_balance">
+      <div class="item item-custom wallet-checkout-low-balance-item">
+        <h2 class="low-balance-warring-title">{{ ::"You have Low payable Balance" | translate:"ewallet" }}</h2>
+        <p class="low-balance-warring">{{ ::"Conitnue to add" | translate:"ewallet" }} <i>{{cart.currency_code}}</i>{{cart.required_more_amount}} {{ ::"to" | translate:"ewallet" }} {{application.app_name}}</p>
+        <p>
+        <button  ng-click="goToAddWallet()" class="button button-full button-positive-custom">
+            {{ ::"Add" | translate:"ewallet" }} <i>{{cart.currency_code}}</i>{{cart.required_more_amount}} & {{ ::"Pay" | translate:"ewallet" }}
+        </button>
+         </p>
+      </div>
+  </div>
+
+ </ion-content>   
+
+</ion-view>

@@ -1,0 +1,89 @@
+<ion-view smartengine-back-img="{{ ads_background_image }}"
+          ads-background-color="{{ ads_background_color }}"
+          id="ads_view"
+          ng-class="(ads_background_image !='') ? 'ads-backgroung' : ''"
+          hide-nav-bar="true">
+    <ion-content scroll="false">
+        <div class="loader" ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+        <div ng-if="showClose == 0" class="close-button" ng-click="skipAds()">
+            <i class="icon ion-close-circled" ng-style="{'color': close_slider_background_color}"></i>
+        </div>
+
+        <ion-slides ng-if="!is_slider" options="data.sliderOptions" slider="data.sliderDelegate">
+            <ion-slide-page>
+                <div class="card text-center ads">
+                    <div class="item  item-text-wrap item-custom ads-description">
+                        <p ng-if="currectAds.description"
+                           class="padding"
+                           ng-bind-html="currectAds.description | trusted_html"></p>
+                    </div>
+                    <div class="item item-custom ads-button">
+                        <button ng-if="currectAds.url"
+                                class="button button-custom"
+                                ng-style="{'border-color': currectAds.ad_border_color,'background-color': currectAds.button_background_color, 'color': currectAds.button_text_color }"
+                                ng-click="openLink(currectAds.url , currectAds.url_select, currectAds.smartengine_id )">{{ currectAds.button_text === '' ? 'Click here' : currectAds.button_text }}
+                        </button>
+                    </div>
+                </div>
+            </ion-slide-page>
+        </ion-slides>
+
+        <ion-slides ng-if="is_slider" options="data.sliderOptions2" slider="data.sliderDelegate">
+            <ion-slide-page ng-repeat="ads in slider_images" >
+                <div class="card text-center ads">
+                    <div class="item  item-text-wrap item-custom ads-description">
+                        <p ng-if="currectAds.description"
+                           class="padding"
+                           ng-bind-html="currectAds.description | trusted_html"></p>
+                    </div>
+                    <div class="item item-custom ads-button">
+                        <button ng-if="currectAds.url"
+                                class="button button-custom"
+                                ng-style="{'border-color': currectAds.ad_border_color,'background-color': currectAds.button_background_color, 'color': currectAds.button_text_color }"
+                                ng-click="openLink(currectAds.url , currectAds.url_select, currectAds.smartengine_id)">{{ currectAds.button_text === '' ? 'Click here' : currectAds.button_text
+                            }}
+                        </button>
+                    </div>
+                </div>
+            </ion-slide-page>
+        </ion-slides>
+    </ion-content>
+    <style type="text/css">
+        .swiper-container-horizontal>.swiper-pagination{
+            bottom: 10%;
+        }
+        .ads-description{
+          /*  min-height: 50%;*/
+          position: absolute;
+        }
+        .card .item.item-custom {
+            background-color: transparent !important;
+            border: 0px !important;
+        }
+        .close-button {
+            text-align: right;
+            margin-top: 10px;
+            margin-right: 10px;
+            font-size: 30px;
+            background: transparent;
+        }
+        .ads-button {
+            width: 100%;
+        }
+        .ads {
+            box-shadow: none;
+            height: 100%;
+        }
+        .ads-backgroung {
+            background-position: center center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+        }
+        .item.item-custom.ads-button {
+            min-height: 10%;
+          /*  top: 15%;*/
+        }
+    </style>
+</ion-view>

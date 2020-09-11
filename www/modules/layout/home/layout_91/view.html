@@ -1,0 +1,66 @@
+<div class="layout l91" ng-controller="L91Controller">
+
+<div id="sidebar">
+<div class="toggle-btn" onclick="toggleSidebar(); toggle_div_fun('tboxhide');">
+</div>
+
+<div class="{{ features.layoutOptions.label }}">
+    <ion-content class="homepage-custom" scrollbar-y="false">
+        <ul class="items homepage-custom">
+            <li ng-repeat="feature in features.options" class="border-custom" tabbar-items option="feature" id="feature-{{ $index }}" go-to-url="goTo(feature)">
+                <img ng-src="{{ feature.icon_url }}"/>
+                <p>{{ feature.name }}</p>
+                <div ng-if="feature.code == 'push_notification' && push_badge" class="badge-custom">{{ push_badge }}</div>
+            </li>
+        </ul>
+    </ion-content>
+</div>
+
+</div>
+
+<div id="tboxhide">
+<div class="tbox">
+    <ul class="row homepage-custom tabs tabs-icon-top" ng-class="{ 'background-transparent' : tabbar_is_transparent }" ng-show="tabbar_is_visible">
+		<li class="col col-20 tab-item" ng-repeat="feature in features.options" tabbar-items option="feature" go-to-url="goTo(feature)" ng-class="{ 'no-border': tabbar_is_transparent }">
+		<img ng-src="{{ feature.icon_url }}" />
+		</li>
+    </ul>
+</div>
+</div>
+
+</div>
+
+<style>
+.layout.l91 #sidebar {
+width: {{ features.layoutOptions.togglemenuwidth }};
+left: -{{ features.layoutOptions.togglemenuwidth }};
+}
+
+.layout.l91 .toggle-btn { left: {{ features.layoutOptions.togglemenuwidth }}; }
+
+.layout.l91 .toggle-btn {
+ width: {{ features.layoutOptions.togglebtnsize }};
+ height: {{ features.layoutOptions.togglebtnsize }}; 
+ background: url({{ features.layoutOptions.menuiconurl }});
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+.layout.l91 .active div.toggle-btn {
+ width: {{ features.layoutOptions.togglebtnsize }};
+ height: {{ features.layoutOptions.togglebtnsize }};
+ background: url({{ features.layoutOptions.closeiconurl }});
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+.layout.l91 .r99 ul.items li p, .layout.l91 .r9 li p {
+text-transform: {{ features.layoutOptions.texttransform }};
+color: {{ features.layoutOptions.sidetextclr }};
+} 
+
+.layout.l91 #sidebar ul li {
+background: {{ features.layoutOptions.sidebgclr }};
+color: {{ features.layoutOptions.borderclr }};
+}
+</style>

@@ -1,0 +1,80 @@
+<ion-view sb-page-background
+          class="ewallet ewallet-transaction-details">
+    <ion-nav-title></ion-nav-title>
+  
+    <ion-content class="has-header">
+        
+    <div class="list" ng-if="!is_loading">
+
+          <div class="item item-custom remove-border">
+            <p class="text-center thankyou-success-icon">
+                <i class="icon ion-checkmark-circled rotate-45 icon-active-custom" ng-if="(transaction.payment_type == 'credit') && (transaction.status == 'success') "></i>
+                <i class="icon ion-checkmark-circled rotate-45 icon-active-custom" ng-if="(transaction.payment_type == 'debit') && (transaction.status == 'success')"></i> 
+                <i ng-if="(transaction.status == 'failed') ? true : false" class="icon ion-close-circled icon-danger-custom"></i>
+                <i ng-if="(transaction.status == 'pending') ? true : false" class="icon icon ion-ios-timer-outline icon-warning-custom"></i>
+             </p>
+              <p class="text-center">
+                <i class="icon-active-custom" ng-if="(transaction.payment_type == 'credit') && (transaction.status == 'success') ">{{ ::"Success" | translate:"ewallet" }}</i>
+                <i class="icon-active-custom" ng-if="(transaction.payment_type == 'debit') && (transaction.status == 'success')">{{ ::"Success" | translate:"ewallet" }}</i> 
+                <i ng-if="(transaction.status == 'failed') ? true : false" class="icon-danger-custom">{{ ::"Failed" | translate:"ewallet" }}</i>
+                <i ng-if="(transaction.status == 'pending') ? true : false" class="icon-warning-custom">{{ ::"In Progress" | translate:"ewallet" }}</i>
+             </p>
+          </div>
+          
+          <div  class="item item-custom remove-border">
+            <!-- <h2>{{ ::"Transaction Successful" | translate:"ewallet" }}</h2> -->
+            <p class="ewallet-transaction-details-amount">
+              <i>{{currency_code}}</i>{{transaction.amount}}
+            </p>
+            <p>
+              <a class="subdued">{{transaction.created_at}}</a>
+              <a class="subdued">|</a>
+              <a class="subdued">{{ ::"Closing Balance" | translate:"ewallet" }}: <i>{{currency_code}}</i>{{transaction.new_balance}}</a>
+            </p>
+       </div>
+
+        <div class="item item-custom" ng-if="(transaction.to_customer_id > 0 || transaction.to_store_id > 0) ? true : false">
+            <p class="opacity05" ng-if="(transaction.payment_type == 'debit' ) ? true : false">{{ ::"Paid To" | translate:"ewallet" }}</p>
+            <p class="opacity05" ng-if="(transaction.payment_type == 'credit' ) ? true : false">{{ ::"Received from" | translate:"ewallet" }}</p>
+            <p class="opacity05" ng-if="(transaction.method == 'payToPlc' ) ? true : false">
+              {{ ::"Transfer To" | translate:"ewallet" }}
+            </p>
+            
+           <h2 ng-if="(transaction.to_customer_id > 0 || transaction.to_store_id > 0) ? false : true">{{transaction.remark}}</h2>
+           <h2 ng-if="(transaction.to_customer_id > 0 ) ? true : false">{{ transaction.customer.firstname }} {{ transaction.customer.lastname }}</h2>           
+           <p ng-if="(transaction.to_customer_id > 0 ) ? true : false" ng-show="transaction.customer.email">( {{ transaction.customer.email }} )</p>
+       </div>
+
+
+       <div class="item item-custom" ng-if="(transaction.to_customer_id > 0 || transaction.to_store_id > 0) ? false : true">
+            <p class="opacity05" ng-if="(transaction.payment_type == 'credit' ) ? true : false">{{ ::"In Your" | translate:"ewallet" }}</p>
+            <h2  ng-if="(transaction.remark == 'In PLC' ) ? false : true">{{ application.app_name }} WALLET</h2>
+            <h2  ng-if="(transaction.remark == 'In PLC' ) ? true : false">{{transaction.remark}}</h2>
+         </div>
+
+        <div class="item item-custom" ng-if="(transaction.payment_type == 'credit' ) ? true : false">
+          <p class="opacity05" ng-if="(transaction.to_customer_id > 0 || transaction.to_store_id > 0) ? true : false">{{ ::"In Your" | translate:"ewallet" }}</p>
+          <p ng-if="(transaction.to_customer_id > 0 || transaction.to_store_id > 0) ? false : true">{{ ::"From" | translate:"ewallet" }}</p>
+          <h2 ng-if="(transaction.to_customer_id > 0 || transaction.to_store_id > 0) ? true : false">{{ application.app_name }} WALLET</h2>
+          <h2 ng-if="(transaction.to_customer_id > 0 || transaction.to_store_id > 0) ? false : true">{{ transaction.payment_method }}</h2>
+        </div>
+  
+         <div class="item item-custom" ng-if="(transaction.remark == '' ) ? false : true">
+          <p class="Remark">{{ ::"Remark" | translate:"ewallet" }}</p>
+          <h2>{{transaction.remark}}</h2>
+        </div>        
+
+        <div class="item item-custom">
+          <p class="opacity05">{{ ::"Transaction Id" | translate:"ewallet" }}</p>
+          <h2>{{transaction.transacrtion_id}}</h2>
+        </div>
+
+         <div class="item item-custom" ng-if="(transaction.message == '' ) ? false : true">
+          <p class="Remark">{{ ::"Message" | translate:"ewallet" }}</p>
+          <h2>{{transaction.message}}</h2>
+        </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

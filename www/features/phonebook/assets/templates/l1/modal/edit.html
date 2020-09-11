@@ -1,0 +1,60 @@
+<ion-modal-view sb-page-background
+                ng-controller="PhonebookInfoController"
+                class="phonebook phonebook-edit-details">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="close()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ "Edit detail" | translate:"phonebook" }}</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="list list-item">
+            <div style="margin-bottom: 20px;"></div>
+            <div class="item item-divider item-divider-custom">
+                {{ ::"About" | translate:"phonebook" }}
+            </div>
+
+             <label class="item item-input item-custom">
+                <textarea rows="4"
+                          placeholder="{{ forTranslate('Enter about your') }}..."
+                          ng-model="user.about_me"></textarea>
+            </label>
+
+            <div class="item item-divider item-divider-custom" >
+                {{ ::"Personal Info" | translate:"phonebook" }}
+            </div>
+
+             <label class="item item-input item-custom" >
+                <div class="input-label">
+                    <b>{{ ::"Mobile" | translate:"phonebook" }}</b>
+                </div>
+                <input class="text-right"
+                       type="text"
+                       placeholder="{{ forTranslate('Mobile') }}"
+                       ng-model="user.mobile_number" />
+            </label>
+
+             <label class="item item-input item-custom">
+                <div class="input-label">
+                    <b>{{ ::"DOB" | translate:"phonebook" }}</b>
+                </div>
+                <input class="text-right"
+                       type="date"
+                       placeholder="{{ forTranslate('DOB') }}"
+                       ng-model="user.date_of_brith" />
+            </label>
+
+
+            <button type="submit"
+                    class="button button-positive button-full button-positive-custom"
+                    ng-click="SaveCustomerProfile()"
+                    ng-show="!is_loading">{{ ::"Submit" | translate:"phonebook" }}</button>
+
+        </div>
+    </ion-content>
+</ion-modal-view>

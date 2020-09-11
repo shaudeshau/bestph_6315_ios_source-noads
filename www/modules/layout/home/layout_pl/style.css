@@ -1,0 +1,156 @@
+/* .layout.pl .patt-holder{background:#3382c0;-ms-touch-action:none} */
+.layout.pl .patt-wrap{position:relative;cursor:pointer}
+.layout.pl .patt-wrap li,.patt-wrap ul{list-style:none;margin:0;padding:0}
+.layout.pl .patt-circ{position:relative;float:left;-webkit-box-sizing:border-box;box-sizing:border-box;-moz-box-sizing:border-box}
+.layout.pl .patt-circ.hovered{border:3px solid #090}
+.layout.pl .patt-error .patt-circ.hovered{border:3px solid #BA1B26}
+.layout.pl .patt-hidden .patt-circ.hovered{border:0}
+.layout.pl .patt-dots,.patt-lines{border-radius:5px;height:10px;position:absolute}
+.layout.pl .patt-dots{width:10px;top:50%;left:50%;margin-top:-5px;margin-left:-5px}
+.layout.pl .patt-lines{background:rgba(255,255,255,.7);transform-origin:5px 5px;-ms-transform-origin:5px 5px;-webkit-transform-origin:5px 5px}
+.layout.pl .patt-hidden .patt-lines{display:none}
+
+.layout.pl .mhn-ui-wrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: initial;
+    margin: 30px auto 0;
+}
+.layout.pl .mhn-ui-wrap:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+}
+
+.layout.pl .mhn-lock-wrap {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    position: absolute;
+}
+.layout.pl .mhn-lock-wrap .mhn-lock-title {
+	font-size: 20px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .5)
+}
+.layout.pl .mhn-lock-wrap .mhn-lock-success {
+    color: transparent;
+    text-shadow: none;
+}
+.layout.pl .mhn-lock-wrap .mhn-lock-failure {
+    color: #f34235;
+}
+.layout.pl .mhn-lock {
+    margin: auto;
+}
+.layout.pl .patt-wrap {
+    margin: auto;
+    overflow: hidden;
+}
+.layout.pl .patt-wrap li {
+    -webkit-transition: all .4s ease-in-out 0s;
+    transition: all .4s ease-in-out 0s;
+}
+.layout.pl .patt-dots,
+.layout.pl .patt-lines {
+    -webkit-transition: background .1s ease-in-out 0s;
+    transition: background .1s ease-in-out 0s;
+}
+.layout.pl .patt-circ {
+    border: 3px solid transparent
+}
+
+.layout.pl .patt-error .patt-circ.hovered {
+    background: rgba(243, 66, 53, .4);
+    border-color: rgba(243, 66, 53, .8)
+}
+.layout.pl .patt-error .patt-lines {
+    background: rgba(243, 66, 53, .5)
+}
+.layout.pl .patt-success .patt-circ.hovered {
+    background: rgba(75, 174, 79, .4);
+    border-color: rgba(75, 174, 79, .8);
+}
+.layout.pl .patt-success .patt-lines {
+    background: rgba(75, 174, 79, .5);
+}
+.layout.pl .mhn-ui-page {
+    height: 100%;
+    z-index: 200;
+    display: none;
+    padding: 15px;
+    position: initial;
+}
+.layout.pl .mhn-ui-page.page-lock {
+    position: initial;
+}
+.layout.pl .mhn-ui-page .mhn-ui-app-title-head {
+    padding: 15px;
+    font-size: 16px;
+    margin: 0 -15px;
+    background: rgba(0, 0, 0, .4);
+}
+
+.layout.pl .mhn-lock-failure {
+    -webkit-animation: zoomIn .4s;
+            animation: zoomIn .4s;
+}
+.layout.pl .patt-circ:nth-child(1),
+.layout.pl .patt-circ:nth-child(2),
+.layout.pl .patt-circ:nth-child(3) {
+    -webkit-animation: fadeInUp .4s;
+            animation: fadeInUp .4s;
+}
+.layout.pl .patt-circ:nth-child(4),
+.layout.pl .patt-circ:nth-child(5),
+.layout.pl .patt-circ:nth-child(6) {
+    -webkit-animation: fadeInUp .6s;
+            animation: fadeInUp .6s;
+}
+.layout.pl .patt-circ:nth-child(7),
+.layout.pl .patt-circ:nth-child(8),
+.layout.pl .patt-circ:nth-child(9) {
+    -webkit-animation: fadeInUp .8s;
+            animation: fadeInUp .8s;
+}
+
+.layout.pl .bar1 {
+    left: 0;
+	right: 0;
+    top: 0;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+	line-height: 30px;
+}
+
+.layout.pl .bar2 {
+    right: 0;
+    top: 0;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+	line-height: 30px;
+}
+
+.layout.pl .bar1 .text1 {
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.layout.pl .bar2 .btn2 {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+}
+

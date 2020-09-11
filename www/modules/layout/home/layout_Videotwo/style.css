@@ -1,0 +1,152 @@
+.layout.layout_videotwo {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fff;
+}
+
+.layout.layout_videotwo .Videotwo-header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #FC466B;
+    /*position: fixed;*/
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+.layout.layout_videotwo .Videotwo-main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    /*margin-top: 60px;*/
+}
+.layout.layout_videotwo .Videotwo-mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.layout.layout_videotwo .Videotwo-mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+.layout.layout_videotwo #Videotwo-sidebarMenu {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    /*margin-top: 60px;*/
+    transform: translateX(250px);
+    transition: transform 250ms ease-in-out;
+    background: #fc466b;
+}
+.layout.layout_videotwo .Videotwo-sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.layout.layout_videotwo .Videotwo-sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.layout.layout_videotwo .Videotwo-sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.layout.layout_videotwo .Videotwo-sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+.layout.layout_videotwo input[type="checkbox"]:checked ~ #Videotwo-sidebarMenu {
+    transform: translateX(0);
+}
+
+.layout.layout_videotwo input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.layout.layout_videotwo .Videotwo-sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    right: 15px;
+    height: 22px;
+    width: 22px;
+}
+.layout.layout_videotwo .Videotwo-spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.layout.layout_videotwo .Videotwo-horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.layout.layout_videotwo .Videotwo-diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.layout.layout_videotwo .Videotwo-diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.layout.layout_videotwo input[type=checkbox]:checked ~ .Videotwo-sidebarIconToggle > .Videotwo-horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+.layout.layout_videotwo input[type=checkbox]:checked ~ .Videotwo-sidebarIconToggle > .Videotwo-diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+.layout.layout_videotwo input[type=checkbox]:checked ~ .Videotwo-sidebarIconToggle > .Videotwo-diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+.layout.layout_videotwo #Videotwo-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+}

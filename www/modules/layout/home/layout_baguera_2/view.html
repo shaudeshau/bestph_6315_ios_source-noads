@@ -1,0 +1,19 @@
+<div class="layout layout_baguera_2">
+
+  <div id="Baguera-menu1_bottom">
+    <input type="checkbox" name="zimenu" id="Baguera-menu1_bottom-menu">
+    <div id="Baguera-menu1" class="homepage-custom"></div>
+    <div id="Baguera-menu1_cercle" class="item homepage-custom border-custom  tabbar background-tabbar" ng-class="{ 'background-transparent' : tabbar_is_transparent }" ng-show="tabbar_is_visible">
+      <ul class="inner-scroll">
+        <li class="text-center homepage-custom translucent" tabbar-items ng-repeat="feature in features.overview.options" option="feature" go-to-url="goTo(feature);">
+          <div class="items">
+            <img ng-src="{{ feature.icon_url }}" width="30px" height="30px" />
+            <p>{{ feature.name }}</p>
+            <div ng-if="feature.code == 'push_notification' && push_badge" class="badge-custom">{{ push_badge }}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <label for="Baguera-menu1_bottom-menu" class="text-center homepage-custom border-custom" id="zitrigger"><p class="points">&#x2807;</p></label>
+  </div>
+</div>

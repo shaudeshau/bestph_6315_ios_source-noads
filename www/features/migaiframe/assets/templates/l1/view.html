@@ -1,0 +1,35 @@
+<div class="nav-bar-block">
+    <ion-header-bar class="bar-custom bar bar-header disable-user-behavior migaiframe-view" align-title="center">
+        <button ng-click="goToFrameMainPage()" class="button back-button buttons button-clear header-item">
+            <i class="icon ion-ios-arrow-back"></i>
+            <span class="default-title ng-binding">{{ "Back" | translate }}</span>
+            <span class="back-text" style="transform: translate3d(0px, 0px, 0px);">
+        </button>
+        <div class="title title-center header-item" id="migaiframe-title" ng-style="title_styles">
+            <span class="nav-bar-title ng-binding">{{ page_title }}</span>
+        </div>
+        <div class="buttons buttons-right header-item">
+            <span class="right-buttons">
+                <a class="button button-clear button-icon icon ion-home" ng-click="goToHomePage();"></a>
+            </span>
+        </div>
+    </ion-header-bar>
+</div>
+<ion-view class="migaiframe-view">
+    <ion-nav-title>{{ page_title }}</ion-nav-title>
+    <ion-content class="migaiframe-view" scroll="false" sb-background-image overflow-scroll="true">
+        <div class="loader"
+             ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+        <div ng-style="ios_styles">
+            <iframe id="miga_iframe" ng-src="{{ migaiframe.url }}" ng-if="migaiframe.url" width="100%" height="100%" onload="iframeLoaded()"></iframe>
+        </div>
+        <style> .backdrop { background-color: rgba(255,255,255,1) !important; } .nav-bar-block { z-index: 3 !important; } </style>
+    </ion-content>
+    <ion-footer-bar ng-click="openScanner();" style="cursor:pointer;background-color: {{ migaiframe.banner_bg_color }};color: {{ migaiframe.banner_text_color }}" ng-show="migaiframe.is_qr_ean">
+        <img ng-src="{{ migaiframe.icon }}" ng-hide="!migaiframe.icon" width="32" height="32" alt="{{ migaiframe.banner_text }}" />
+        <span style="margin-left:10px;margin-top:8px;">{{ migaiframe.banner_text }}</span>
+    </ion-footer-bar>
+
+</ion-view>

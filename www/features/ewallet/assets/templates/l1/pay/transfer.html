@@ -1,0 +1,30 @@
+<ion-view sb-page-background
+          class="ewallet ewallet-transfer">
+    <ion-nav-title></ion-nav-title>
+    
+    <ion-content class="has-header">
+     
+      <div class="list">
+          <a  class="item item-custom remove-border">
+             <h2>{{ ::"Money Transfer" | translate:"ewallet" }}</h2>
+         </a>
+      </div>
+
+      <div class="list">
+          <a class="item item-icon-left item-icon-right" ui-sref="ewallet-transfer-plc({value_id: value_id })">
+            <i class="icon ion-shuffle"></i>
+             {{ ::"Transfer Money to a Loyalty Card" | translate:"ewallet" }}
+            <i class="icon ion-chevron-right"></i>
+          </a>
+     </div>
+
+      <div class="list">
+          <a class="item item-icon-left item-icon-right" ui-sref="ewallet-paycontact({value_id: value_id})">
+             <i class="icon ion-ios-people-outline"></i> 
+             {{ ::"Transfer Money to a User" | translate:"ewallet" }}
+            <i class="icon ion-chevron-right"></i>
+          </a>
+     </div>
+    
+    </ion-content>  
+</ion-view>

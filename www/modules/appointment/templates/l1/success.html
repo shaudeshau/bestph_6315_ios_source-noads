@@ -1,0 +1,28 @@
+<ion-view   sb-page-background class="view_appointment" >
+    <ion-nav-title>{{ "Success" | translate }}</ion-nav-title>
+    <ion-content   class="appointment_checkout_page" >
+        <div class="loader" ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+        <div class="card">
+          <div class="item item-text-wrap">
+            <h2> {{success_heading}}</h2>
+             {{success_msg}}
+          </div>
+        </div>
+        <button class="button button-block button-custom" ng-click="goBack()">
+            {{ "Back To Home" | translate }}
+        </button>
+            
+    </ion-content>
+    <style>
+        /* CSS to change page content   */
+        {{COLOR_BACKGROUND}}
+        /* CSS to change header-bar color change    */
+        {{COLOR_HEADER}}
+        /* CSS to change button color   */
+        {{COLOR_BUTTON}}
+        /* CSS to change icon color*/
+        {{COLOR_ICON}}
+    </style>
+</ion-view>

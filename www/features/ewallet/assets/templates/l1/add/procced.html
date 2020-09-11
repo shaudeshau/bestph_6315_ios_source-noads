@@ -1,0 +1,57 @@
+<ion-view sb-page-background
+          class="ewallet ewallet-procced">
+    <ion-nav-title></ion-nav-title>
+  
+    <ion-content class="has-header">
+     <div class="list remove-margin-bottom">
+          <a  class="item item-custom remove-border">
+               <span class="item-note icon-custom font-bold">
+                  <i>{{cart.currency_code}}</i>{{cart.amount}}
+              </span>
+              <h2>{{ ::"Add Money to Wallet" | translate:"ewallet" }}</h2>
+         </a>
+      </div>
+
+      <div class="list wallet-procced-bank-list">
+        
+        <div class="item item-divider item-divider-custom wallet-procced-divider-item">
+            {{ ::"Select an option to Pay" | translate:"ewallet" }}
+        </div>
+
+         <div class="loader" ng-show="is_loading">
+          <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>  
+
+        <div class="item item-divider text-center" ng-if="!paymentMethodList.length && !is_loading"> {{ ::"No payment gateways available!" | translate:"ewallet" }}
+         </div>
+
+      <div ng-repeat="method in paymentMethodList" ng-if="paymentMethodList.length > 0">   
+        <!-- Paypal Method -->
+        <div class="item item-custom wallet-proceed-item item-body" ng-hide="is_loading" ng-if="method.gateway_code == 'paypal'">
+             <ion-radio class="remove-border" ng-value="'paypal'" ng-model="selectoption.method">
+              {{method.lable_name}}
+            </ion-radio>
+            <p  class="shot_description" ng-if="method.shot_description" ng-bind-html="method.shot_description | trusted_html"></p>
+            <button ng-click="payPaypalNow()" ng-disabled="is_submiting" ng-show="selectoption.method == 'paypal'"  class="button button-full button-positive-custom">
+                {{ ::"Pay Now" | translate:"ewallet" }}
+              </button>
+        </div>
+
+        <!-- Stripe Method --> 
+        <div class="item item-custom wallet-proceed-item item-body" ng-hide="is_loading" ng-if="method.gateway_code == 'stripe'">
+            <ion-radio class="remove-border" ng-value="'stripe'" ng-model="selectoption.method"> 
+               {{method.lable_name}}
+            </ion-radio>
+            <p class="shot_description" ng-if="method.shot_description"  ng-bind-html="method.shot_description | trusted_html"></p>
+            <form class="model-form" method="post" name="stripeform" class="stripeform" method="post" ng-submit="payStripeNow(stripeform.$valid,formData)" novalidate>        
+              <ng-include ng-if="selectoption.method != ''" ng-show="selectoption.method == 'stripe' && !is_loading" src="'./features/ewallet/assets/templates/l1/gateways/stripe.html'"></ng-include>          
+              <button type="submit" ng-disabled="is_submiting || !stripeform.$valid" ng-show="selectoption.method == 'stripe'" class="button button-full button-positive-custom">
+                {{ ::"Pay Now" | translate:"ewallet" }}
+              </button>        
+            </form>
+        </div> 
+
+      </div>
+     </div>
+    </ion-content>  
+</ion-view>

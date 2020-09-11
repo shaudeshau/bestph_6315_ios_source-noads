@@ -1,0 +1,115 @@
+.layout.l69 .sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.layout.l69 .sidenav .closebtn {
+position: absolute;
+top: 10px;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+.layout.l69 #main {
+transition: margin-left .5s;
+}
+
+.layout.l69 #main p.title {
+font-size: 25px !important;
+padding-top: 12px; 
+text-align: center;  
+}
+
+.layout.l69 #main .row {
+padding: 0 !important;
+}
+
+.layout.l69 #main .navbtn {
+display: block;
+width: 20px;
+margin-bottom: 0;
+margin-top: 3px;
+font-size: 36px !important;
+}
+
+.layout.l69 .sidenav ul.items li  { 
+display: -webkit-flex;
+display: flex;
+-webkit-align-items: center;
+align-items:center;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+width: 100%;
+height: 70px;
+padding: 10px 5px;
+}
+
+.layout.l69 .sidenav ul.items li p { 
+font-size: 13px;	
+margin: 0 0 0 10px;
+}
+
+.layout.l69 .sidenav li img {
+width: 30px;
+height: 30px;	
+margin: 0 0 0 10px;
+max-height: 100%;
+}
+
+.layout.l69 .sidenav li p {
+font-size: 10px; 
+line-height: 20px; 
+height: 20px; 
+overflow: hidden; 
+}
+
+.layout.l69 .sbox {
+width: 100%;
+height: 50%;
+}
+
+.layout.l69 .slider {
+height: 250px;
+top: 50px;
+}
+
+.layout.l69 .slider-slide {
+padding-top: 20px;
+text-align: center;
+}
+
+.layout.l69 .slider-pager {
+background-color: transparent;
+}
+
+.layout.l69 .sbox .sicon {
+display: none;
+}
+
+.layout.l69 .sbox .stext h2 {
+display: none;
+}
+
+.layout.l69 .r6menu ion-content { 
+position: absolute; 
+width: 100%; 
+height: 50%; 
+bottom: 0; 
+top: initial; 
+}
+
+.layout.l69 .r6menu .item h2 { 
+margin-top: 10px; 
+}
+
+.layout.l69 .r6menu .no-border{
+	border:none !important;
+}

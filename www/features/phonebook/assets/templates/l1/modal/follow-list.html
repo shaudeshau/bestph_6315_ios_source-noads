@@ -1,0 +1,47 @@
+<ion-modal-view sb-page-background
+                ng-controller="PhonebookInfoController"
+                class="phonebook phonebook-feed">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeFollow()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{customer_info.customer.firstname}} {{customer_info.customer.lastname}}</h1>
+    </ion-header-bar>
+   
+   <div class="tabs tabs-striped tabs-top tabs-background-positive-custom">
+        <a class="tab-item tab-item-custom" ng-class="follower_following_active == 1 ? 'active' : ''" ng-click ="follower_following_active=1" >
+          {{ "Followers" | translate:"phonebook" }} ({{follow_list.follower.length}})
+        </a>
+        <a class="tab-item tab-item-custom" ng-class="follower_following_active == 2 ? 'active' : ''" ng-click ="follower_following_active=2" >
+          {{ "Following" | translate:"phonebook" }} ({{follow_list.following.length}})
+        </a>
+    </div>
+    
+   <ion-content class="has-header has-subheader follower-content">
+    <div class="list" ng-if="follower_following_active == 1">
+       <div class="item item-avatar" ng-repeat="customer in follow_list.follower" ng-if="follow_list.follower.length > 0">
+          <img zoom-view zoom-src="{{ customer_avatar(customer.image) }}" src="{{ customer_avatar(customer.image) }}">
+          <h2>{{customer.firstname}} {{customer.lastname}}</h2>
+        </div>
+
+         <div class="item text-center" ng-if="follow_list.follower.length == 0">
+             <p> {{ ::"No followers yet!" | translate:"phonebook" }}</p>
+        </div>
+    </div>
+
+    <div class="list " ng-if="follower_following_active == 2">
+       <div class="item item-avatar" ng-repeat="customer in follow_list.following" ng-if="follow_list.following.length > 0">
+          <img zoom-view zoom-src="{{ customer_avatar(customer.image) }}" src="{{ customer_avatar(customer.image) }}">
+          <h2>{{customer.firstname}} {{customer.lastname}}</h2>
+      </div>
+
+        <div class="item text-center" ng-if="follow_list.following.length == 0">
+            <p> {{ ::"No following yet!" | translate:"phonebook" }}</p>
+        </div>
+   </div>
+  </ion-content>
+</ion-modal-view>

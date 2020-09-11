@@ -1,0 +1,156 @@
+<ion-view cache-view="false"
+          class="listing listing-favorite"
+          sb-page-background>
+    <ion-nav-title> {{ ::"My Activity" | translate:"propertylisting" }}</ion-nav-title>
+
+    <div class="loader"
+         ng-show="is_loading">
+        <ion-spinner class="spinner-custom"></ion-spinner>
+    </div>
+
+
+    <div ng-hide="is_loading"
+         class="tabs tabs-striped tabs-top tabs-background-positive-custom propertylisting-tabs tabs-icon-left">
+        <a class="tab-item tab-item-custom"
+           ng-class="is_favorites == 1 ?'active' : '' "
+           ng-click="tabContent(1)">
+            <i class="icon ion-android-favorite"></i>
+            {{ ::"Favorites" | translate:"propertylisting" }} ({{favoritecollection.length}})
+        </a>
+        <a class="tab-item tab-item-custom"
+           ng-class="is_view == 1 ?'active' : '' "
+           ng-click="tabContent(2)">
+            <i class="icon ion-eye"></i>
+            {{ ::"Last viewed" | translate:"propertylisting" }} ({{viewcollection.length}})
+        </a>
+        <a class="tab-item tab-item-custom"
+           ng-class="is_inbox == 1 ?'active' : '' "
+           ng-click="tabContent(3)">
+            <span class="badge badge-assertive badge-message">{{listingFavoriteData.unread_message}}</span>
+            <i class="icon ion-email"></i>
+            {{ ::"Inbox" | translate:"propertylisting" }}
+        </a>
+    </div>
+
+
+    <ion-content id="listing-filter-content"
+                 class="has-header has-subheader"
+                 ng-hide="is_loading"
+                 delegate-handle="FavoritesScroll">
+
+        <div class="list listing-list"
+             ng-if="!is_inbox && collectionList.length">
+            <div class="item item-divider item-divider-custom">
+                <span ng-show="is_favorites == 1">{{ ::"Favorites property listing" | translate:"propertylisting" }}</span>
+                <span ng-show="is_view == 1">{{ ::"Last viewed property listing" | translate:"propertylisting" }}</span>
+            </div>
+            <div ng-repeat="value in collectionList"
+                 ng-click="listingDeails(value.id)"
+                 class="listingBounceInUp">
+                <div class="item item-custom item-avatar listing-header">
+                    <img ng-src="{{ customer_avatar(value.customer.image, value.customer.is_app ) }}">
+                    <p class="listing-customer-name">{{value.customer.firstname}} {{value.customer.lastname}}
+                        <span class="listing-post-time">{{ convertDate(value.created_at) }}</span></p>
+                    <h2 class="listing-headline-name"> {{value.headline}} </h2>
+                </div>
+                <div class="item item-custom item-body listing-body">
+                    <span class="badge badge-assertive badge-assertive-custom listing-listing-for"> {{value.listing_for == 'NewProject' ? 'Project':  value.listing_for }} </span>
+                    <img class="full-image listing-feature-img"
+                         ng-src="{{ lisingFeaturesImages(value.feature_image) }}">
+
+                    <div class="property-listing-image-overlay-content"
+                         ng-if="listing_settings.enable_view_count || listing_settings.enable_favorite || value.total_images > 1">
+                        <div class="row">
+                            <div class="col col-33">
+                                <span ng-if="listing_settings.enable_view_count">
+                                    <i class="icon ion-eye"></i> {{value.views_count}}
+                                </span>
+                            </div>
+                            <div class="col col-33">
+                                <span ng-if="listing_settings.enable_favorite">
+                                    <i class="icon ion-android-favorite"></i> {{value.favorite_count}}
+                                </span>
+                            </div>
+                            <div class="col col-33">
+                                <span ng-if="value.total_images > 1">
+                                    <i class="icon ion-ios-photos"></i> +{{value.total_images-1}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="listing-other-info">
+                        <div class="row">
+                            <div class="col col-25 listing-plotsize">
+                                <span> {{value.property_sqft}} {{ ::"Sq.Ft." | translate:"propertylisting" }} </span>
+                            </div>
+                            <div class="col col-20 listing-bedroom">
+                                <span>
+                                    <img width="15px"
+                                         height="15px"
+                                         src="./features/propertylisting/assets/media/bedroom.png" /> {{value.bedrooms}}
+                                </span>
+                            </div>
+                            <div class="col col-20 listing-bathroom">
+                                <span>
+                                    <img width="15px"
+                                         height="15px"
+                                         src="./features/propertylisting/assets/media/bathroom.png" /> {{value.bathrooms}}
+                                </span>
+                            </div>
+                            <div class="col col-33 listing-price">
+                                <span class="icon-active-custom"
+                                      ng-if="value.rental_amount">{{value.currency_symbol}} {{value.rental_amount}}</span>
+                                <span class="icon-active-custom"
+                                      ng-if="value.selling_price">{{value.currency_symbol}} {{value.selling_price}}</span>
+                                <span class="icon-active-custom"
+                                      ng-if="value.starting_price">{{value.currency_symbol}} {{value.starting_price}}</span>
+                                <span class="icon-active-custom"
+                                      ng-if="value.minimum_selling_price">{{value.currency_symbol}} {{value.minimum_selling_price}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-60 listing-location">
+                                <span>
+                                    <i class="icon ion-location icon-active-custom"></i> {{value.taman_area}}, {{value.city}}, {{value.post_code}}
+                                </span>
+                            </div>
+                            <div class="col col-40 listing-type">
+                                <span> {{value.property_type}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="list"
+             ng-if="is_inbox && collectionList.length">
+            <div class="item item-divider item-divider-custom">
+                {{ ::"Messages" | translate:"propertylisting" }}
+            </div>
+
+            <div class="item item-avatar item-custom item-icon-left"
+                 ng-repeat="value in collectionList | orderBy: '-created_at'"
+                 ng-click="listingMessage(value)">
+                <img ng-src="{{ messageCustomerImage(value) }}">
+                <h2>{{ messageCustomerName(value) }}</h2>
+                <p>{{value.headline}}</p>
+                <span class="item-note">
+                  {{ convertMessageDate(value.created_at) }}
+                </span>
+            </div>
+        </div>
+
+        <div class="list"
+             ng-if="!is_loading && !collectionList.length">
+            <div class="item text-center item-custom">
+                {{ ::"No items found" | translate:"propertylisting" }}
+            </div>
+        </div>
+
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,40 @@
+<ion-view cache-view="false"
+                 class="listing propertylisting propertylisting-add amenities">
+
+    <ion-nav-title>{{ ::"Add amenities" | translate:"propertylisting" }} </ion-nav-title>
+    <div class="loader"
+    ng-show="is_loading">
+    <ion-spinner class="spinner-custom"></ion-spinner>
+    </div>
+    <div class="bar bar-subheader">
+      
+            <span class="col assertive assertive-custom"><i class="icon ion-home"></i></span>
+            <span class="col assertive assertive-custom"><i class="icon ion-location"></i></span>
+            <span class="col assertive assertive-custom"><i class="icon ion-pricetag"></i></span>
+            <span class="col calm calm-custom"><i class="icon ion-image"></i></span>
+            <span class="col light light-custom"><i class="icon ion-images"></i></i></span>
+            <span class="col light light-custom"><i class="icon ion-android-done-all"></i></span>
+     
+      </div>
+    <ion-content class="has-subheader ">
+      <form name="add_amenities" ng-if="listingAmenitiesData">
+        <div class="list">
+            <ion-list class="amenities-list">
+                <ion-checkbox ng-model="addpropertyValues.amenities[ameniti.id]"
+                              ng-value="ameniti.id"
+                              class="item-custom checkbox-custom"
+                              ng-repeat="ameniti in listingAmenitiesData">{{ameniti.name}}
+                </ion-checkbox>
+            </ion-list>
+            <button ng-disabled="add_amenities.$invalid" class="button button-block button-positive button-positive-custom"
+            ng-click="addamenities(addpropertyValues)">
+                {{ ::"Next" | translate:"propertylisting" }}
+            </button>
+            
+          </div>
+        </form>
+    </ion-content>
+
+   
+
+</ion-view>

@@ -1,0 +1,136 @@
+<ion-view cache-view="false"
+          class="listing listing-home">
+    <ion-nav-title>{{ page_title }}</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+        <button class="button button-clear header-item"
+                ng-click="filterMenuModal()">
+            <i class="icon ion-funnel"></i>
+        </button>
+    </ion-nav-buttons>
+
+      <ion-header-bar class="bar-subheader bar-custom bar bar-header" ng-show="listing_settings.enable_map_view">
+        <div class="button-bar text-center">
+            <div class="button button-custom active item-icon-left ng-binding">
+                <i class="icon ion-sb-list1"></i>
+                {{ ::"List" | translate:"propertylisting" }}
+            </div>
+            <div class="button button-custom item-icon-left ng-binding"  ui-sref="propertylisting-map({value_id: value_id})">
+                <i class="icon ion-sb-map"></i>
+                {{ ::"Map" | translate:"propertylisting" }}
+            </div>
+        </div>
+    </ion-header-bar>
+
+   <ion-content id="listing-content"
+                 class="has-header"
+                 scrollbar-y="false"
+                 overflow-scroll="false"
+                 delegate-handle="mainScroll">
+         
+          <div class="loader"
+               ng-show="is_loading">
+              <ion-spinner class="spinner-custom"></ion-spinner>
+          </div>
+
+        <div class="list listing-list" ng-hide="is_loading">
+
+            <div ng-repeat="value in collectionFilter"
+                 ng-click="listingDeails(value.id)"
+                 class="listingBounceInUp">
+                <div class="item item-custom item-avatar listing-header">
+                    <img ng-src="{{ customer_avatar(value.customer.image, value.customer.is_app ) }}">
+                    <p class="listing-customer-name">{{value.customer.firstname}} {{value.customer.lastname}}
+                        <span class="listing-post-time">{{ convertDate(value.created_at) }}</span>
+                    </p>
+                    <h2 class="listing-headline-name"> {{value.headline}} </h2>
+                </div>
+                <div class="item item-custom item-body listing-body">
+                    <span class="badge badge-assertive badge-assertive-custom listing-listing-for"> {{value.listing_for == 'NewProject' ? 'Project':  value.listing_for | translate:"propertylisting"  }} </span>
+                    <img class="full-image listing-feature-img"
+                         ng-src="{{ lisingFeaturesImages(value.feature_image) }}">
+
+                    <div class="property-listing-image-overlay-content"
+                         ng-if="listing_settings.enable_view_count || listing_settings.enable_favorite || value.total_images > 1">
+                        <div class="row">
+                            <div class="col col-33">
+                                <span ng-if="listing_settings.enable_view_count">
+                                    <i class="icon ion-eye"></i> {{value.views_count}}
+                                </span>
+                            </div>
+                            <div class="col col-33">
+                                <span ng-if="listing_settings.enable_favorite">
+                                    <i class="icon ion-android-favorite"></i> {{value.favorite_count}}
+                                </span>
+                            </div>
+                            <div class="col col-33">
+                                <span ng-if="value.total_images > 1">
+                                    <i class="icon ion-ios-photos"></i> +{{value.total_images-1}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="listing-other-info">
+                        <div class="row">
+                            <div class="col col-25 listing-plotsize">
+                                <span> {{value.property_sqft}}  {{ ::"Sq.Ft." | translate:"propertylisting" }}</span>
+                            </div>
+                            <div class="col col-20 listing-bedroom">
+                                <span>
+                                    <img width="15px"
+                                         height="15px"
+                                         src="./features/propertylisting/assets/media/bedroom.png" /> {{value.bedrooms}}
+                                </span>
+                            </div>
+                            <div class="col col-20 listing-bathroom">
+                                <span>
+                                    <img width="15px"
+                                           height="15px"
+                                           src="./features/propertylisting/assets/media/bathroom.png" /> {{value.bathrooms}}
+                                </span>
+                            </div>
+                            <div class="col col-33 listing-price">
+                                <span class="icon-active-custom"
+                                      ng-if="value.rental_amount">{{value.currency_symbol}} {{value.rental_amount}}</span>
+                                <span class="icon-active-custom"
+                                      ng-if="value.selling_price">{{value.currency_symbol}} {{value.selling_price}}</span>
+                                <span class="icon-active-custom"
+                                      ng-if="value.starting_price">{{value.currency_symbol}} {{value.starting_price}}</span>
+                                <span class="icon-active-custom"
+                                      ng-if="value.minimum_selling_price">{{value.currency_symbol}} {{value.minimum_selling_price}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-60 listing-location">
+                                <span>
+                                    <i class="icon ion-location icon-active-custom"></i> {{value.taman_area}}, {{value.city}}, {{value.post_code}}
+                                </span>
+                            </div>
+                            <div class="col col-40 listing-type">
+                                <span> {{value.property_type}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="list"
+             ng-if="!is_loading && !collectionFilter.length">
+            <div class="item text-center item-custom">
+                {{ ::"No items found" | translate:"propertylisting" }}
+            </div>
+        </div>
+
+        <ion-infinite-scroll ng-if="can_load_older_posts"
+                             on-infinite="loadFilterMore()"
+                             immediate-check="false"
+                             distance="50%"
+                             class="spinner-custom">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+</ion-view>

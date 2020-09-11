@@ -1,0 +1,331 @@
+<ion-modal-view cache-view="false"
+                sb-page-background
+                ng-controller="PropertylistingHomeController"
+                class="propertylisting propertylisting-details listing">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeModalDetails()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ :: feildsSettings.property_name.label_name | translate:"propertylisting" }}</h1>
+    </ion-header-bar>
+
+    <div class="loader"
+         ng-show="isLoading">
+        <ion-spinner class="spinner-custom"></ion-spinner>
+    </div>
+
+    <ion-content class="has-header has-footer"
+                 ng-hide="isLoading">
+        <div class="list listing-list">
+            <div class="item item-custom listing-slider">
+                
+                <span ng-if="currentCustomerId != listing_deails.customer.customer_id" ng-show="listing_deails.enable_favorite"
+                      ng-click="markAsFavorite(listing_deails.id)"
+                      class="icon icon-custom pull-left listing-details-favorite">
+                    <i class="icon ion-android-favorite{{ listing_deails.is_favorite == 1 ? '' : '-outline'}}"></i>
+                </span>
+
+                <span class="badge badge-assertive badge-assertive-custom listing-details-listing-for"> {{listing_deails.listing_for == 'NewProject' ? 'Project':  listing_deails.listing_for | translate:"propertylisting"}}</span>
+
+                <ion-slide-box id="propertylisting_slider"
+                               ng-if="listing_deails.total_images > 0"
+                               auto-play="true"
+                               slide-interval="3000"
+                               show-pager="true" ,
+                               does-continue="true"
+                               style="height: 150px;">
+                    <ion-slide ng-repeat="image in listing_deails.gallery">
+                        <img class="listing-feature-img" ng-src="{{ lisingFeaturesImages(image.original_image_path) }}" style="width:100%;"/>
+                    </ion-slide>
+                </ion-slide-box>
+                 <img class="listing-feature-img" ng-if="listing_deails.total_images == 0" ng-src="{{ lisingFeaturesImages(null) }}" style="width:100%;">
+            </div>
+            <div class="item item-custom listing-info">
+                <div class="listing-basic-info">
+                    <h2 class="listing-headline-name">{{ listing_deails.headline }}</h2>
+                    <p class="listing-type">{{ listing_deails.property_type }}
+                        <span class="icon-active-custom listing-price pull-right"
+                              ng-if="listing_deails.rental_amount">{{listing_deails.currency_symbol}} {{listing_deails.rental_amount}}</span>
+                        <span class="icon-active-custom listing-price pull-right"
+                              ng-if="listing_deails.selling_price">{{listing_deails.currency_symbol}} {{listing_deails.selling_price}}</span>
+                        <span class="icon-active-custom listing-price pull-right"
+                              ng-if="listing_deails.starting_price">{{listing_deails.currency_symbol}} {{listing_deails.starting_price}}</span>
+                        <span class="icon-active-custom listing-price pull-right"
+                              ng-if="listing_deails.minimum_selling_price">{{listing_deails.currency_symbol}} {{listing_deails.minimum_selling_price}}</span>
+                    </p>
+                </div>
+                <div class="row listing-size-info">
+                    <div class="col col-25 listing-plotsize">
+                        <span> {{listing_deails.property_sqft}} {{ :: area_unit | translate:"propertylisting" }} </span>
+                    </div>
+                    <div class="col col-25 listing-bedroom">
+                            <span ng-if="listing_deails.bedrooms">
+                                <img width="15px"
+                                     height="15px"
+                                     src="./features/propertylisting/assets/media/bedroom.png"/> {{listing_deails.bedrooms}}
+                            </span>
+                    </div>
+                    <div class="col col-25 listing-bathroom">
+                            <span ng-if="listing_deails.bathrooms">
+                                <img width="15px"
+                                     height="15px"
+                                     src="./features/propertylisting/assets/media/bathroom.png"/> {{listing_deails.bathrooms}}
+                            </span>
+                    </div>
+                    <div class="col col-25"></div>
+                </div>
+            </div>
+
+            <div class="item item-divider item-divider-custom">
+                {{ ::"More Details" | translate:"propertylisting" }}
+            </div>
+
+            <div class="item item-custom propertylisting-row-values"
+            ng-if="listing_deails.availability">
+                <span class="item-note">
+                    {{ :: feildsSettings.availability.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.availability}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+            ng-if="listing_deails.furnishing">
+                <span class="item-note">
+                    {{ :: feildsSettings.furnishing.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.furnishing | translate:"propertylisting"}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.year_of_construction">
+                <span class="item-note">
+                    {{ :: feildsSettings.year_of_construction.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.year_of_construction}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.tenure">
+                <span class="item-note">
+                    {{ :: feildsSettings.tenure.label_name | translate:"propertylisting" }}  {{ ::"Year" | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.tenure | translate:"propertylisting"}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.minimum_rent_tenure">
+                <span class="item-note">
+                    {{ :: feildsSettings.minimum_rent_tenure.label_name | translate:"propertylisting" }}  {{ ::"Year" | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.minimum_rent_tenure}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.down_payment">
+                <span class="item-note">
+                    {{ :: feildsSettings.down_payment.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.down_payment}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.floor_size">
+                <span class="item-note">
+                    {{ :: feildsSettings.floor_size.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.floor_size}} {{ :: area_unit | translate:"propertylisting" }}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.land_size">
+                <span class="item-note">
+                    {{ :: feildsSettings.land_size.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.land_size}} {{ :: area_unit | translate:"propertylisting" }}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.price_per_sqft">
+                <span class="item-note">
+                  {{ ::"Price per" | translate:"propertylisting" }} {{ :: area_unit | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.currency_symbol}} {{listing_deails.price_per_sqft}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.total_number_of_units">
+                <span class="item-note">
+                    {{ :: feildsSettings.total_number_of_units.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.total_number_of_units}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.floor">
+                <span class="item-note">
+                    {{ :: feildsSettings.floor.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.floor}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.total_floor">
+                <span class="item-note">
+                    {{ :: feildsSettings.total_floor.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.total_floor}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.full_loan">
+                <span class="item-note">
+                  {{ ::"Full loan" | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.full_loan == 0 ? 'Not Available' : 'Available' }}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.starting_price">
+                <span class="item-note">
+                    {{ :: feildsSettings.starting_price.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.currency_symbol}} {{listing_deails.starting_price}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.starting_price">
+                <span class="item-note">
+                    {{ :: feildsSettings.auction_date.label_name | translate:"propertylisting" }}
+                </span>
+                {{ convertDate(listing_deails.auction_date) }}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.auction_venue!=''">
+                <span class="item-note">
+                    {{ :: feildsSettings.auction_venue.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.auction_venue}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.auction_by!=''">
+                <span class="item-note">
+                    {{ :: feildsSettings.auction_by.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.auction_by}}
+            </div>
+
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.minimum_selling_price">
+                <span class="item-note">
+                    {{ :: feildsSettings.maximum_selling_price.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.currency_symbol}} {{listing_deails.minimum_selling_price}} -
+                {{listing_deails.maximum_selling_price}}
+            </div>
+            <div class="item item-custom propertylisting-row-values"
+                 ng-if="listing_deails.year_of_construction">
+                <span class="item-note">
+                  {{ ::"Status" | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.status}}
+            </div>
+        </div>
+
+
+        <div class="list"
+             ng-if="listing_deails.project_developer!='' || listing_deails.project_description!=''">
+            <div class="item item-divider item-divider-custom">
+                {{ :: feildsSettings.project_description.label_name | translate:"propertylisting" }}
+            </div>
+            <div class="item item-custom item-body">
+                <p> {{listing_deails.project_developer}} </p>
+            </div>
+            <div class="item item-custom item-body">
+                <p>{{listing_deails.project_description}}</p>
+            </div>
+        </div>
+
+        <div class="list">
+            <div class="item item-divider item-divider-custom">
+                {{ ::"Address" | translate:"propertylisting" }}
+            </div>
+
+            <div class="item item-custom propertylisting-row-values">
+                <span class="item-note"
+                      ng-if="listing_deails.taman_area!=''">
+                      {{ :: feildsSettings.area_Landmark.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.taman_area}}
+            </div>
+            <div class="item item-custom propertylisting-row-values">
+                <span class="item-note"
+                      ng-if="listing_deails.city!=''">
+                      {{ :: feildsSettings.city.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.city}}
+            </div>
+            <div class="item item-custom propertylisting-row-values">
+                <span class="item-note"
+                      ng-if="listing_deails.address!=''">
+                      {{ :: feildsSettings.address.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.address}}
+            </div>
+            <div class="item item-custom propertylisting-row-values">
+                <span class="item-note"
+                      ng-if="listing_deails.post_code">
+                      {{ :: feildsSettings.post_code.label_name | translate:"propertylisting" }}
+                </span>
+                {{listing_deails.post_code}}
+            </div>
+        </div>
+
+
+        <div class="list"
+             ng-if="listing_deails.descriptions!=''">
+            <div class="item item-divider item-divider-custom">
+                {{ ::"Descriptions" | translate:"propertylisting" }}
+            </div>
+
+            <div class="item item-custom item-body">
+                <p>{{listing_deails.descriptions}}</p>
+            </div>
+        </div>
+    
+        <div class="list"
+             ng-show="listing_deails.enable_owner_info"
+             ng-if="listing_deails.contact_person_name!=''">
+            <div class="item item-divider item-divider-custom">
+                {{ :: feildsSettings.contact_person_name.label_name | translate:"propertylisting" }}
+            </div>
+
+
+             <div class="item item-custom  item-icon-right">
+                {{listing_deails.contact_person_name}}
+                <a  ng-if="listing_deails.contact_person_no" href="tel:{{listing_deails.contact_person_no}}" class="icon ion-ios-telephone-outline icon-active-custom"></a>
+              </div>
+          </div>
+
+
+        <div class="list amenities-list"
+             ng-if="listing_deails.amenities.length">
+            <div class="item item-divider item-divider-custom">
+                {{ ::"Amenities" | translate:"propertylisting" }}
+            </div>
+            <a class="item item-avatar item-custom item-amenities"
+               ng-repeat="ameniti in listing_deails.amenities">
+                <img ng-src="{{ amenitiesImages(ameniti) }}">
+                <h2 class="amenities-name">{{ameniti.name}}</h2>
+            </a>
+        </div>
+
+    </ion-content>
+
+    <div class="bar bar-footer bar-footer-custom bar-listing-footer"
+         ng-hide="isLoading">
+        <div class="list listing-list">
+            <div class="item item-custom item-avatar listing-footer item-icon-right">
+                <img ng-src="{{ customer_avatar(listing_deails.customer.image, listing_deails.customer.is_app ) }}">
+                <h2 class="listing-customer-name">{{listing_deails.customer.firstname}}
+                    {{listing_deails.customer.lastname}} </h2>
+                <p style="font-size: 12px;">{{ convertDate(listing_deails.created_at) }}</p>
+            </div>
+        </div>
+        <button ng-if="currentCustomerId != listing_deails.customer.customer_id" ng-click="actionButtonbottom(listing_deails.id)"
+                class="button pull-right bottom-action-button">
+            <i class="icon ion-navicon-round"></i>
+        </button>
+
+    </div>
+
+</ion-modal-view>

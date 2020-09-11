@@ -1,0 +1,57 @@
+<ion-modal-view cache-view="false"
+                 ng-controller="PropertylistingEditController"
+                class="listing propertylisting propertylisting-edit ownerinfo">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeeditOwnerinfoModal()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ ::"Edit Contact Info" | translate:"propertylisting" }}</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header ">
+        <form name="edit_ownerinfo" novalidate ng-submit="edit_ownerinfo.$valid && editPropertyownerinfo(edit_listing_value)">
+            <div class="list">
+                
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">
+                    {{ :: feildsSettings.availability.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.availability.field_required == 1">*</span>
+                  </span>
+                  <input name="availability" type="date" ng-model="edit_listing_value.availability" ng-required="feildsSettings.availability.field_required == 1 ? true : false">
+                  <div ng-if="edit_ownerinfo.$submitted">
+                    <div class="assertive assertive-custom" ng-show="edit_ownerinfo.availability.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">
+                    {{ :: feildsSettings.contact_person_name.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.contact_person_name.field_required == 1">*</span>
+                  </span>
+                  <input name="contact_person_name" ng-required="feildsSettings.contact_person_name.field_required == 1 ? true : false"  type="text" placeholder="{{ forTranslate(feildsSettings.contact_person_name.label_name) }}"ng-model="edit_listing_value.contact_person_name">
+                  <div ng-if="edit_ownerinfo.$submitted">
+                    <div class="assertive assertive-custom" ng-show="edit_ownerinfo.contact_person_name.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+               
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">
+                    {{ :: feildsSettings.mobile_number.label_name | translate:"propertylisting" }}<span ng-if ="feildsSettings.mobile_number.field_required == 1">*</span>
+                </span>
+                  <input name="mobile_number" ng-required="feildsSettings.mobile_number.field_required == 1 ? true : false"  type="number" placeholder="{{ forTranslate(feildsSettings.mobile_number.label_name) }}"ng-model="edit_listing_value.contact_person_no">
+                  <div ng-if="edit_ownerinfo.$submitted">
+                    <div class="assertive assertive-custom" ng-show="edit_ownerinfo.mobile_number.$invalid">{{ ::"This field is required." | translate:"propertylisting" }}</div>
+                  </div>
+                </label>
+               
+                <button type="submit" class="button button-block button-positive button-positive-custom">
+                    {{ ::"Save" | translate:"propertylisting" }}
+                </button>
+                
+              </div>
+            </form>
+
+    </ion-content>
+
+</ion-modal-view>

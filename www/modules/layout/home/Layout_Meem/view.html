@@ -1,0 +1,48 @@
+<ion-content overflow-scroll=”true”>
+
+  <div class="layout_meem">
+    <div class="meem_col" tabbar-items ng-repeat="feature in features.overview.options" option="feature" go-to-url="goTo(feature);" >
+      <div class="meem_content">
+        <div class="meem_img"><img src="{{ feature.icon_url }}"></div>
+
+        <div class="meem_info">
+          <div class="meem_tooltip">
+            <button class="meem_btn" type="button">?</button>
+            <span class="tooltiptext">{{ feature.subtitle }}</span>
+          </div>
+
+
+          <div class="meem_text">
+            <h3>{{ feature.name }}</h3>
+            <button class="meem_btn" type="button">></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<style>
+    .layout_meem .meem_content .meem_info .meem_text h3 {
+      text-transform: {{ features.layoutOptions.MeemtextTransform }} !important;
+      font-size: {{ features.layoutOptions.MeemTitleSize }} !important;
+      color: {{ features.layoutOptions.MeemTitleColor }} !important;
+    }
+
+    .layout_meem .meem_content .meem_info .meem_text > .meem_btn {
+        background-color: {{ features.layoutOptions.MeemBtnColor }} !important;
+        color: {{ features.layoutOptions.MeemBtnFontColor }} !important;
+        display: {{ features.layoutOptions.displayenterbutton }} !important;
+   }
+
+   .layout_meem .meem_content .meem_tooltip {
+     display: {{ features.layoutOptions.displayinfobutton }} !important;
+   }
+
+   .layout_meem .meem_content .meem_tooltip .meem_btn {
+     color: {{ features.layoutOptions.MeemInfoBtnColor }} !important;
+     border: 1px solid {{ features.layoutOptions.MeemInfoBtnColor }} !important;
+   }
+
+	</style>
+
+</ion-content>

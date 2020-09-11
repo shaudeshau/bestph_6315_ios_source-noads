@@ -1,0 +1,27 @@
+.layout.l95 li img {width: 70px; height: 70px; margin: 0 auto; max-height: 100%;}
+.layout.l95 li p {font-size: 10px; line-height: 20px; height: 20px; overflow: hidden; }
+.layout.l95 {position: absolute;  top: 0;  left: 0;  bottom: 0;  width: 100%;  border: 0;}
+.layout.l95 ul.items li { float: left; display: block;  width: 45%;  height: 135px;  margin: 8% 2% -10% 2%;  text-align: center; }
+.layout.l95 ul.items li p { font-size: 13px; }
+
+.layout.l95 ion-content.homepage-custom.scroll-content.ionic-scroll {
+background-position: center;
+background-attachment: fixed;
+background-repeat:no-repeat;
+}
+
+.layout.l95 .mylogo {
+   display: block;	
+   width:100%; /*width of logo*/
+   height:auto; /*height of logo*/
+   margin:0; /* If you want no margin */
+   padding-bottom:20px; /*if your want to padding */
+}
+
+.layout.l95 .mylogo img{
+    display:block;
+    width:100%; /*width of logo*/
+    height:auto; /*height of logo*/
+    margin:0; /* If you want no margin */
+    padding-bottom:20px; /*if your want to padding */
+}

@@ -1,0 +1,78 @@
+<ion-view sb-page-background
+          class="ewallet ewallet-thankyou">
+    <ion-nav-title>
+        {{ page_title }}
+    </ion-nav-title>
+  
+    <ion-content class="has-header">
+        
+      <div class="list remove-margin-bottom" ng-if="!is_loading">
+         <div class="item item-custom remove-border">
+            
+            <p class="text-center thankyou-success-icon icon-active-custom" ng-if="(cart.status == 'success') ? true : false"> 
+              <i class="ion-checkmark-circled"></i> 
+            </p>
+           
+            <p class="text-center thankyou-failed-icon icon-danger-custom" ng-if="(cart.status == 'failed') ? true : false"> 
+              <i class="ion-close-circled"></i>
+            </p>          
+          </div>
+
+          <div class="item item-custom remove-border">
+            <p class="text-center thankyou-payment">
+               <i>{{cart.currency_code}}</i>{{cart.amount}}
+            </p>
+            <div ng-if="(cart.status == 'success') ? true : false">
+              <p class="text-center thankyou-sentto opacity05" ng-if="(cart.method == 'payToCustomer') ? true : false">
+                   <span class="text">{{ ::"Sent to" | translate:"ewallet" }}</span>
+              </p>
+              <p class="text-center thankyou-sentto opacity05" ng-if="(cart.method == 'addInWallet') ? true : false">
+                   <span class="text">{{ ::"Added Successfully to" | translate:"ewallet" }}</span>
+              </p>
+            </div>
+            <div ng-if="(cart.status == 'failed') ? true : false">
+               <p class="text-center thankyou-sentto opacity05">
+                   <span class="text">{{ ::"Failed" | translate:"ewallet" }}</span>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="item item-custom remove-border">
+           <p class="text-center thankyou-devider">
+             <span class="text">-----***-----</span>
+           </p>
+          </div>
+
+          <div class="item item-custom remove-border">
+            <p class="text-center thankyou-customername" ng-if="(cart.method == 'payToCustomer') ? true : false">  <span class="text">{{cart.firstname}} {{cart.lastname}}</span>
+            </p>
+            <p class="text-center thankyou-customername" ng-if="(cart.method == 'payToStore') ? true : false">  <span class="text">{{cart.firstname}} {{cart.lastname}}</span>
+            </p>
+            <p class="text-center thankyou-customeremail" ng-if="(cart.method == 'payToCustomer') ? true : false">  <span class="text">{{cart.email}}</span>
+            </p>
+
+             <p class="text-center thankyou-customername" ng-if="(cart.method == 'addInWallet') ? true : false"><span class="text">{{ ::"Your Wallet" | translate:"ewallet" }}</span>
+            </p>
+
+        </div>
+
+       <div class="item item-custom remove-border">
+           <p class="text-center thankyou-txnid opacity05">
+             <span class="text">{{ ::"Tranaction ID" | translate:"ewallet" }}</span>: {{cart.txnId}}
+           </p>
+           <p class="text-center thankyou-datetime">
+             <span class="text"><b>{{cart.datetime}}</b></span>
+           </p>
+       </div>
+ 
+       <div class="item item-custom remove-border">
+          <p class="text-center">
+            <a ui-sref="ewallet({value_id: value_id})">{{ ::"Go to Wallet Home" | translate:"ewallet" }}</a>
+          </p>
+       </div>
+
+      </div>
+
+  </ion-content>
+</ion-view>

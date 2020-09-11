@@ -1,0 +1,84 @@
+<div class="layout pl" ng-controller="PLController">
+<div class="mhn-ui-wrap">
+	<div class="mhn-ui-page page-lock" id="lock">
+		
+		<div class="mhn-lock-wrap">
+			<div class="mhn-lock-title" data-title="{{ features.layoutOptions.patternlocktext }}" style="color: {{ features.layoutOptions.patternlocktextcolor }}"></div>
+			<div class="mhn-lock"></div>
+		</div>
+	</div>
+	
+	<div class="{{ features.layoutOptions.label2 }}">    
+
+    <div class="bar1"><span class="text1">{{ features.layoutOptions.titletext }}</span></div>
+	<div class="bar2"><span class="btn2 ion-ios-locked" onclick="mhnUI.page.show('page-lock');mhnUI.data.set('')"></span></div> 
+
+	<div class="layout l5">
+    <ion-content>
+        <ul class="inner-scroll">
+            <li class="text-center homepage-custom translucent" ng-repeat="feature in features.options" tabbar-items option="feature" go-to-url="goTo(feature)">
+                <div class="items">
+                    <img ng-src="{{ feature.icon_url }}" />
+                    <p>{{ feature.name }}</p>
+                    <div ng-if="feature.code == 'push_notification' && push_badge" class="badge-custom">{{ push_badge }}</div>
+                </div>
+            </li>
+        </ul>
+    </ion-content>
+    </div>
+	
+	<div class="layout l6">
+    <ion-content>
+        <div ng-repeat="feature in features.options">
+            <a tabbar-items class="item item-avatar item-avatar-square homepage-custom border-custom translucent" option="feature" go-to-url="goTo(feature)" ng-class="{ 'no-border': tabbar_is_transparent }">
+                <img ng-src="{{ feature.icon_url }}" />
+                <h2>{{ feature.name }}</h2>
+                <span ng-if="feature.code == 'push_notification' && push_badge" class="badge badge-assertive">{{ push_badge }}</span>
+            </a>
+        </div>
+    </ion-content>
+    </div>
+	
+	<div class="layout l3">
+    <ion-content>
+        <ul class="inner-scroll">
+            <li class="text-center homepage-custom transparent" ng-repeat="feature in features.options"
+                tabbar-items option="feature" go-to-url="goTo(feature)" ng-class="{ 'no-border': tabbar_is_transparent }">
+                <div class="item homepage-custom border-custom" ng-class="{ 'background-transparent' : tabbar_is_transparent , 'no-border': tabbar_is_transparent}">
+                    <img ng-src="{{ feature.icon_url }}" />
+                    <div ng-if="feature.code == 'push_notification' && push_badge" class="badge-custom">{{ push_badge }}</div>
+                </div>
+                <p>{{ feature.name }}</p>
+            </li>
+        </ul>
+    </ion-content>
+    </div>
+	
+	</div>
+		
+</div>
+</div>
+<div id="lock_value" style="display: none;">{{ features.layoutOptions.patternlock }}</div>
+
+<style>
+.layout.pl .patt-dots { background: {{ features.layoutOptions.patterndotscolor }}; }
+.layout.pl .mhn-lock {  background: {{ features.layoutOptions.lockbgcolor }}; }
+.layout.pl .patt-circ.hovered {
+    border-color: {{ features.layoutOptions.patternbordercolor }};
+    background: {{ features.layoutOptions.patterncirclehover }};
+}
+.layout.pl .patt-lines {
+    background: {{ features.layoutOptions.patternlinecolor }};
+}
+
+.layout.pl {{ features.layoutOptions.label }} {
+ display: none;
+}
+
+.layout.pl .bar1 { background: {{ features.layoutOptions.titlebgcolor }}; }
+.layout.pl .bar1 .text1, .layout.pl .bar2 .btn2 { color: {{ features.layoutOptions.titletextcolor }}; }
+.layout.pl .bar1, .layout.pl .bar2 { margin-top:  {{ features.layoutOptions.label1 }}; }
+.layout.pl .bar2 { display: {{ features.layoutOptions.label4 }}; }
+.layout.pl .mhn-ui-wrap #lock { display: {{ features.layoutOptions.label3 }}; }
+
+ </style>

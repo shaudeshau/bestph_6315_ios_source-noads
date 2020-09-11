@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="
+            default-src * filesystem: cdvfile://* ws://* wss://* ionic://* mailto:;
+            script-src * filesystem: cdvfile://* ionic://* 'unsafe-inline' 'unsafe-eval';
+            object-src *;
+            style-src * ionic://* 'unsafe-inline';
+            img-src * data: android-webview-video-poster: ionic://*;
+            media-src * ionic://*;
+            frame-src * gap://ready ws://* wss://* ionic://* mailto:;
+            child-src * gap://ready ws://* wss://* ionic://* mailto:;
+            font-src * data:;
+            connect-src * ws://* wss://* filesystem: cdvfile://* ionic://*;">
+        <meta id="last_meta"
+              name="apple-mobile-web-app-capable"
+              content="yes">
+        <meta name="mobile-web-app-capable"
+              content="yes">
+
+        <title></title>
+
+        <!-- Ensure file will never be cached. -->
+            <script type="text/javascript">
+                var _ifopRoot = function () {
+                    return (/[?&]root(=([^&#]*)|&|#|$)/.exec(window.location.href))[2].replace(/\+/g, ' ');
+                }
+                document.write('<script src="ionic://localhost/_app_file_' + _ifopRoot() + '?t=' + Date.now() + '"><\/script>');
+            </script>
+
+        <script src="./dist/app.libs.min.js"></script>
+        <script src="./js/utils/url.js"></script>
+        <script src="./cordova.js"></script>
+        <script src="./dist/libraries.bundle.min.js"></script>
+        <script src="./dist/app.min.js"></script>
+        <script src="./dist/templates.js"></script>
+        <script src="./dist/utils.bundle.min.js"></script>
+        <script src="./dist/services.bundle.min.js"></script>
+        <script src="./dist/directives.bundle.min.js"></script>
+        <script src="./dist/providers.bundle.min.js"></script>
+        <script src="./dist/features.bundle.min.js"></script>
+        <script src="./dist/onloadchunks.bundle.min.js"></script>
+
+	
+		<script src="modules/layout/home/layout_siberian_swipe/swiper/swiper.min.js"></script>
+	
+		<script src="modules/layout/home/layout_siberian_swipe/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_siberian_18/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_siberian_year/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_Sokar/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_taxi/hooks.js"></script>
+	
+		<script src="modules/progressiveloyaltycards/controllers/progressiveloyaltycards.js"></script>
+	
+		<script src="modules/progressiveloyaltycards/factories/progressiveloyaltycards.js"></script>
+	
+		<script src="modules/progressiveloyaltycards/js/gauge.min.js"></script>
+	
+		<script src="modules/layout/home/layout_ribbon/hooks.js"></script>
+	
+		<script src="modules/migabirthday/controllers/migabirthday.js"></script>
+	
+		<script src="modules/migabirthday/factory/migabirthday.js"></script>
+	
+		<script src="modules/layout/home/Layout_Dream/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_101/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_91/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_pl/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_baguera_14/factories/state.js"></script>
+	
+		<script src="modules/layout/home/layout_baguera_14/hooks.js"></script>
+	
+		<script src="modules/woocommerce/controllers/woocommerce.js"></script>
+	
+		<script src="modules/woocommerce/factory/woocommerce.js"></script>
+	
+		<script src="modules/woocommerce/directives/sb-products.js"></script>
+	
+		<script src="modules/woocommerce/directives/sb-rating.js"></script>
+	
+		<script src="modules/woocommerce/service/woocommerce.js"></script>
+	
+		<script src="modules/layout/home/layout_104/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_Videotwo/hooks.js"></script>
+	
+		<script src="modules/layout/home/Layout_Meem/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_39/hooks.js"></script>
+	
+		<script src="modules/quiz/controllers/quiz.js"></script>
+	
+		<script src="modules/quiz/factories/quiz.js"></script>
+	
+		<script src="modules/layout/home/layout_d9/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_baguera_1/hooks.js"></script>
+	
+		<script src="modules/scratchcard/directives/sb-scratch.js"></script>
+	
+		<script src="modules/scratchcard/controllers/scratchcard.js"></script>
+	
+		<script src="modules/scratchcard/factory/scratchcard.js"></script>
+	
+		<script src="modules/layout/home/layout_introslider/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_90/hooks.js"></script>
+	
+		<script src="modules/chatrooms/controllers/chatrooms.js"></script>
+	
+		<script src="modules/chatrooms/factories/chatrooms.js"></script>
+	
+		<script src="modules/chatrooms/filters/emojify.js"></script>
+	
+		<script src="modules/chatrooms/libraries/base64.min.js"></script>
+	
+		<script src="modules/layout/home/layout_69/hooks.js"></script>
+	
+		<script src="modules/socialnetworks/controllers/socialnetworks.js"></script>
+	
+		<script src="modules/socialnetworks/controllers/socialnetworks-factory.js"></script>
+	
+		<script src="modules/socialnetworks/controllers/socialnetworks-directives.js"></script>
+	
+		<script src="modules/socialnetworks/controllers/chat.js"></script>
+	
+		<script src="modules/appointment/controllers/appointment.js"></script>
+	
+		<script src="modules/appointment/factories/appointment.js"></script>
+	
+		<script src="modules/layout/home/layout_cinema/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_baguera_12/hooks.js"></script>
+	
+		<script src="modules/socketio/libraries/socket.io.min.js"></script>
+	
+		<script src="modules/layout/home/layout_baguera_11/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_99/hooks.js"></script>
+	
+		<script src="modules/loginredirect/libraries/h5_lib.js"></script>
+	
+		<script src="modules/loginredirect/controllers/loginredirect.js"></script>
+	
+		<script src="modules/loginredirect/factory/loginredirect.js"></script>
+	
+		<script src="modules/layout/home/layout_95/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_royal/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_Steps/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_baguera_2/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_baguera_13/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_Videone/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_103/hooks.js"></script>
+	
+		<script src="modules/layout/home/layout_Zain/hooks.js"></script>
+	
+		<script src="modules/smartengine/controllers/smart.js"></script>
+	
+		<script src="modules/smartengine/factories/smart.js"></script>
+	
+		<script src="modules/smartengine/directive/smart.js"></script>
+	
+		<script src="modules/layout/home/layout_35/hooks.js"></script>
+	
+		<link href="modules/layout/home/layout_siberian_swipe/swiper/swiper.min.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_siberian_swipe/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_siberian_18/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_siberian_year/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_Sokar/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_taxi/style.css" rel="stylesheet">
+	
+		<link href="modules/progressiveloyaltycards/styles/progressiveloyaltycards.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_ribbon/style.css" rel="stylesheet">
+	
+		<link href="modules/migabirthday/styles/migabirthday.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/Layout_Dream/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_101/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_91/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_pl/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_baguera_14/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_baguera_14/separator.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_104/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_Videotwo/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/Layout_Meem/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_39/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_d9/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_baguera_1/style.css" rel="stylesheet">
+	
+		<link href="modules/scratchcard/css/scratchcard.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_introslider/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_90/style.css" rel="stylesheet">
+	
+		<link href="modules/chatrooms/stylesheets/chatrooms.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_69/style.css" rel="stylesheet">
+	
+		<link href="modules/socialnetworks/css/socialnetworks.css" rel="stylesheet">
+	
+		<link href="modules/appointment/styles/appointment.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_cinema/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_baguera_12/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_baguera_11/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_99/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_95/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_royal/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_Steps/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_baguera_2/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_baguera_13/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_Videone/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_103/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_Zain/style.css" rel="stylesheet">
+	
+		<link href="modules/layout/home/layout_35/style.css" rel="stylesheet">
+	
+		<script src="./features/folder_v2/folder_v2.js" data-feature="folder_v2"></script>
+	
+		<script src="./features/job/job.js" data-feature="job"></script>
+	
+		<script src="./features/m_commerce/m_commerce.js" data-feature="m_commerce"></script>
+	
+		<script src="./features/places/places.js" data-feature="places"></script>
+	
+		<script src="./features/radio/radio.js" data-feature="radio"></script>
+	
+		<script src="./features/wordpress_v2/wordpress_v2.js" data-feature="wordpress_v2"></script>
+	
+		<script src="./features/fanwall2/fanwall2.js" data-feature="fanwall2"></script>
+	
+		<script src="./features/migaiframe/migaiframe.js" data-feature="migaiframe"></script>
+	
+		<script src="./features/payment_cash/payment_cash.js" data-feature="payment_cash"></script>
+	
+		<script src="./features/payment_method/payment_method.js" data-feature="payment_method"></script>
+	
+		<script src="./features/payment_stripe/payment_stripe.js" data-feature="payment_stripe"></script>
+	
+		<script src="./features/previewer/previewer.js" data-feature="previewer"></script>
+	
+		<script src="./features/form_v2/form_v2.js" data-feature="form_v2"></script>
+	
+		<script src="./features/invitefriend/invitefriend.js" data-feature="invitefriend"></script>
+	
+		<script src="./features/classifieds/classifieds.js" data-feature="classifieds"></script>
+	
+		<script src="./features/phonebook/phonebook.js" data-feature="phonebook"></script>
+	
+		<script src="./features/propertylisting/propertylisting.js" data-feature="propertylisting"></script>
+	
+		<script src="./features/SmsGateway/SmsGateway.js" data-feature="SmsGateway"></script>
+	
+		<script src="./features/ewallet/ewallet.js" data-feature="ewallet"></script>
+	
+		<script src="./features/cabride/cabride.js" data-feature="cabride"></script>
+	
+		<script src="./features/attendance/attendance.js" data-feature="attendance"></script>
+	
+		<script src="./features/purchase/purchase.js" data-feature="purchase"></script>
+	</head>
+    <body ng-app="starter"
+          class="platform-browser platform-cordova platform-webview">
+
+        <!-- Global layout handler -->
+        <sb-side-menu ng-if="app_is_loaded"></sb-side-menu>
+
+        <!-- NoScript javascript alert. -->
+        <noscript><div class="javascript-required"><div class="javascript-header">Application</div><div class="javascript-message"><h3>JavaScript Required</h3><p>We're sorry, but this application requires JavaScript in order to work properly, please enable it and reload this page.</p><a class="javascript-button" href="./index-prod.html">Reload</a><div class="javascript-clear"></div></div></div><style type="text/css">div.ui-background-loader {display: none;}div.javascript-required {top: 0;left: 0;position: absolute;width: 100%;height: 100%;color: #333333;background-color: #f8f8f8;}div.javascript-header {width: 100%;height: 40px;font-size: 22px;text-align: center;color: #333333;line-height: 39px;background-color: #0099c7;border-bottom: 1px solid #ffffff;color: white;box-shadow: 0px 1px 1px grey;font-weight: bold;}div.javascript-message {width: 80vw;max-width: 600px;margin: 0 auto;margin-top: 20vh;padding: 40px;border: 1px solid lightgrey;background-color: #f0f0f0;color: #333333;box-shadow: 1px 1px 1px grey;border-radius: 2px;}div.javascript-clear {clear: both;}a.javascript-button {padding: 8px;text-decoration: none;color: white;background-color: #0099c7;border: 1px solid #0088b6;border-radius: 2px;font-weight: 15px;  text-transform: uppercase;  margin-top: 20px;  float: right;  }</style></noscript>
+
+        <div class="previewer-load"
+             ng-show="previewerNotice">{{ ::'Triple tap to close the preview' | translate }}</div>
+
+        <div class="previewer-splashscreen"
+             ng-style="previewerSplashscreenStyle"
+             ng-show="previewerSplashscreen">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+
+        <link href="./dist/app.bundle.min.css"
+              rel="stylesheet" />
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<ion-modal-view sb-page-background
+                ng-controller="PhonebookInfoController"
+                class="phonebook phonebook-settings">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closePrivacySettings()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ ::"Privacy Settings" | translate:"phonebook" }}</h1>
+    </ion-header-bar>
+    <ion-content class="has-header">
+            <div class="list">
+               <!-- Settings -->
+            <div class="item item-divider item-divider-custom">
+                 {{ ::"Can people see on your profile?" | translate:"phonebook" }}
+            </div>             
+            <ion-checkbox ng-model="settings.display_number"
+                       class="listingBounceInUp item-custom">{{ ::"Phone Number" | translate:"phonebook" }}
+            </ion-checkbox>
+
+             <ion-checkbox ng-model="settings.display_email"                      
+                       class="listingBounceInUp item-custom">{{ ::"Email Address" | translate:"phonebook" }}
+            </ion-checkbox>
+
+             <ion-checkbox ng-model="settings.display_dob"                      
+                       class="listingBounceInUp item-custom">{{ ::"DOB" | translate:"phonebook" }}
+            </ion-checkbox>
+
+
+             <button ng-click="saveSettings()"
+                    class="button button-block  button-positive button-positive-custom">
+                {{ ::"Save" | translate:"phonebook" }}
+            </button>
+
+        </div>
+
+    </ion-content>
+
+</ion-modal-view>

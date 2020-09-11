@@ -1,0 +1,135 @@
+<ion-modal-view cache-view="false"
+                sb-page-background
+                class="listing propertylisting propertylisting-filter-menu">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeFilterModal()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ ::"Filter" | translate:"propertylisting" }} </h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header has-footer">
+
+        <div class="list">
+            <div class="item item-divider item-divider-custom listing-filter-divider">
+                {{ ::"Property For" | translate:"propertylisting" }}
+               <span ng-show="filterValues.propertyFor!=''" class="badge badge-positive-custom">.</span>
+               <i class="icon ion-chevron{{ f_list == 3 ? '-up' : '-down'}} pull-right" ng-click="toggleList(3)"></i>
+            </div>
+            
+            <ion-list ng-if="f_list == 3">
+                <ion-radio ng-model="filterValues.propertyFor"
+                           ng-value="'Rent'"
+                           ng-checked='filterValues.propertyFor == "Rent"'
+                           class="listing-filter-item item-custom radio-custom">{{ ::"Rent" |
+                    translate:"propertylisting" }}
+                </ion-radio>
+                <ion-radio ng-model="filterValues.propertyFor"
+                           ng-value="'Sales'"
+                           class="listing-filter-item item-custom radio-custom">{{ ::"Sales" |
+                    translate:"propertylisting" }}
+                </ion-radio>
+                <ion-radio ng-model="filterValues.propertyFor"
+                           ng-value="'Auction'"
+                           class="listing-filter-item item-custom radio-custom">{{ ::"Auction" |
+                    translate:"propertylisting" }}
+                </ion-radio>
+                <ion-radio ng-model="filterValues.propertyFor"
+                           ng-value="'NewProject'"
+                           class="listing-filter-item item-custom radio-custom">{{ ::"New Project" |
+                    translate:"propertylisting" }}
+                </ion-radio>
+            </ion-list>
+
+            <div ng-if="listing_settings.enable_property_type" class="item item-divider item-divider-custom listing-filter-divider">
+                {{ ::"Property Type" | translate:"propertylisting" }}
+                <span ng-show="{{ filterValuesChecked(filterValues.propertyTypes) }}" class="badge badge-positive-custom">.</span>
+                <i class="icon ion-chevron{{ f_list == 0 ? '-up' : '-down'}} pull-right" ng-click="toggleList(0)"></i>
+            </div>
+            <div ng-if="f_list == 0">
+                <ion-list ng-if="listing_settings.enable_property_type" >
+                    <ion-checkbox class="listing-filter-item item-custom checkbox-custom"
+                                ng-repeat="value in propertytypes"
+                                ng-model="filterValues.propertyTypes[value.property_type]"
+                                ng-value="value.property_type">{{value.property_type}}
+                    </ion-checkbox>
+                </ion-list>
+            </div>
+
+
+            <div ng-if="listing_settings.enable_price" class="item item-divider item-body item-divider-custom listing-filter-divider">
+                {{ ::"Budget" | translate:"propertylisting" }}
+                <p style="font-size: 12px;" ng-show="filterValues.propertyFor==''">({{ ::"Must be select 'property for' option for filter by price!" | translate:"propertylisting" }})</p>
+            </div>
+
+            <div class="row budget-row" ng-if="listing_settings.enable_price">
+              <div class="col-50">
+                  <label class="item item-input item-stacked-label">
+                    <span class="input-label">{{ ::"Min" | translate:"propertylisting" }}</span>
+                    <input type="number"  ng-value="filterValues.minprice" ng-model="filterValues.minprice" placeholder="{{ ::'Min' | translate:'propertylisting' }}" ng-disabled="filterValues.propertyFor==''">
+                  </label>
+              </div>
+              <div class="col-50">
+                 <label class="item item-input item-stacked-label">
+                  <span class="input-label">{{ ::"Max" | translate:"propertylisting" }}</span>
+                  <input type="number"  ng-value="filterValues.maxprice" ng-model="filterValues.maxprice" placeholder="{{ ::'Max' | translate:'propertylisting' }}"  ng-disabled="filterValues.propertyFor==''">
+                </label>
+              </div>
+            </div>
+
+            <div  ng-if="listing_settings.enable_bedroom"  class="item item-divider item-divider-custom listing-filter-divider">
+                {{ ::"Bedrooms" | translate:"propertylisting" }}
+                <span ng-show="{{ filterValuesChecked(filterValues.badrooms) }}" class="badge badge-positive-custom">.</span>
+                <i class="icon ion-chevron{{ f_list == 1 ?'-up' : '-down'}} pull-right" ng-click="toggleList(1)"></i>
+            </div>
+            <div ng-if="f_list == 1">
+                <ion-list ng-if="listing_settings.enable_bedroom" >
+                    <ion-checkbox ng-model="filterValues.badrooms[n]"
+                                ng-value="n"
+                                class="listing-filter-item item-custom checkbox-custom"
+                                ng-repeat="n in range(1,10)">{{n}}
+                    </ion-checkbox>
+                </ion-list>
+            </div>
+
+            <div  ng-if="listing_settings.enable_bathroom" class="item item-divider item-divider-custom listing-filter-divider">
+                {{ ::"Bathrooms" | translate:"propertylisting" }}
+                <span ng-show="{{ filterValuesChecked(filterValues.bathrooms) }}" class="badge badge-positive-custom">.</span>
+                <i class="icon ion-chevron{{ f_list == 2 ?'-up' : '-down'}} pull-right" ng-click="toggleList(2)"></i>
+            </div>
+
+            <div ng-if="f_list == 2">
+                <ion-list ng-if="listing_settings.enable_bathroom">
+                    <ion-checkbox ng-model="filterValues.bathrooms[n]"
+                                ng-value="n"
+                                class="listing-filter-item item-custom checkbox-custom"
+                                ng-repeat="n in range(1,10)">{{n}}
+                    </ion-checkbox>
+                </ion-list>
+            </div>
+        </div>
+
+    </ion-content>
+
+    <div class="bar bar-custom bar-footer">
+        <button class="button button-clear button-custom"
+                ng-click="clearAllFilter()"> {{ ::"Clear all" | translate:"propertylisting" }}
+        </button>
+        <button class="button button-clear button-positive button-positive-custom"
+                ng-click="applyListingFilter(filterValues)">{{ ::"Apply" | translate:"propertylisting" }}
+        </button>
+    </div>
+
+    <style type="text/css">
+        .propertylisting-filter-menu .badge {
+            padding: 1px 1px!important;
+            font-size: 0px!important;
+            line-height: 8px!important;
+        }
+    </style>
+
+</ion-modal-view>

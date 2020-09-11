@@ -1,0 +1,2906 @@
+[
+    {
+        "file": "cordova_plugins.js",
+        "hash": "06658f2f5ff6fe47531faec8858a0b62"
+    },
+    {
+        "file": "modules/progressiveloyaltycards/factories/progressiveloyaltycards.js",
+        "hash": "2a1c416c3dc6eded28ba536a03d0ca5c"
+    },
+    {
+        "file": "modules/progressiveloyaltycards/js/gauge.min.js",
+        "hash": "88c4e66ff6777f64513e87f76e1a862c"
+    },
+    {
+        "file": "modules/progressiveloyaltycards/controllers/progressiveloyaltycards.js",
+        "hash": "4fc6a20356625dc134635e04aa4f78fa"
+    },
+    {
+        "file": "modules/progressiveloyaltycards/templates/l1/view.html",
+        "hash": "ea0ca603a74bbb92c1dda8cc17b6df4c"
+    },
+    {
+        "file": "modules/progressiveloyaltycards/templates/l1/term_conditions.html",
+        "hash": "85171294036a61b04f387bbb93c1f970"
+    },
+    {
+        "file": "modules/progressiveloyaltycards/templates/l1/pad.html",
+        "hash": "5853e925168b623f7e8664f81e70f307"
+    },
+    {
+        "file": "modules/progressiveloyaltycards/styles/progressiveloyaltycards.css",
+        "hash": "80a29154df9058ce3324c5ea93d56825"
+    },
+    {
+        "file": "modules/appointment/factories/appointment.js",
+        "hash": "e716dfe6fa26f18f3ee81fc08cb62540"
+    },
+    {
+        "file": "modules/appointment/js/appointment-wiz.js",
+        "hash": "0a43f86d4b262c109b8af058b54241c1"
+    },
+    {
+        "file": "modules/appointment/js/sha512.min.js",
+        "hash": "ae2430da21477a22d88bade7144094a3"
+    },
+    {
+        "file": "modules/appointment/controllers/appointment.js",
+        "hash": "697109c50b3b132054b31d9f36552b44"
+    },
+    {
+        "file": "modules/appointment/templates/l1/checkout.html",
+        "hash": "6bc5163bc6b9faf5f74a341a200e6394"
+    },
+    {
+        "file": "modules/appointment/templates/l1/transaction.html",
+        "hash": "67979dfa4454fcec480aac62a048d39d"
+    },
+    {
+        "file": "modules/appointment/templates/l1/view.html",
+        "hash": "cfea58760ef4fcd680cdf61fa1979357"
+    },
+    {
+        "file": "modules/appointment/templates/l1/book-class-session.html",
+        "hash": "322a5adbe67dd8176fcd016991a86a4f"
+    },
+    {
+        "file": "modules/appointment/templates/l1/location.html",
+        "hash": "704ad9f89f814a21db0e8e8ac4602a85"
+    },
+    {
+        "file": "modules/appointment/templates/l1/notification.html",
+        "hash": "dac00a07ef211bd7f84351e80f70f14d"
+    },
+    {
+        "file": "modules/appointment/templates/l1/booked.html",
+        "hash": "7ccf82b67ec30aff3107b325e67342b7"
+    },
+    {
+        "file": "modules/appointment/templates/l1/success.html",
+        "hash": "e1753658450b58aeb91afc1c1454693c"
+    },
+    {
+        "file": "modules/appointment/templates/l1/booked-classes.html",
+        "hash": "d24abcc3088b7ce257a0c50d9ae52d27"
+    },
+    {
+        "file": "modules/appointment/styles/appointment.css",
+        "hash": "c738e31af977f78be05d797d5dc026a2"
+    },
+    {
+        "file": "modules/loginredirect/factory/loginredirect.js",
+        "hash": "c8bbc98c3dc13e65bf6124806d73a172"
+    },
+    {
+        "file": "modules/loginredirect/controllers/loginredirect.js",
+        "hash": "4a6932c2a7e0a649dd59dcdc51c0f7e0"
+    },
+    {
+        "file": "modules/loginredirect/templates/l1/view.html",
+        "hash": "545624287605881ce6ceb0c15ce78789"
+    },
+    {
+        "file": "modules/loginredirect/libraries/h5_lib.js",
+        "hash": "1d06111c46a96c7808ca7d6c7192059d"
+    },
+    {
+        "file": "modules/smartengine/factories/smart.js",
+        "hash": "d05638df61c0bef1d5bad077d47f74ba"
+    },
+    {
+        "file": "modules/smartengine/directive/smart.js",
+        "hash": "5a653f4506e4f73d8046c1922286ea3c"
+    },
+    {
+        "file": "modules/smartengine/controllers/smart.js",
+        "hash": "63f974cd6ac451900139dce34d105192"
+    },
+    {
+        "file": "modules/smartengine/templates/l1/view.html",
+        "hash": "5ae1f2bc0183209d3c8f4c035b7f8775"
+    },
+    {
+        "file": "modules/scratchcard/factory/scratchcard.js",
+        "hash": "9dd149656bb5c6b7965a30dd83ea8c62"
+    },
+    {
+        "file": "modules/scratchcard/controllers/scratchcard.js",
+        "hash": "781137763c9137616292696b011855e0"
+    },
+    {
+        "file": "modules/scratchcard/templates/l1/view.html",
+        "hash": "ee56a297a01b1eefe101677be4ec413d"
+    },
+    {
+        "file": "modules/scratchcard/directives/sb-scratch.js",
+        "hash": "476676e09415223a2e88121a3d84368c"
+    },
+    {
+        "file": "modules/scratchcard/css/scratchcard.css",
+        "hash": "2383f2dab1987b03d18926a3ce9b6bf4"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_year/style.css",
+        "hash": "b5ce1a615a1c9edfef71df997ffe36e4"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_year/view.html",
+        "hash": "84bdd0187eb60b8b1967cf6f68dc4e25"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_year/hooks.js",
+        "hash": "8a3c60abbca6edff19fdecb715a85ab5"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_year/modal.html",
+        "hash": "14bfb9d9713507ffac41649c4cd90844"
+    },
+    {
+        "file": "modules/layout/home/layout_39/r9-menu.js",
+        "hash": "d754ee1c7944f80943ac753d7ce066e9"
+    },
+    {
+        "file": "modules/layout/home/layout_39/style.css",
+        "hash": "30a5a482c6835a39cadec00b76d4e90e"
+    },
+    {
+        "file": "modules/layout/home/layout_39/view.html",
+        "hash": "9ebc685c1c1561d37f7903360781df74"
+    },
+    {
+        "file": "modules/layout/home/layout_39/hooks.js",
+        "hash": "ac732cb44e75dc7f5b316a054af9e549"
+    },
+    {
+        "file": "modules/layout/home/layout_95/style.css",
+        "hash": "71a1f962ecceafe5424c87b984f833c9"
+    },
+    {
+        "file": "modules/layout/home/layout_95/view.html",
+        "hash": "7fd9716b54f9ab1b165b75d67b7127f0"
+    },
+    {
+        "file": "modules/layout/home/layout_95/hooks.js",
+        "hash": "ac3b3a2226baf90e32c7574de8280a58"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_12/style.css",
+        "hash": "8a48ca108ce034d0be9b523216b05c2f"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_12/view.html",
+        "hash": "616cefe921628c3dc40c38b73dfc5164"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_12/hooks.js",
+        "hash": "deb8fe8daaf681345d42c986051a6345"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_12/modal.html",
+        "hash": "0df44fdcae3173175fcbc2f67692fe08"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_12/waves-effect.js",
+        "hash": "df8b324d8830a65dfb0ad127891ca301"
+    },
+    {
+        "file": "modules/layout/home/layout_35/style.css",
+        "hash": "be5c232af304c67111cf233a0a94dcee"
+    },
+    {
+        "file": "modules/layout/home/layout_35/view.html",
+        "hash": "11cc17434be68057a5c7d600ce0156b5"
+    },
+    {
+        "file": "modules/layout/home/layout_35/hooks.js",
+        "hash": "d4841d21ec89932291d094776aa33b50"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_swipe/style.css",
+        "hash": "b285fcc54ab80701388f1234908daf46"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_swipe/view.html",
+        "hash": "a06231ac1c728e8acfeb36c092f03835"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_swipe/swiper/swiper.min.css",
+        "hash": "6af34d0737ad0ca608111771cf74cc79"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_swipe/swiper/swiper.min.js",
+        "hash": "fb13ef3e875ca3497ede35d3774be9d3"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_swipe/hooks.js",
+        "hash": "3b40cad03d0f70b4d68ada1790724ea1"
+    },
+    {
+        "file": "modules/layout/home/layout_taxi/style.css",
+        "hash": "f5093276846a7d3aee42903058210ebb"
+    },
+    {
+        "file": "modules/layout/home/layout_taxi/view.html",
+        "hash": "148968cb384e31f64eb7d2f031dcdf63"
+    },
+    {
+        "file": "modules/layout/home/layout_taxi/hooks.js",
+        "hash": "a7faadb3629f59c6c80a918aea9b1177"
+    },
+    {
+        "file": "modules/layout/home/layout_taxi/assets/background.png",
+        "hash": "ad001648482565c7da4da9b396672868"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_18/style.css",
+        "hash": "9f31af682ae215a137dfffd5ec86c1a3"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_18/view.html",
+        "hash": "f9ac0336d2be1b4556c5b5106bb8f6a0"
+    },
+    {
+        "file": "modules/layout/home/layout_siberian_18/hooks.js",
+        "hash": "7f3acc42975198ba1de7c1be90931fed"
+    },
+    {
+        "file": "modules/layout/home/layout_Zain/style.css",
+        "hash": "239ca8476c9b01ffef6d8840ee7ecc7f"
+    },
+    {
+        "file": "modules/layout/home/layout_Zain/view.html",
+        "hash": "4057175468f667795fd2d3f4104ec812"
+    },
+    {
+        "file": "modules/layout/home/layout_Zain/hooks.js",
+        "hash": "69446df0ea8992d930458ec55b02d62e"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_2/style.css",
+        "hash": "b7f182b226a85891a12723bd9e2c9a55"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_2/view.html",
+        "hash": "71beb74759033354e8e14d0d3ae30529"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_2/hooks.js",
+        "hash": "ced7d0a5755e9cb1b318cd82500e60fe"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_2/modal.html",
+        "hash": "b850e7a05f12f1549070ce94b154876b"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_1/style.css",
+        "hash": "67545c2da834dc23fb340b77bc7d66e7"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_1/view.html",
+        "hash": "a8b3d92f536046743853bd7f879817cf"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_1/hooks.js",
+        "hash": "2d115166afd8a7add7b065518155ce32"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_1/modal.html",
+        "hash": "b850e7a05f12f1549070ce94b154876b"
+    },
+    {
+        "file": "modules/layout/home/layout_103/style.css",
+        "hash": "09cdb8f569318873da133aa213757e57"
+    },
+    {
+        "file": "modules/layout/home/layout_103/view.html",
+        "hash": "b7c02e9a848cce4d11f8a75adad20c45"
+    },
+    {
+        "file": "modules/layout/home/layout_103/hooks.js",
+        "hash": "56d29a50a6e923c1322c7a97fb840b19"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_11/style.css",
+        "hash": "59d59344dab6ab9936eca8cdc7e81d61"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_11/view.html",
+        "hash": "7e8d3ba128cd7f8629413dc3e9badb39"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_11/hooks.js",
+        "hash": "3a9ab90d12d5ab0fe230d0b634fc612c"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_11/modal.html",
+        "hash": "1c84d2fe387920e3ab44b1e6c4608b43"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_11/waves-effect.js",
+        "hash": "df8b324d8830a65dfb0ad127891ca301"
+    },
+    {
+        "file": "modules/layout/home/layout_Sokar/style.css",
+        "hash": "bf3f2d4d212395d36b573e1df806f3c6"
+    },
+    {
+        "file": "modules/layout/home/layout_Sokar/view.html",
+        "hash": "ef6ab9c91cbdde573f9622d14d5a7502"
+    },
+    {
+        "file": "modules/layout/home/layout_Sokar/hooks.js",
+        "hash": "9ebf201c0993b7bdf54b90b36e32e536"
+    },
+    {
+        "file": "modules/layout/home/Layout_Meem/style.css",
+        "hash": "0809570c49bbd39b694fcd4aa5f504e0"
+    },
+    {
+        "file": "modules/layout/home/Layout_Meem/view.html",
+        "hash": "7c91d21a02e03f24f7a3b4264f42b7e4"
+    },
+    {
+        "file": "modules/layout/home/Layout_Meem/hooks.js",
+        "hash": "2bd4bf0457de3a06bfc030e70396619f"
+    },
+    {
+        "file": "modules/layout/home/layout_cinema/style.css",
+        "hash": "16b5c1d1d3d67e326309494d3c18ee49"
+    },
+    {
+        "file": "modules/layout/home/layout_cinema/view.html",
+        "hash": "8360d1138a8e950ef9a10cb4771e3c45"
+    },
+    {
+        "file": "modules/layout/home/layout_cinema/hooks.js",
+        "hash": "2d8c72bef296910fde72e234534f994e"
+    },
+    {
+        "file": "modules/layout/home/layout_101/style.css",
+        "hash": "d94614b73ce5629aba60522bae3f2f5b"
+    },
+    {
+        "file": "modules/layout/home/layout_101/view.html",
+        "hash": "88794f027c6b4b0d0f04f7c9b21d8971"
+    },
+    {
+        "file": "modules/layout/home/layout_101/hooks.js",
+        "hash": "f8eb03d2c03318690e72e552c76e1e18"
+    },
+    {
+        "file": "modules/layout/home/layout_d9/style.css",
+        "hash": "a65b565be4076d9f9127ae455f3e42a9"
+    },
+    {
+        "file": "modules/layout/home/layout_d9/view.html",
+        "hash": "26fa29c4545bc3244c897a2d4988cfed"
+    },
+    {
+        "file": "modules/layout/home/layout_d9/hooks.js",
+        "hash": "0d58441abd8f05129a996b83c1e1d085"
+    },
+    {
+        "file": "modules/layout/home/layout_d9/d9-menu.js",
+        "hash": "d754ee1c7944f80943ac753d7ce066e9"
+    },
+    {
+        "file": "modules/layout/home/layout_69/r9-menu.js",
+        "hash": "b2c406828249ae373bbb327513060c72"
+    },
+    {
+        "file": "modules/layout/home/layout_69/style.css",
+        "hash": "102da182a07944f50dbc43e295782d8b"
+    },
+    {
+        "file": "modules/layout/home/layout_69/view.html",
+        "hash": "aeca3557e12c9c20eb4d7cffd3e70da3"
+    },
+    {
+        "file": "modules/layout/home/layout_69/hooks.js",
+        "hash": "bbb9325ae9c0d4e9c5d0c6a0bd61fc37"
+    },
+    {
+        "file": "modules/layout/home/layout_91/style.css",
+        "hash": "7a8f7fcbf15f60a57a208c051e8b5642"
+    },
+    {
+        "file": "modules/layout/home/layout_91/view.html",
+        "hash": "8b7becf215008dd7d65d732ae0a3fc16"
+    },
+    {
+        "file": "modules/layout/home/layout_91/side-menu.js",
+        "hash": "1c0aa7b18c9768559940b6fa4365ce3e"
+    },
+    {
+        "file": "modules/layout/home/layout_91/hooks.js",
+        "hash": "7746a84f0ec504f890aae4f1856cbb74"
+    },
+    {
+        "file": "modules/layout/home/layout_introslider/style.css",
+        "hash": "f4f17790865a92e3427273952f4d845d"
+    },
+    {
+        "file": "modules/layout/home/layout_introslider/view.html",
+        "hash": "417ac6c697ad72c02176ea4e5300e379"
+    },
+    {
+        "file": "modules/layout/home/layout_introslider/hooks.js",
+        "hash": "97d213e1759a4395121b3d277c4c64f4"
+    },
+    {
+        "file": "modules/layout/home/layout_introslider/intro.js",
+        "hash": "011accce45da40fb46482d1973a6597a"
+    },
+    {
+        "file": "modules/layout/home/layout_Steps/style.css",
+        "hash": "cca3d8637c9b8455fc7910268e6e1b79"
+    },
+    {
+        "file": "modules/layout/home/layout_Steps/view.html",
+        "hash": "d1bad071c0cde3f2c7257bd1df57b030"
+    },
+    {
+        "file": "modules/layout/home/layout_Steps/hooks.js",
+        "hash": "63344dd351700d8c468b7f5596d9c8bf"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_14/style.css",
+        "hash": "f40371e14478a4f05a0acc522592e7f9"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_14/view.html",
+        "hash": "673ace53ba7b27a7deae389ef9ae5c6a"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_14/factories/state.js",
+        "hash": "f7ca26a636898bc3c88a83ef62334455"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_14/hooks.js",
+        "hash": "3d0e8ed184d80c981f6021ac964e9efb"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_14/modal.html",
+        "hash": "6aea26625beee5063adb88f2716ed31d"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_14/separator.css",
+        "hash": "84e6a0cd2ed5efedbc48a7a6dbf658d9"
+    },
+    {
+        "file": "modules/layout/home/layout_Videotwo/style.css",
+        "hash": "e381b70d1f448db0452f241e7f82b9e8"
+    },
+    {
+        "file": "modules/layout/home/layout_Videotwo/view.html",
+        "hash": "2c7529d58168bf83a57cac77111a0ddc"
+    },
+    {
+        "file": "modules/layout/home/layout_Videotwo/hooks.js",
+        "hash": "8283b3fdf1a5eec072f96dadd1ced02f"
+    },
+    {
+        "file": "modules/layout/home/layout_royal/style.css",
+        "hash": "f54a4110f8c0350489c1cc06b980b025"
+    },
+    {
+        "file": "modules/layout/home/layout_royal/view.html",
+        "hash": "ecb3bfad7cf9416d9f7112e2e2525ecf"
+    },
+    {
+        "file": "modules/layout/home/layout_royal/hooks.js",
+        "hash": "6e92a04946bda285b06fa16823c108fa"
+    },
+    {
+        "file": "modules/layout/home/layout_royal/royal.js",
+        "hash": "bf767bf1a41f6a8c7543e5c0c66ff306"
+    },
+    {
+        "file": "modules/layout/home/Layout_Dream/style.css",
+        "hash": "73786660d617ffa4c8469b02a468d8e5"
+    },
+    {
+        "file": "modules/layout/home/Layout_Dream/view.html",
+        "hash": "2d43f428905fc61852aaf77b36b8c957"
+    },
+    {
+        "file": "modules/layout/home/Layout_Dream/hooks.js",
+        "hash": "ce5f22680fb603009dc1345573e3e836"
+    },
+    {
+        "file": "modules/layout/home/layout_Videone/style.css",
+        "hash": "28c1a70a9e0cdb5cbca70dfc29c4599f"
+    },
+    {
+        "file": "modules/layout/home/layout_Videone/view.html",
+        "hash": "e60770de8d290237ced6edc0ffff8889"
+    },
+    {
+        "file": "modules/layout/home/layout_Videone/hooks.js",
+        "hash": "b047b9ee6524783af2d43d03f30b8af5"
+    },
+    {
+        "file": "modules/layout/home/layout_pl/style.css",
+        "hash": "137e82ead2d34942763c9f1e8ed19259"
+    },
+    {
+        "file": "modules/layout/home/layout_pl/view.html",
+        "hash": "f1a9ce030f43a8f92bb8ad905bc179e3"
+    },
+    {
+        "file": "modules/layout/home/layout_pl/patternLock.js",
+        "hash": "a7538483d8053840efd074fd07a046bd"
+    },
+    {
+        "file": "modules/layout/home/layout_pl/hooks.js",
+        "hash": "4d560b92db49b66f676d7dd5f5044e6a"
+    },
+    {
+        "file": "modules/layout/home/layout_99/style.css",
+        "hash": "c1d6b86a2406dd126cc0ebf8278c2955"
+    },
+    {
+        "file": "modules/layout/home/layout_99/view.html",
+        "hash": "3e8ba34c1daa0705a39bc7ef1454bbcc"
+    },
+    {
+        "file": "modules/layout/home/layout_99/hooks.js",
+        "hash": "96e777c2d697ec7688b57216d1a0f911"
+    },
+    {
+        "file": "modules/layout/home/layout_90/r9-menu.js",
+        "hash": "d754ee1c7944f80943ac753d7ce066e9"
+    },
+    {
+        "file": "modules/layout/home/layout_90/style.css",
+        "hash": "aaf3e42aef100e63f47a1119d348ea39"
+    },
+    {
+        "file": "modules/layout/home/layout_90/view.html",
+        "hash": "b81e2b283ff8d43cb7ac2d42ece2bf46"
+    },
+    {
+        "file": "modules/layout/home/layout_90/hooks.js",
+        "hash": "1edbd72c8b5f49f162854dc86db6424b"
+    },
+    {
+        "file": "modules/layout/home/layout_ribbon/style.css",
+        "hash": "eb3a28f07774aad87b4231f91ba0b3e6"
+    },
+    {
+        "file": "modules/layout/home/layout_ribbon/view.html",
+        "hash": "d293b41315afe7f34c377181b28c307f"
+    },
+    {
+        "file": "modules/layout/home/layout_ribbon/hooks.js",
+        "hash": "af7a07b0bcb52d7bd05e7d3ec8ea071f"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_13/style.css",
+        "hash": "37cb51c44fd152ef03b1db4773d30942"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_13/view.html",
+        "hash": "e85663621d21b718fdaa7ab7ed8fe622"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_13/hooks.js",
+        "hash": "ccf78df1eac2c00112a4415c7fd94318"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_13/modal.html",
+        "hash": "33ab451add3d591edb74ae6e77f8b010"
+    },
+    {
+        "file": "modules/layout/home/layout_baguera_13/waves-effect.js",
+        "hash": "acce85d08cb9a2239ce58918f7ce78ab"
+    },
+    {
+        "file": "modules/layout/home/layout_104/style.css",
+        "hash": "ab42a133c63f555eeed51ec69d76faaa"
+    },
+    {
+        "file": "modules/layout/home/layout_104/view.html",
+        "hash": "6e9f00623e38d1ccf1230747e8f40607"
+    },
+    {
+        "file": "modules/layout/home/layout_104/hooks.js",
+        "hash": "786c3e2e26ab32e8ec3cf61f45e176c4"
+    },
+    {
+        "file": "modules/socialnetworks/controllers/socialnetworks-factory.js",
+        "hash": "f0b01a003a5d401c1244acd292efb618"
+    },
+    {
+        "file": "modules/socialnetworks/controllers/socialnetworks-directives.js",
+        "hash": "c2b0323e37251907b589fa4801415676"
+    },
+    {
+        "file": "modules/socialnetworks/controllers/socialnetworks.js",
+        "hash": "c5ecccb9657edf47297c6a1c31c27766"
+    },
+    {
+        "file": "modules/socialnetworks/controllers/chat.js",
+        "hash": "9e8eae48dcd5f0eaa881ec818a463992"
+    },
+    {
+        "file": "modules/socialnetworks/images/pin4.svg",
+        "hash": "cf62f7d2a7a127b242d6906ce7b54740"
+    },
+    {
+        "file": "modules/socialnetworks/images/pin1.svg",
+        "hash": "3b55d5b0d932da32ff9af64a8f801208"
+    },
+    {
+        "file": "modules/socialnetworks/images/pin5.svg",
+        "hash": "8a20d46712e851d990cf0e78d1e3b858"
+    },
+    {
+        "file": "modules/socialnetworks/images/youarehere.png",
+        "hash": "901c98fd6c6dc5fa72dedc4f64690495"
+    },
+    {
+        "file": "modules/socialnetworks/images/pin2.svg",
+        "hash": "8a410cfd12f38586737ef06cba8b6dd9"
+    },
+    {
+        "file": "modules/socialnetworks/images/pin3.svg",
+        "hash": "6f8e8782d0c40ea519e92e36a20d415f"
+    },
+    {
+        "file": "modules/socialnetworks/images/customer-placeholder.png",
+        "hash": "b73084b2ac83da186ec9eb540efab63e"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/view.html",
+        "hash": "9a82f95e26c33062912fe8dde519d5b5"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/chat.html",
+        "hash": "36a5cfa00b4a464980160d998ca7755e"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/followers-friends-list.html",
+        "hash": "ca3650c07d5930b221edb7552444db28"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/search.html",
+        "hash": "8a9ada0aee484cece9179d0a2093c27d"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/gallery.html",
+        "hash": "65474adc3ed74f0756a127f67ba39e39"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/nearby.html",
+        "hash": "aa3ae51facffc15a29aaaa003f86c02b"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/chat-history.html",
+        "hash": "67af5f5385c2e54f85132f651c266b43"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/profile.html",
+        "hash": "06db04d81f820692eab1b2c4097803ce"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/map.html",
+        "hash": "feb3f77a8b82c0f2f1319db91d11a2dd"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/directives/post-item.html",
+        "hash": "f2138bde918bcbfc24f9e3133019efbb"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/directives/post-list.html",
+        "hash": "183f2f8fd686aa2e6092a54c4304c37e"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/directives/gallery.html",
+        "hash": "357f14358a2067f4cd32e4e7c0429612"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/directives/profile-item.html",
+        "hash": "8aaadc61274d6d10a0e7184d09ccc107"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/directives/actions-popover.html",
+        "hash": "cbdf31359bdd52477eabfd9a5e98f031"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/directives/profile-list.html",
+        "hash": "fd87b1a05588f3ff2f1db20b4009e951"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/tabs/post.html",
+        "hash": "0fd5cfdf71f53b1d6fe638fa3155e3a1"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/home.html",
+        "hash": "3a72540773a040a0e58b9e6ab3ef3510"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/post/history-item.html",
+        "hash": "07338cc769e24cac0df7b838e835cd36"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/post/actions-popover.html",
+        "hash": "cbdf31359bdd52477eabfd9a5e98f031"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/post/history.html",
+        "hash": "ec3fe8f593700b6bcf944761af959bf4"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/comment/history-item.html",
+        "hash": "07338cc769e24cac0df7b838e835cd36"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/comment/edit.html",
+        "hash": "f7af74a4350890714b1b06167dced8a6"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/comment/history.html",
+        "hash": "8cf3aebc9a0e5fdf26ee31b908594fb6"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/comment.html",
+        "hash": "b12c27fbf3b037a8310286e88201022c"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/new.html",
+        "hash": "cbdd59799980a3998341cf0137a3618b"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/directives/comment-item.html",
+        "hash": "f74bf2b698619a516d1f525e21f94047"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/directives/actions-popover.html",
+        "hash": "cbdf31359bdd52477eabfd9a5e98f031"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/directives/comment-form.html",
+        "hash": "0d159d746be0014045ee62306d1e0943"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/directives/comment-list.html",
+        "hash": "0e123d3e8be8a258868434743e91f0ba"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/profile/blocked.html",
+        "hash": "eb5dc63f021ce0b89f1f7a28306daa16"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/profile/blocked-user-item.html",
+        "hash": "590c89b27833eda8b48509bd750edb71"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/profile/actions-popover.html",
+        "hash": "cbdf31359bdd52477eabfd9a5e98f031"
+    },
+    {
+        "file": "modules/socialnetworks/templates/l1/modal/post.html",
+        "hash": "33f75616c433a6fb85489b145a2adea7"
+    },
+    {
+        "file": "modules/socialnetworks/css/socialnetworks.css",
+        "hash": "4b0dcabded1f803c122f2d8969cbc7fe"
+    },
+    {
+        "file": "modules/migabirthday/factory/migabirthday.js",
+        "hash": "b9451b895156e8b0bccfb191dc328e68"
+    },
+    {
+        "file": "modules/migabirthday/controllers/migabirthday.js",
+        "hash": "01fc4238404b613e255547e462f4640a"
+    },
+    {
+        "file": "modules/migabirthday/templates/l1/view.html",
+        "hash": "7193f790c5d28e8bf099838d85586afc"
+    },
+    {
+        "file": "modules/migabirthday/styles/migabirthday.css",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+        "file": "modules/chatrooms/factories/chatrooms.js",
+        "hash": "725fb0d9c028e203cbc3e358ba397ad9"
+    },
+    {
+        "file": "modules/chatrooms/controllers/chatrooms.js",
+        "hash": "74bde5cd45186e39f8eb62568008c66f"
+    },
+    {
+        "file": "modules/chatrooms/templates/l2/view.html",
+        "hash": "2304ca5de2db4eafae22b1b8bc1c3da9"
+    },
+    {
+        "file": "modules/chatrooms/templates/l1/view.html",
+        "hash": "952f7dedf4f6bd545b0a455b93a7d7c4"
+    },
+    {
+        "file": "modules/chatrooms/templates/l1/list.html",
+        "hash": "e9988d972824aa0b35057bf34c701f4b"
+    },
+    {
+        "file": "modules/chatrooms/templates/l1/friendships.html",
+        "hash": "07aeb68d3ce236d70f032009aefed40a"
+    },
+    {
+        "file": "modules/chatrooms/templates/l1/modal.html",
+        "hash": "1e5729064110972a9a8e25f2320c0210"
+    },
+    {
+        "file": "modules/chatrooms/templates/l1/profile.html",
+        "hash": "41f8baad281327288848ed5ed2b6cd50"
+    },
+    {
+        "file": "modules/chatrooms/templates/l1/contextual-menu.html",
+        "hash": "6128eec3e232c35818e128bddbb4aec2"
+    },
+    {
+        "file": "modules/chatrooms/stylesheets/chatrooms.css",
+        "hash": "ae76ccaf48c5bc3d84125dab631e1c08"
+    },
+    {
+        "file": "modules/chatrooms/libraries/base64.min.js",
+        "hash": "e1d2e008a05805f760010a0e3125d250"
+    },
+    {
+        "file": "modules/chatrooms/filters/emojify.js",
+        "hash": "3bdd220324dae594fdd4a355d1ec853d"
+    },
+    {
+        "file": "modules/socketio/libraries/socket.io.min.js",
+        "hash": "5457b40ff184b1431d0ecf4c047ac607"
+    },
+    {
+        "file": "modules/woocommerce/factory/woocommerce.js",
+        "hash": "0262bfb945163d726120b5f8d287c95c"
+    },
+    {
+        "file": "modules/woocommerce/controllers/woocommerce.js",
+        "hash": "35b691859140281a00b5de769981b9db"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/categories.html",
+        "hash": "9b78818032ec65f6ef7354bbd099a914"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/cancel.html",
+        "hash": "0aadc7bc7ab00dc1f0dd8ccc792e4610"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/home.html",
+        "hash": "03ad62355876faddc50e5d74babbde99"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/stripe.html",
+        "hash": "56809a8e3bc21d1652158af494dae61e"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/customer.html",
+        "hash": "210bee4840cf895af931392c848cf0db"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/product.html",
+        "hash": "d6437ffbb8c22e998413abd1905d2a00"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/category.html",
+        "hash": "a7dc9b1ae97741c2bfc4b81e6c1f7380"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/success.html",
+        "hash": "b87d7c5b0e37dc5db141cc4d4fb7c859"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/cart.html",
+        "hash": "d0b1e6c0759404eec32c276d074eebc5"
+    },
+    {
+        "file": "modules/woocommerce/templates/l1/products.html",
+        "hash": "0723304e3cef1c22da3d2214c699785e"
+    },
+    {
+        "file": "modules/woocommerce/directives/sb-products.js",
+        "hash": "c4fa425666a71054b2907cb1d2445727"
+    },
+    {
+        "file": "modules/woocommerce/directives/sb-rating.js",
+        "hash": "1356f01239d23d675127372e7be4ea18"
+    },
+    {
+        "file": "modules/woocommerce/service/woocommerce.js",
+        "hash": "d62a5934882fee16ecc20e0bbcfe1dff"
+    },
+    {
+        "file": "modules/woocommerce/scss/woocommerce.scss",
+        "hash": "75d4dc5e7337e6d9b09a6c6d731f9ed7"
+    },
+    {
+        "file": "modules/quiz/factories/quiz.js",
+        "hash": "906e86e224334dcc8c4da2eaa7d2ba71"
+    },
+    {
+        "file": "modules/quiz/controllers/quiz.js",
+        "hash": "d02764bde503d1f16e2157a4a8a35637"
+    },
+    {
+        "file": "modules/quiz/templates/l1/view.html",
+        "hash": "c44b66b093d4cc25f0f200c9db2f132a"
+    },
+    {
+        "file": "features/payment_cash/payment_cash.js",
+        "hash": "0b37695d108fad283b5e163280abcca8"
+    },
+    {
+        "file": "features/payment_cash/assets/templates/l1/payment-cash.html",
+        "hash": "597d877f38feabb6c7c6859b11f05501"
+    },
+    {
+        "file": "features/payment_cash/assets/templates/images/010-money.svg",
+        "hash": "41864f718558ac2b957a1c6d1b787ac2"
+    },
+    {
+        "file": "features/payment_cash/payment_cash.bundle.min.js",
+        "hash": "3912d312a4fd33a838d1ac85ff5774f5"
+    },
+    {
+        "file": "features/propertylisting/propertylisting.js",
+        "hash": "3928f69aab5d1a1133e882a5c769475a"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingEdit/priceedit.html",
+        "hash": "1ab8ad80c2b1e0da6ba4564ff457d7d8"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingEdit/view.html",
+        "hash": "df77734d9e053c31b3198df8f26c86cb"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingEdit/imageedit.html",
+        "hash": "a2e539b1e0bc5ff187adcdcbc4046b91"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingEdit/amenitiesedit.html",
+        "hash": "4a55ad05f88f2594a14322da27bd626a"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingEdit/basicinfoedit.html",
+        "hash": "c6ac0ea1d7f5c0ac7143b2fe39c8a6c4"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingEdit/ownerinfoedit.html",
+        "hash": "0047e0a423b6bd106bb4f7155ad1ecef"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingEdit/locationedit.html",
+        "hash": "8d9a1576dcc5ea6a9c523e99c7a252fb"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingAdd/amenities.html",
+        "hash": "0848b6eb061efd41c5375dcb998342e0"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingAdd/ownerinfo.html",
+        "hash": "783f144b329c2fd36606d9eae066fa85"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingAdd/price.html",
+        "hash": "12ab329ab7531c6c8c7d93bd40c90810"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingAdd/locations.html",
+        "hash": "1503b8b4894ce06682ffe575e802327d"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingAdd/basicinfo.html",
+        "hash": "f8fcf519436e681cde321c40c51f7ea8"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/propertyListingAdd/images.html",
+        "hash": "22a58c8b4ab71f8736dcf9d030c2c657"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/list.html",
+        "hash": "577234815ae79e8cbaf84e77131d46bf"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/filter.html",
+        "hash": "4c3f6a6bce78dfb9e2f1b5613e725ab6"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/home.html",
+        "hash": "4b91df8a9872abb7639763cd67bc0fd9"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/favorite.html",
+        "hash": "166435ab5952bc5384aa03744da3a26c"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/map.html",
+        "hash": "56e4c6de49610d8923567a259867ccd4"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/modal/search.html",
+        "hash": "249ccf6a357d7a5b3c3b8a3d4ab6c640"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/modal/filter_menu.html",
+        "hash": "b5f06d31632382fd371b8be85cf67746"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/modal/detail.html",
+        "hash": "3547b6602d00e01742bd756c3863d9e2"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/modal/message.html",
+        "hash": "41a6287b03e3662cd26be4643a9edcad"
+    },
+    {
+        "file": "features/propertylisting/assets/templates/l1/modal/feedback.html",
+        "hash": "bcfd22a631fd92d9bd040258979690a3"
+    },
+    {
+        "file": "features/propertylisting/assets/media/bedroom.png",
+        "hash": "b49dd16dade3bbeb768f4e44cfc9a36c"
+    },
+    {
+        "file": "features/propertylisting/assets/media/bathroom.png",
+        "hash": "1af3a216cb1a4f356328538478abb2ad"
+    },
+    {
+        "file": "features/propertylisting/assets/media/no_image.jpg",
+        "hash": "1e663c1576698e2d9d19c496ece990ea"
+    },
+    {
+        "file": "features/propertylisting/assets/media/customer-placeholder.png",
+        "hash": "b73084b2ac83da186ec9eb540efab63e"
+    },
+    {
+        "file": "features/propertylisting/propertylisting.bundle.min.js",
+        "hash": "8edfbc2f9b40fd5c401ce190e50e9363"
+    },
+    {
+        "file": "features/SmsGateway/SmsGateway.js",
+        "hash": "af0ba533920d152a8b58c3d4d0a01399"
+    },
+    {
+        "file": "features/SmsGateway/assets/templates/l1/view.html",
+        "hash": "d4bb4dbf2bb588845c3792b5af48a74e"
+    },
+    {
+        "file": "features/SmsGateway/SmsGateway.bundle.min.js",
+        "hash": "d96dd9d673677d1b86f1958b7d4b495c"
+    },
+    {
+        "file": "features/form_v2/form_v2.js",
+        "hash": "437f85a895dcce61c7e1081d7a031482"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/directive/clickwrap-modal.html",
+        "hash": "e097e8706355eba805b2b03e3b632e7f"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/directive/clickwrap.html",
+        "hash": "c9363df50b80e250368d7ffdb791240b"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/directive/pictures.html",
+        "hash": "3c89586d454cf4126928b6cf684fc04a"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/directive/geolocation.html",
+        "hash": "535770a94b88f668c66d9efadf812e14"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/home.html",
+        "hash": "84dbcd1665bfc4a6ccb9542c1bbe7705"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/img/no-image.png",
+        "hash": "cbf2f91574aead07ef645e2f070bce1f"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/divider.html",
+        "hash": "22693bffbf48587eb5fb7e8a36e28be6"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/spacer.html",
+        "hash": "21b11570033a9ce3a392c2a3f2058010"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/date.html",
+        "hash": "9a0c395698238cc7a28317361ce4848d"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/image.html",
+        "hash": "12e8bad2fe9547945f0d22ccf4a3cf6a"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/richtext.html",
+        "hash": "572b4d22b41d6e554ecbb00c8b6f0b43"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/illustration.html",
+        "hash": "1898c9dfea22a29850ae8b8d15e3a3bd"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/number.html",
+        "hash": "960c58c5db941937660be830175ef42f"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/select.html",
+        "hash": "feb0c7afc0fbc860d0d642c31339da7b"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/textarea.html",
+        "hash": "2f048c8365e8857a2b6c3dab7971f229"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/clickwrap.html",
+        "hash": "cfbe28a3a3b3e297556dc100e97e770f"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/checkbox.html",
+        "hash": "e03f4487d8524c649e788ea8faf57928"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/password.html",
+        "hash": "fc6a5d0e49543da0d8f416bc50358144"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/text.html",
+        "hash": "3f13d49e6b3af5aea4b9dbd899005137"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/geolocation.html",
+        "hash": "29bb3be342985e77336669e4833f4fda"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/radio.html",
+        "hash": "20ce061077d45aa67f20c53d63d530a3"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display/datetime.html",
+        "hash": "82d051a4e5d8e45148e06c6fb518e5f5"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/form.html",
+        "hash": "b41d4f8829b7887ad4a0c4188b506a45"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/display-modal.html",
+        "hash": "ead9ebb3b4545773325490584c92478b"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/divider.html",
+        "hash": "8d3f1a48d0c3f3b40fe1da4ee15b1de4"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/spacer.html",
+        "hash": "21b11570033a9ce3a392c2a3f2058010"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/date.html",
+        "hash": "90c51989fddcef81922ef1150cdf8687"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/image.html",
+        "hash": "a78006741e270d2adc546652bfc4479b"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/richtext.html",
+        "hash": "572b4d22b41d6e554ecbb00c8b6f0b43"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/illustration.html",
+        "hash": "1898c9dfea22a29850ae8b8d15e3a3bd"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/number.html",
+        "hash": "fb4fd1c0a6a6d225b1262bf17c7421fd"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/select.html",
+        "hash": "f7c07c2c0bfabb8da4291932e776e2ba"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/textarea.html",
+        "hash": "ef9c0ae11f34986f84110230f72fcf58"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/clickwrap.html",
+        "hash": "962497147c0dc2c1b5d86934b1231ca6"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/checkbox.html",
+        "hash": "5abf0982bb9c0c37c481a8996a45a8a5"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/password.html",
+        "hash": "c4ef432be5e1250501ec8af107f46a2b"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/text.html",
+        "hash": "8d7dcee9da51e681412ce222b64146cc"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/geolocation.html",
+        "hash": "fa8ca9066a667dc57f56c6c27206c698"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/radio.html",
+        "hash": "412f1acdf6e1f4596ae8a33eb19c0772"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/fields/datetime.html",
+        "hash": "03de2f6e71bf273b5fb0bd4abf033f7b"
+    },
+    {
+        "file": "features/form_v2/assets/templates/l1/form/history.html",
+        "hash": "ee9fa34eca79d7d3186f5aa64e6d7f74"
+    },
+    {
+        "file": "features/form_v2/form_v2.bundle.min.js",
+        "hash": "0c5645483f89aae25853d209c707417b"
+    },
+    {
+        "file": "features/wordpress_v2/assets/templates/l1/view.html",
+        "hash": "c98239311105b3ca02ea9f0bb69218e6"
+    },
+    {
+        "file": "features/wordpress_v2/assets/templates/l1/list.html",
+        "hash": "8cefa5fd44e50fb3b4f5c31936e5da19"
+    },
+    {
+        "file": "features/wordpress_v2/wordpress_v2.bundle.min.js",
+        "hash": "abd1f9618ec2cae13c1fed76e8d68ecf"
+    },
+    {
+        "file": "features/wordpress_v2/wordpress_v2.js",
+        "hash": "57126d54cf1acbdf93da780dcb1455b7"
+    },
+    {
+        "file": "features/previewer/previewer.js",
+        "hash": "9ffc920dcc67c52852683fc1c910051a"
+    },
+    {
+        "file": "features/previewer/assets/templates/l1/list.html",
+        "hash": "7149c537ce0bd23b7ec0601de65a7426"
+    },
+    {
+        "file": "features/previewer/previewer.bundle.min.js",
+        "hash": "d25dcaf9d7ccfac5e5b3300106e0d89a"
+    },
+    {
+        "file": "features/fanwall2/fanwall2.bundle.min.js",
+        "hash": "de99e7326ccd50815305507a573efc3d"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/gallery.html",
+        "hash": "527a91b55a0fe66832d9c42393aedce6"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/nearby.html",
+        "hash": "e45494bea13247b450366633b786c9b6"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/profile.html",
+        "hash": "bd4a86f3f962e9c94e35fde80054c3cc"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/map.html",
+        "hash": "beebd03d79c326ca7454bf58c019eb71"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/directives/post-item.html",
+        "hash": "351c26bab2bc79589de79c83305526fb"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/directives/post-list.html",
+        "hash": "2b3870bd46dc3a2a0e9ccc82beb39897"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/directives/gallery.html",
+        "hash": "718b061ced88e26b2587a840fd5f9bf6"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/directives/post-item/post-images.html",
+        "hash": "4fd3ff6dcbc0ec53b9356785ebc0fcfd"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/directives/actions-popover.html",
+        "hash": "cbdf31359bdd52477eabfd9a5e98f031"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/tabs/post.html",
+        "hash": "f323433ed3a1f4703a88490852df3114"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/home.html",
+        "hash": "8ff6ad16224bfd53fd1bda15fe8d183f"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/directives/slider.html",
+        "hash": "4c34eae702242852b8fe4a488e050c3c"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/directives/pictures.html",
+        "hash": "1246e41e66ea2ea0087e00bbd3b091b4"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/post/history-item.html",
+        "hash": "f137954bba976c503d8795fc8cb5bc62"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/post/actions-popover.html",
+        "hash": "cbdf31359bdd52477eabfd9a5e98f031"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/post/history.html",
+        "hash": "b7a9e48a637e320272bd12d6025e9c5b"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/comment/history-item.html",
+        "hash": "07338cc769e24cac0df7b838e835cd36"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/comment/edit.html",
+        "hash": "e12376957a759aae24b6c5a8a986aafb"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/comment/history.html",
+        "hash": "47b37f938716614ed5b32ff780ebac02"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/comment.html",
+        "hash": "aca281ce79e8234e8d677fe79a4d42c9"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/new.html",
+        "hash": "d7ba69b0c9d0b690d9b8f7000d4d7b72"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/directives/comment-item.html",
+        "hash": "0da50837e611b250767a20529fd9f18c"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/directives/actions-popover.html",
+        "hash": "d712b84abc7a19164d9ce3d36d296cd5"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/directives/comment-form.html",
+        "hash": "0d159d746be0014045ee62306d1e0943"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/directives/comment-list.html",
+        "hash": "8eadbbc0d915f75820e621fa829721f9"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/profile/blocked.html",
+        "hash": "346932869334a58fa3cf4bfe72dc7e04"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/profile/blocked-user-item.html",
+        "hash": "590c89b27833eda8b48509bd750edb71"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/profile/actions-popover.html",
+        "hash": "cbdf31359bdd52477eabfd9a5e98f031"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/l1/modal/post.html",
+        "hash": "d09089903f931438afb107b09c19656e"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/images/pin4.svg",
+        "hash": "cf62f7d2a7a127b242d6906ce7b54740"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/images/pin1.svg",
+        "hash": "3b55d5b0d932da32ff9af64a8f801208"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/images/pin5.svg",
+        "hash": "8a20d46712e851d990cf0e78d1e3b858"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/images/pin2.svg",
+        "hash": "8a410cfd12f38586737ef06cba8b6dd9"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/images/pin3.svg",
+        "hash": "6f8e8782d0c40ea519e92e36a20d415f"
+    },
+    {
+        "file": "features/fanwall2/assets/templates/images/customer-placeholder.png",
+        "hash": "b73084b2ac83da186ec9eb540efab63e"
+    },
+    {
+        "file": "features/fanwall2/fanwall2.js",
+        "hash": "7aea7e0c8708cddc3e34911fd9c3828b"
+    },
+    {
+        "file": "features/job/job.js",
+        "hash": "8bf33ef277729a89ec5500355c6832bf"
+    },
+    {
+        "file": "features/job/assets/templates/l1/manage-company.html",
+        "hash": "31d0fc444d477cce4a9b75976cb502c8"
+    },
+    {
+        "file": "features/job/assets/templates/l1/more.html",
+        "hash": "2976f0ebc1be00a1b8c0695311c08937"
+    },
+    {
+        "file": "features/job/assets/templates/l1/view.html",
+        "hash": "dfbbb883da536aa8f9bbb054bf1f9b53"
+    },
+    {
+        "file": "features/job/assets/templates/l1/manage-place.html",
+        "hash": "53a042756ef298c3b9593e8573741d72"
+    },
+    {
+        "file": "features/job/assets/templates/l1/create-place.html",
+        "hash": "bc1163895e73c2b3e4c6f2b3497bdb17"
+    },
+    {
+        "file": "features/job/assets/templates/l1/list.html",
+        "hash": "f9c749a1bd18d751bc882f6d892fead9"
+    },
+    {
+        "file": "features/job/assets/templates/l1/admin-modal.html",
+        "hash": "58c639ea6ef99cb30a168fbd6ef842ad"
+    },
+    {
+        "file": "features/job/assets/templates/l1/view-company.html",
+        "hash": "e7c70fa11e3951ee33784311bf100dc1"
+    },
+    {
+        "file": "features/job/assets/templates/l1/img/no-category.png",
+        "hash": "57998f2312f4e77110aed99ead926ca4"
+    },
+    {
+        "file": "features/job/assets/templates/l1/img/blank-700-440.png",
+        "hash": "13f338cace1235961899a6c7797ebeba"
+    },
+    {
+        "file": "features/job/assets/templates/l1/img/no-place.png",
+        "hash": "b4f7d359f046ab466ab3caf2d80b43d9"
+    },
+    {
+        "file": "features/job/assets/templates/l1/img/job-header.png",
+        "hash": "47c4e41fe4a0d48714bbb3bb4ea10e64"
+    },
+    {
+        "file": "features/job/assets/templates/l1/img/search.svg",
+        "hash": "8270788bde487d82a2dc5d8e499aacfd"
+    },
+    {
+        "file": "features/job/assets/templates/l1/contact.html",
+        "hash": "374a344ba84b5f30bb3ac4eab2bb2f5c"
+    },
+    {
+        "file": "features/job/job.bundle.min.js",
+        "hash": "a6458682b8f829b99949a3fa23c14e98"
+    },
+    {
+        "file": "features/folder_v2/assets/templates/search.html",
+        "hash": "ab2d18b54fcc006f57ba9e800b7c14d9"
+    },
+    {
+        "file": "features/folder_v2/assets/templates/l2/list.html",
+        "hash": "e771a761a7f1c3188c361987bb0835ea"
+    },
+    {
+        "file": "features/folder_v2/assets/templates/l1/list.html",
+        "hash": "f31a7f24a8341ba9e34f75e7be89fe9e"
+    },
+    {
+        "file": "features/folder_v2/assets/templates/l4/list.html",
+        "hash": "93cbe66d3ffee945c9f4ec329152005d"
+    },
+    {
+        "file": "features/folder_v2/assets/templates/l6/list.html",
+        "hash": "f8c131a3679eafb797df2ef07b7eaa17"
+    },
+    {
+        "file": "features/folder_v2/assets/templates/cover.html",
+        "hash": "3b4dc16397f7dce602c7935f46ea0268"
+    },
+    {
+        "file": "features/folder_v2/assets/templates/l5/list.html",
+        "hash": "1bad301cb1d2ad9332af66e739f97ab0"
+    },
+    {
+        "file": "features/folder_v2/assets/templates/l3/list.html",
+        "hash": "afd617a8d5cff02fffca8ecff4669bf1"
+    },
+    {
+        "file": "features/folder_v2/folder_v2.bundle.min.js",
+        "hash": "bb4f7e866fd48a09920a3ef0b6167f4d"
+    },
+    {
+        "file": "features/folder_v2/folder_v2.js",
+        "hash": "c40e4155355ccef25bcb63cb216b9581"
+    },
+    {
+        "file": "features/classifieds/classifieds.js",
+        "hash": "d98033a6716ae7d880024109f37a1ab2"
+    },
+    {
+        "file": "features/classifieds/assets/templates/view.html",
+        "hash": "0473301c367b013191e2ad3641403118"
+    },
+    {
+        "file": "features/classifieds/assets/templates/index.html",
+        "hash": "baab71f76dcf55768ed0575984ae8c5b"
+    },
+    {
+        "file": "features/classifieds/assets/templates/edit.html",
+        "hash": "2180739042f5cf8a4e64512a5ba459e5"
+    },
+    {
+        "file": "features/classifieds/assets/templates/modals/contact.html",
+        "hash": "03cbb678e851cbe42f453e58f3b23fa3"
+    },
+    {
+        "file": "features/classifieds/classifieds.bundle.min.js",
+        "hash": "47a380f2d065c68621f9e3cb4090cc2b"
+    },
+    {
+        "file": "features/attendance/attendance.js",
+        "hash": "e1e5a9fce8b58c148797e23c755f3a9d"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/leaves.html",
+        "hash": "61b642dcc051b0708f973db75379544d"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/attendance.html",
+        "hash": "9af851404bd5c429fe82267816bb37fd"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/home.html",
+        "hash": "225d138de087756ed5913d69def581ff"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/message.html",
+        "hash": "740de49d465069aa349cfd8025174dac"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/modal/history_filter.html",
+        "hash": "0e036ea581e0988ee0d4796619cd4e30"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/modal/note.html",
+        "hash": "3f6b87a7876d380929c21e41bd33a3b4"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/modal/projects.html",
+        "hash": "15013ae6e074c30ac37af1cb268109d0"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/modal/leave_details.html",
+        "hash": "3b471fc32a8ffd7d57f2cefe4818e4e5"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/modal/apply_leave.html",
+        "hash": "14e5a53e74de512ec5dda0b17f417fd6"
+    },
+    {
+        "file": "features/attendance/assets/templates/l1/modal/history.html",
+        "hash": "114b40c65322f0880f2d03188def82f7"
+    },
+    {
+        "file": "features/attendance/assets/media/customer-placeholder.png",
+        "hash": "b73084b2ac83da186ec9eb540efab63e"
+    },
+    {
+        "file": "features/attendance/attendance.bundle.min.js",
+        "hash": "cc0ee88feddca47d90b496e356fe300b"
+    },
+    {
+        "file": "features/migaiframe/assets/templates/l1/view.html",
+        "hash": "058a5e93335749b02938f5fa0c3219a9"
+    },
+    {
+        "file": "features/migaiframe/migaiframe.js",
+        "hash": "e29f45b98872f6d02655c1c34fcaecfb"
+    },
+    {
+        "file": "features/migaiframe/migaiframe.bundle.min.js",
+        "hash": "208f19b103b399e5a8816a2de7436010"
+    },
+    {
+        "file": "features/m_commerce/m_commerce.bundle.min.js",
+        "hash": "7c9864ef59cab6e1db44d77c5fa41bd1"
+    },
+    {
+        "file": "features/m_commerce/m_commerce.js",
+        "hash": "712cba670a09ed6880aa5eca22517e33"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/list.html",
+        "hash": "72f8d43cb9c1264e367e3d9a1f30e3f7"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/delivery.html",
+        "hash": "4a54e170ab9c1e565aa4d146fa241141"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/store.html",
+        "hash": "7983bd25602d8a6064eb8803c1dcbe25"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/history_details.html",
+        "hash": "33bd5b14d2e01451dcd46d5e05a5adf3"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/stripe.html",
+        "hash": "e0263346521a029869f5ceefe0fb2107"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/payment.html",
+        "hash": "251041dada124b03a585747482e17134"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/customer.html",
+        "hash": "1387655180c5fb8606687d4fdb147f5c"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/confirmation.html",
+        "hash": "d760599ea7441eb28860e96070336dac"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/success.html",
+        "hash": "09629bb6c16529ca9ddf3ab894e182d7"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/error.html",
+        "hash": "3ce28ddb0b87a017842c9f60d672a0bc"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/sales/history.html",
+        "hash": "99a21cecd5794b7d13dc41bd11e6f7c1"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/product.html",
+        "hash": "f13329cb18cdebcdd7d2b338218267ef"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/l1/cart.html",
+        "hash": "b37e53fb96b67913d5964b23d3df8161"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/images/011-cc-visa.svg",
+        "hash": "05d2d57a68e6928c17a881955c205652"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/images/013-cc-amex.png",
+        "hash": "9c954ac89a3e533a8f5a3a61934915e3"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/images/014-cc.svg",
+        "hash": "12713ca9d34c5fa4dbbaa02fcec1ea55"
+    },
+    {
+        "file": "features/m_commerce/assets/templates/images/012-cc-mastercard.svg",
+        "hash": "dd08f5c64f7ce1a31778181f2851b2d9"
+    },
+    {
+        "file": "features/payment_method/payment_method.bundle.min.js",
+        "hash": "c93c020bd43cdd4b027bb3cbffef4bae"
+    },
+    {
+        "file": "features/payment_method/payment_method.js",
+        "hash": "a97fef8ee8802f4b4e56554203223d49"
+    },
+    {
+        "file": "features/payment_method/assets/templates/l1/payment-modal.html",
+        "hash": "2e00b799944ba9dae0dd79a075786b4a"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/info.html",
+        "hash": "85f0b644abfc1137c4afb6b3755df058"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/search.html",
+        "hash": "cdbf014fc46336b76d186bca5593b787"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/list.html",
+        "hash": "9b1ab8ae56c4b6e72e6705d990b358af"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/message.html",
+        "hash": "40ff78a10c600b11aca2569f5402a026"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/invite.html",
+        "hash": "5ab6572e5b285a4ddda63acf112ad51a"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/modal/feed.html",
+        "hash": "26cb82217777aa56b4af10e050b2d39d"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/modal/edit.html",
+        "hash": "ce6722af5a3c6f87f83e5fa773a6aafd"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/modal/follow-list.html",
+        "hash": "6a9b25361d37df7178482aa55e3dd836"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/modal/message.html",
+        "hash": "59d4934bf6e230c8a96cd4c366c4f983"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/modal/settings.html",
+        "hash": "7fd7f29b64d17cca4502c577cd6379c4"
+    },
+    {
+        "file": "features/phonebook/assets/templates/l1/messages_rooms.html",
+        "hash": "75cf4afa813452958fb4052c0b94ca48"
+    },
+    {
+        "file": "features/phonebook/assets/templates/images/default_cover.jpg",
+        "hash": "cf22aea24dd2008004bd0daca4b0dcd1"
+    },
+    {
+        "file": "features/phonebook/assets/templates/images/customer-placeholder.png",
+        "hash": "b73084b2ac83da186ec9eb540efab63e"
+    },
+    {
+        "file": "features/phonebook/phonebook.bundle.min.js",
+        "hash": "524ed09a464344f80f057fe0fecceb7b"
+    },
+    {
+        "file": "features/phonebook/phonebook.js",
+        "hash": "710c0a4ec19a4a2e6d9612073194fdb8"
+    },
+    {
+        "file": "features/places/places.bundle.min.js",
+        "hash": "bc0e967310c0f8e692f28a132e0d4133"
+    },
+    {
+        "file": "features/places/assets/templates/l1/view.html",
+        "hash": "de2a9ec089f92ef6c84201ecd6a6388a"
+    },
+    {
+        "file": "features/places/assets/templates/l1/categories.html",
+        "hash": "4c42a0ca2c441ff80101861a13e82b66"
+    },
+    {
+        "file": "features/places/assets/templates/l1/maps.html",
+        "hash": "8186cc4402ecca2bc8105e6f7e32ad40"
+    },
+    {
+        "file": "features/places/assets/templates/l1/filter.html",
+        "hash": "5b2cd0c930ba403bfb66e8067fa30160"
+    },
+    {
+        "file": "features/places/assets/templates/l1/places.html",
+        "hash": "300044afdc8ec8b28d8eec56b637e1c2"
+    },
+    {
+        "file": "features/places/assets/templates/l1/img/no-category.png",
+        "hash": "57998f2312f4e77110aed99ead926ca4"
+    },
+    {
+        "file": "features/places/assets/templates/l1/img/blank-700-440.png",
+        "hash": "13f338cace1235961899a6c7797ebeba"
+    },
+    {
+        "file": "features/places/assets/templates/l1/img/no-place.png",
+        "hash": "b4f7d359f046ab466ab3caf2d80b43d9"
+    },
+    {
+        "file": "features/places/assets/templates/l1/img/search.svg",
+        "hash": "8270788bde487d82a2dc5d8e499aacfd"
+    },
+    {
+        "file": "features/places/places.js",
+        "hash": "4428df5493f9920be4696e188f56cc8b"
+    },
+    {
+        "file": "features/radio/radio.js",
+        "hash": "3b14c73cb506a10bdbe88484cd654c14"
+    },
+    {
+        "file": "features/radio/radio.bundle.min.js",
+        "hash": "6dce193dad7de201069f2214f581078b"
+    },
+    {
+        "file": "features/purchase/purchase.bundle.min.js",
+        "hash": "25c6df0d64448fa006d6b7e858be9959"
+    },
+    {
+        "file": "features/purchase/purchase.js",
+        "hash": "bda2731fd16d55727a7de35f18a95f10"
+    },
+    {
+        "file": "features/cabride/cabride.js",
+        "hash": "4526795f464ae4ee5e477c177df883aa"
+    },
+    {
+        "file": "features/cabride/cabride.bundle.min.js",
+        "hash": "b52f3c9d1c3a6fe3641fa919b8578944"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/my-rides.html",
+        "hash": "5f63289970f99001ee04535ef0c4419d"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/completed-rides.html",
+        "hash": "7ca42fc287805ed2a4da41a29b263148"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/vehicle-information.html",
+        "hash": "ef03475ab20f7bfc5bc5ffaf10963b55"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/cancelled.html",
+        "hash": "f7af0adf574a58ca1ef1a34fc94bd90c"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/nav/contextual-menu.html",
+        "hash": "301047c84c483347756a44a561936ff4"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/home.html",
+        "hash": "2938dda0c68d2d9eda9bf3f571a53534"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/client-done.html",
+        "hash": "5a250b584eb3e72adb51203485792cc5"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/client-pending.html",
+        "hash": "67372a65583400ac214ff5ada724259c"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/driver-accepted.html",
+        "hash": "1a4ec7a51ac662f13e1acd15b692bfc2"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/driver-onway.html",
+        "hash": "1a4ec7a51ac662f13e1acd15b692bfc2"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/client-accepted.html",
+        "hash": "3bfa995ea0732f4a3e27a86a20a6abe5"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/client-inprogress.html",
+        "hash": "36387e300a9b8bf9449c8974f79a67aa"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/driver-inprogress.html",
+        "hash": "d58f7b6739228389b54b37850b0cb627"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/driver-pending.html",
+        "hash": "172c73c5c430cb3d2a7f8328805dd6ca"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/client-expired.html",
+        "hash": "36387e300a9b8bf9449c8974f79a67aa"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/driver-declined.html",
+        "hash": "9ce1735585c5e6b2b48d9344dc1b1a3f"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/client-declined.html",
+        "hash": "36387e300a9b8bf9449c8974f79a67aa"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/client-aborted.html",
+        "hash": "36387e300a9b8bf9449c8974f79a67aa"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/driver-expired.html",
+        "hash": "36387e300a9b8bf9449c8974f79a67aa"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/client-onway.html",
+        "hash": "79d272c579be57047920d70fea256ca5"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/driver-aborted.html",
+        "hash": "36387e300a9b8bf9449c8974f79a67aa"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/actions/driver-done.html",
+        "hash": "36387e300a9b8bf9449c8974f79a67aa"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/pending-requests.html",
+        "hash": "d4c71d9f727012662f22f82bcbffec6c"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/payment-history.html",
+        "hash": "b912ab0e6c0a404e257394a7cee10bf1"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/my-payments.html",
+        "hash": "b8244c8d2ad86f64ae0a8af8bdfad149"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/modal/rate-course.html",
+        "hash": "0ccb088d3330c99b0ce96ca0b0b1841f"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/modal/vehicle-type.html",
+        "hash": "0932fa2273eb5150d369d6fbada8d8c4"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/modal/cancel-course.html",
+        "hash": "8857658987e18790f4d0186ae2614ce8"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/modal/payment-type.html",
+        "hash": "b7a9209aeeea745e38316f8f13a3648b"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/modal/request-details.html",
+        "hash": "b1de44d0d1d48d09f3db7aae29cbcea7"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display.html",
+        "hash": "37e1d195de7214f967ab96b5235f6a31"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/divider.html",
+        "hash": "5ce188b9120072f600525e636e96e1dc"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/spacer.html",
+        "hash": "683a8008fb46a592236c124aa4a0feb5"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/date.html",
+        "hash": "f05ce696a22ba2a3e4e739bb54b9587a"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/number.html",
+        "hash": "82c9487d760d0399da70ce847204e0b5"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/select.html",
+        "hash": "225e35d93c07e86bea1e4cf860e9a395"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/textarea.html",
+        "hash": "f2ef476c99bfce80918e95b14a2ac877"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/checkbox.html",
+        "hash": "55c3b073f7023e0cfbe3b2ea98e4bc73"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/password.html",
+        "hash": "6a4876e282c923adfbd6d75876e07f93"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/text.html",
+        "hash": "225e35d93c07e86bea1e4cf860e9a395"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/display/datetime.html",
+        "hash": "f05ce696a22ba2a3e4e739bb54b9587a"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/form.html",
+        "hash": "3b8acf9a9e0d6e690a66b4b1dedaea6a"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/divider.html",
+        "hash": "9a7d9f642d804c8cb9b7ce638e427cb0"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/spacer.html",
+        "hash": "683a8008fb46a592236c124aa4a0feb5"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/date.html",
+        "hash": "767335e58af1185f52cc6dc561cb91c4"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/number.html",
+        "hash": "ec9f3700383cbf811563a4b7e8fcbd05"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/select.html",
+        "hash": "d9fc390ce0b6be0d5844b74c266b94e6"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/textarea.html",
+        "hash": "b5d0af40668e47c22c7286d7d5092d1b"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/checkbox.html",
+        "hash": "41ef86d5996a187fdc03dcb1054da642"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/password.html",
+        "hash": "41e95d7c8c4ce2d2c737cc96e89d72db"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/text.html",
+        "hash": "91191269950c243e10a76500c0a580d8"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/form/fields/datetime.html",
+        "hash": "1429a5faf718dc7b674da155e99ae463"
+    },
+    {
+        "file": "features/cabride/assets/templates/l1/accepted-requests.html",
+        "hash": "3f645a175594e599414b715dedaf6e18"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/001-passenger.svg",
+        "hash": "76cd7c5bb774ae8bf26c1e613de9ddc3"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/004-blank.png",
+        "hash": "c60ed2012f3e7df8ea58e623afa7c91b"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/003-pin-green.svg",
+        "hash": "99c5669a80b04424fcf36ce9fc33ee3a"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/003-pin.svg",
+        "hash": "34aaca5db7381bdbd6efb9af8ca4db0d"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/002-driver.svg",
+        "hash": "3b4e93c19613a09600303f4e74b572ba"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/011-cc-visa.svg",
+        "hash": "05d2d57a68e6928c17a881955c205652"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/003-pin.png",
+        "hash": "b78ba30e51eb0bd0f800bdd615444c80"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/009-credit-card.svg",
+        "hash": "b2394561045ccbb8c466ec869f18193d"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/cards.png",
+        "hash": "fc7846bf78310272ae86a2862090f6c6"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/013-cc-amex.png",
+        "hash": "9c954ac89a3e533a8f5a3a61934915e3"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/015-no-photo.png",
+        "hash": "b73084b2ac83da186ec9eb540efab63e"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/014-cc.svg",
+        "hash": "12713ca9d34c5fa4dbbaa02fcec1ea55"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/013-cc-amex.svg",
+        "hash": "a9eddb349f756e7bdc000a8c4835dbf7"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/006-taxi.svg",
+        "hash": "5b8a3e49cede95ca4339d5bae69c9951"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/007-loader.svg",
+        "hash": "f5bdfca69931767d26a7be812d7b65b2"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/008-background.png",
+        "hash": "ad001648482565c7da4da9b396672868"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/010-money.svg",
+        "hash": "41864f718558ac2b957a1c6d1b787ac2"
+    },
+    {
+        "file": "features/cabride/assets/templates/images/012-cc-mastercard.svg",
+        "hash": "dd08f5c64f7ce1a31778181f2851b2d9"
+    },
+    {
+        "file": "features/invitefriend/invitefriend.bundle.min.js",
+        "hash": "df25a88d920d8e86cb6e575bf691de5f"
+    },
+    {
+        "file": "features/invitefriend/assets/templates/l2/view.html",
+        "hash": "f5867825c511ea1c0e5ace457ffc6732"
+    },
+    {
+        "file": "features/invitefriend/assets/templates/l2/modal/fulltext.html",
+        "hash": "cf39229e724c53151fc1ba452fbcb48d"
+    },
+    {
+        "file": "features/invitefriend/assets/templates/l2/modal/code.html",
+        "hash": "24236cb9bf94e6ca4a8564f4b4e3a50a"
+    },
+    {
+        "file": "features/invitefriend/assets/templates/l1/view.html",
+        "hash": "e5704e88be9c58d5f1d28b69cbf717ef"
+    },
+    {
+        "file": "features/invitefriend/assets/templates/l1/code.html",
+        "hash": "8327fa7f37fa3c3edd5f86a80c1b07f9"
+    },
+    {
+        "file": "features/invitefriend/invitefriend.js",
+        "hash": "38b3bec7ab8edbd3c15491823e049140"
+    },
+    {
+        "file": "features/payment_stripe/payment_stripe.js",
+        "hash": "1e80244c843f76b29d538eefbb4e5875"
+    },
+    {
+        "file": "features/payment_stripe/payment_stripe.bundle.min.js",
+        "hash": "fca4665a4cb98a89743bb91c6022d173"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/l1/payment-stripe-form.html",
+        "hash": "7264a03a59d127e25b1f9737d5b0acd5"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/l1/payment-stripe-cards.html",
+        "hash": "c05b6d43e2cfcea749ec324a47142b92"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/l1/payment-stripe.html",
+        "hash": "aef4a3d81064a89326851ec5043a4a29"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/images/005-cc-amex.svg",
+        "hash": "a9eddb349f756e7bdc000a8c4835dbf7"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/images/003-cc-visa.svg",
+        "hash": "05d2d57a68e6928c17a881955c205652"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/images/cards.png",
+        "hash": "fc7846bf78310272ae86a2862090f6c6"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/images/001-blank.png",
+        "hash": "c60ed2012f3e7df8ea58e623afa7c91b"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/images/002-credit-card.svg",
+        "hash": "b2394561045ccbb8c466ec869f18193d"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/images/006-cc.svg",
+        "hash": "12713ca9d34c5fa4dbbaa02fcec1ea55"
+    },
+    {
+        "file": "features/payment_stripe/assets/templates/images/004-cc-mastercard.svg",
+        "hash": "dd08f5c64f7ce1a31778181f2851b2d9"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/promocode/list.html",
+        "hash": "596310bfc385039075de6a0d9954b49a"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/home.html",
+        "hash": "548a509c24034236494e6fb5f039fcfd"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/customer/transaction_details.html",
+        "hash": "306a1c6070437c9c674a31e0558c4e20"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/customer/myqrcode.html",
+        "hash": "2dfff62a3990803e721ba835218a3532"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/customer/history.html",
+        "hash": "32b658de903b9f488c16ef68c19a52d8"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/pay/checkout.html",
+        "hash": "1c5d7419025aa453e7d9cb9f83692044"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/pay/transfer_plc.html",
+        "hash": "5e7d74e7885a326dbdd77cd264d1f072"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/pay/search_contact.html",
+        "hash": "43cc34358c2f305ff969a9796a165040"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/pay/enter_amount.html",
+        "hash": "f31d5feda630386bb3771a058b70534c"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/pay/transfer.html",
+        "hash": "d7b357445a64e64f7b15f9855c4311cf"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/paypal/return.html",
+        "hash": "b1d9ac6b309b450df61eea960c9297d8"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/gateways/stripe.html",
+        "hash": "86c2642a0a988b0e40623225e0e2bbea"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/add/thankyou.html",
+        "hash": "411d96b073850f2d595e5c7ccd398df5"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/add/enter_amount.html",
+        "hash": "5a8260a5784f3c96c5788135f4cab536"
+    },
+    {
+        "file": "features/ewallet/assets/templates/l1/add/procced.html",
+        "hash": "6d35a79dad9b5db911f0aef7265b84a5"
+    },
+    {
+        "file": "features/ewallet/assets/media/customer-placeholder.png",
+        "hash": "b73084b2ac83da186ec9eb540efab63e"
+    },
+    {
+        "file": "features/ewallet/ewallet.js",
+        "hash": "faba2edb069c1e31111e789c27daf1c0"
+    },
+    {
+        "file": "features/ewallet/ewallet.bundle.min.js",
+        "hash": "ac1de980c4df4cec1b95f8ad8735973b"
+    },
+    {
+        "file": "dist/libraries.bundle.min.js",
+        "hash": "082aaf43075307443f31d4774bf1ba8b"
+    },
+    {
+        "file": "dist/features.bundle.min.js",
+        "hash": "2a8a8d90b278a3cde0ce9b241ab32eab"
+    },
+    {
+        "file": "dist/utils.bundle.min.js",
+        "hash": "7cee20e32f4dafeb9a95490a4e0d14db"
+    },
+    {
+        "file": "dist/app.bundle.min.css",
+        "hash": "f1a175c9cd73954cf5650f5f9ccf184b"
+    },
+    {
+        "file": "dist/lazy/moment.min.js",
+        "hash": "0a93d90d821ce2028ec4cfdb59ff6b1d"
+    },
+    {
+        "file": "dist/lazy/angular-carousel.min.js",
+        "hash": "d0db1bb6faf7325f094e83d80a8ee68e"
+    },
+    {
+        "file": "dist/lazy/html5-qrcode.min.js",
+        "hash": "63202c0bf391d6abd313c4bd5f92a1ab"
+    },
+    {
+        "file": "dist/lazy/baguette/baguetteBox.min.css",
+        "hash": "86d024cd7368dc33650674b564a46cab"
+    },
+    {
+        "file": "dist/lazy/baguette/baguetteBox.min.js",
+        "hash": "43a3a555d49a8db6f3672a01499f9b54"
+    },
+    {
+        "file": "dist/lazy/progressbar.min.js",
+        "hash": "1970f37f615a8339b6b249e396ee7d0d"
+    },
+    {
+        "file": "dist/lazy/picker/picker.min.js",
+        "hash": "86ce27110917f548a7848e12043ab999"
+    },
+    {
+        "file": "dist/lazy/picker/picker.js",
+        "hash": "4993df2cccdddd116ad704d4c6e5021e"
+    },
+    {
+        "file": "dist/lazy/picker/picker.min.css",
+        "hash": "960db616722a1a23aeb427294d624f07"
+    },
+    {
+        "file": "dist/lazy/toastr/toastr.js",
+        "hash": "ab180bcdd08afe86768c6b8105bf9df2"
+    },
+    {
+        "file": "dist/lazy/toastr/toastr.css",
+        "hash": "2dc432dbcc3f9fa75c728064a630f170"
+    },
+    {
+        "file": "dist/app.bundle-min.css",
+        "hash": "85ee3f3ec9a3031621373804063dd36d"
+    },
+    {
+        "file": "dist/services.bundle.min.js",
+        "hash": "63e0dc6609616e48dfa06107b8a949d9"
+    },
+    {
+        "file": "dist/providers.bundle.min.js",
+        "hash": "636729fe42bf151f0e368088e664be26"
+    },
+    {
+        "file": "dist/templates.js",
+        "hash": "f81d8efe0d581f88086da5f88dc864a9"
+    },
+    {
+        "file": "dist/app.libs.min.js",
+        "hash": "3b026df8ca4370c43bb1b67c648f04b6"
+    },
+    {
+        "file": "dist/onloadchunks.bundle.min.js",
+        "hash": "1f6c34ea450c858e1d56e8801a6bdd0e"
+    },
+    {
+        "file": "dist/directives.bundle.min.js",
+        "hash": "4dace7ef8579ef32e02cf3401b684a77"
+    },
+    {
+        "file": "dist/app.min.js",
+        "hash": "33686a8a7a38b48ec8f02cf572d50a5d"
+    },
+    {
+        "file": "dist/packed/form.bundle.min.js",
+        "hash": "004a6916eb954ac02ffc2aaa152dbe40"
+    },
+    {
+        "file": "dist/packed/padlock.bundle.min.js",
+        "hash": "71c29a6f35743fc97c47ab8533db1c75"
+    },
+    {
+        "file": "dist/packed/image.bundle.min.js",
+        "hash": "edbae03be715ce645b32bc8b256eb4b6"
+    },
+    {
+        "file": "dist/packed/booking.bundle.min.js",
+        "hash": "c8644e3a2c7437fcd1ce4a3a07c4cc9d"
+    },
+    {
+        "file": "dist/packed/folder.bundle.min.js",
+        "hash": "bbb98215bd8f92dafea427d9e5a5ea73"
+    },
+    {
+        "file": "dist/packed/social_gaming.bundle.min.js",
+        "hash": "71d14fa295a52a11dca209c513674e93"
+    },
+    {
+        "file": "dist/packed/weather.bundle.min.js",
+        "hash": "116a2b534d812b81930bcd50667e219f"
+    },
+    {
+        "file": "dist/packed/event.bundle.min.js",
+        "hash": "722a7dd4cc630439ad219ad25c04cfba"
+    },
+    {
+        "file": "dist/packed/tip.bundle.min.js",
+        "hash": "af5d15e0670d603717277d4c9425d8fc"
+    },
+    {
+        "file": "dist/packed/topic.bundle.min.js",
+        "hash": "b3bb738d6346698ff45aa2d90cac9d75"
+    },
+    {
+        "file": "dist/packed/discount.bundle.min.js",
+        "hash": "361e760ce1dd9834153cfde812b0900b"
+    },
+    {
+        "file": "dist/packed/application.bundle.min.js",
+        "hash": "3559112c6e55e0037a87c782dfbf8214"
+    },
+    {
+        "file": "dist/packed/source_code.bundle.min.js",
+        "hash": "13c5df6470f57cb783385bdeb076aff4"
+    },
+    {
+        "file": "dist/packed/contact.bundle.min.js",
+        "hash": "12fdd1cb971fb1b3f659d4e784a8eb4c"
+    },
+    {
+        "file": "dist/packed/media.bundle.min.js",
+        "hash": "8283b6968316d8c3f875f1d648638516"
+    },
+    {
+        "file": "dist/packed/newswall.bundle.min.js",
+        "hash": "07149c1e9d5ec4a5e5d9153b304f6e64"
+    },
+    {
+        "file": "dist/packed/video.bundle.min.js",
+        "hash": "2b0eafccdc84ac95fbb009fa7d839b6d"
+    },
+    {
+        "file": "dist/packed/radio.bundle.min.js",
+        "hash": "7868d0abf0d16dd40aace6d10e82c179"
+    },
+    {
+        "file": "dist/packed/catalog.bundle.min.js",
+        "hash": "ccfe00df212fbb9337e396da624d125d"
+    },
+    {
+        "file": "dist/packed/rss.bundle.min.js",
+        "hash": "cee8be25d2c7cd8e6b2767c4a1bee456"
+    },
+    {
+        "file": "dist/packed/privacy_policy.bundle.min.js",
+        "hash": "dbaec7bb2f80c16fe1f32a170eb150f9"
+    },
+    {
+        "file": "dist/packed/twitter.bundle.min.js",
+        "hash": "8566b41c8ea5693ed75bf3b3fcc2fd63"
+    },
+    {
+        "file": "dist/packed/codescan.bundle.min.js",
+        "hash": "231b98747d44f70f958cae23d5ce8fbe"
+    },
+    {
+        "file": "dist/packed/homepage.bundle.min.js",
+        "hash": "44bee55f0371927447d827acce3a8573"
+    },
+    {
+        "file": "dist/packed/maps.bundle.min.js",
+        "hash": "86f9bfcca3409f43b7bc73d8ed7f0805"
+    },
+    {
+        "file": "dist/packed/youtube.bundle.min.js",
+        "hash": "2365354dcff269745b45ab4fe7e64098"
+    },
+    {
+        "file": "dist/packed/push.bundle.min.js",
+        "hash": "595344402cac38ddc42dd6e4c06979a7"
+    },
+    {
+        "file": "dist/packed/loyalty_card.bundle.min.js",
+        "hash": "899a34ce111778819fe09accd96451b2"
+    },
+    {
+        "file": "dist/packed/wordpress.bundle.min.js",
+        "hash": "93f3a87ad55cc02ae1c3d1a0d74934de"
+    },
+    {
+        "file": "dist/packed/facebook.bundle.min.js",
+        "hash": "6499cfd27ed8e47ef7f4850af5cf2d41"
+    },
+    {
+        "file": "dist/packed/links.bundle.min.js",
+        "hash": "a0e869899eb6713aaa064563f94f09c5"
+    },
+    {
+        "file": "dist/packed/cms.bundle.min.js",
+        "hash": "21069a7fb57c58689eb1accdf796f3d3"
+    },
+    {
+        "file": "plugins/WebView/www/webViewPlugin.js",
+        "hash": "c772c8397cf3ab318b65f6ed73d9accd"
+    },
+    {
+        "file": "plugins/Badge/www/badge.js",
+        "hash": "b9578b13e92e835b090d103f45817cde"
+    },
+    {
+        "file": "plugins/Clipboard/www/clipboard.js",
+        "hash": "5e1ccfea1e7c825be56baab6b56cd301"
+    },
+    {
+        "file": "plugins/InAppPurchse/www/store-ios.js",
+        "hash": "30c4700a8cf158762bc920c3d3a604a0"
+    },
+    {
+        "file": "plugins/Chcp/www/chcp.js",
+        "hash": "e1b92de8db2031db50bf045f00d4ab2e"
+    },
+    {
+        "file": "plugins/SplashScreen/www/splashscreen.js",
+        "hash": "67999ad8031c4efdddd575a05d3c8ffe"
+    },
+    {
+        "file": "plugins/StatusBar/www/statusbar.js",
+        "hash": "c49621e15860f63e57bb8f63b89d12e2"
+    },
+    {
+        "file": "plugins/BrowserTab/www/browsertab.js",
+        "hash": "13e00be8f1035f84b5d4edf5cd05864a"
+    },
+    {
+        "file": "plugins/File/www/fileSystemPaths.js",
+        "hash": "a1acb8a8f848d90af0a3341945a4cf88"
+    },
+    {
+        "file": "plugins/File/www/browser/isChrome.js",
+        "hash": "df85afd34f0d3aed821f79ed625f5143"
+    },
+    {
+        "file": "plugins/File/www/Metadata.js",
+        "hash": "efd678481ce2894435578198bcc8efc5"
+    },
+    {
+        "file": "plugins/File/www/LocalFileSystem.js",
+        "hash": "92ecac37dd7ece36dd8f9ef682f438d3"
+    },
+    {
+        "file": "plugins/File/www/resolveLocalFileSystemURI.js",
+        "hash": "bd98170e45edb05627e59e71c4534c2d"
+    },
+    {
+        "file": "plugins/File/www/FileUploadResult.js",
+        "hash": "52808da181fcd2e614c3bcf99d46c00a"
+    },
+    {
+        "file": "plugins/File/www/FileWriter.js",
+        "hash": "7873eed6a57908fa425878ec34d499a4"
+    },
+    {
+        "file": "plugins/File/www/FileEntry.js",
+        "hash": "b59c38f5a9e909e4840c5a8d2122f3fa"
+    },
+    {
+        "file": "plugins/File/www/FileUploadOptions.js",
+        "hash": "008ee15986849d4ec7c5e98df26d1b4c"
+    },
+    {
+        "file": "plugins/File/www/FileSystem.js",
+        "hash": "18136c7629c514edee66f68e28dad9c2"
+    },
+    {
+        "file": "plugins/File/www/ProgressEvent.js",
+        "hash": "7032280e11a827b34f3b9a38c7747e14"
+    },
+    {
+        "file": "plugins/File/www/requestFileSystem.js",
+        "hash": "21a93f0c3be59e3bbe1880a8bdd8a3f4"
+    },
+    {
+        "file": "plugins/File/www/ios/FileSystem.js",
+        "hash": "65de6981e8450a4067bcb3f757ea04bf"
+    },
+    {
+        "file": "plugins/File/www/FileReader.js",
+        "hash": "2bb7435f33de101b0bc2eaf4c49b76a0"
+    },
+    {
+        "file": "plugins/File/www/Flags.js",
+        "hash": "b407036f1a80763cac24026b3ab59f5c"
+    },
+    {
+        "file": "plugins/File/www/DirectoryEntry.js",
+        "hash": "57be8059e35c782017dba77bd1024ca1"
+    },
+    {
+        "file": "plugins/File/www/Entry.js",
+        "hash": "73641e5ad50808b2b0342de497f304e9"
+    },
+    {
+        "file": "plugins/File/www/File.js",
+        "hash": "8efbfcf58e6f3c91625591d319159bad"
+    },
+    {
+        "file": "plugins/File/www/FileError.js",
+        "hash": "c4e32d50cfda6c408540df29e81e91c9"
+    },
+    {
+        "file": "plugins/File/www/fileSystems.js",
+        "hash": "d4f619bd1902b47bf7e6c5c46102686f"
+    },
+    {
+        "file": "plugins/File/www/DirectoryReader.js",
+        "hash": "61ff60cff99ba037440d2732b4cc65ff"
+    },
+    {
+        "file": "plugins/File/www/fileSystems-roots.js",
+        "hash": "c9cda280d636ec0df21fd9768712db4a"
+    },
+    {
+        "file": "plugins/MusicControls/www/MusicControls.js",
+        "hash": "7f3fdb2e5a4e10b80ecf52ba553aa4b5"
+    },
+    {
+        "file": "plugins/SocialSharing/www/SocialSharing.js",
+        "hash": "18c5fa31cf1c1c602fab9c57accac9c6"
+    },
+    {
+        "file": "plugins/MediaNative/www/MediaError.js",
+        "hash": "7d6cfb25c97584dfa9ae55d0dbea326d"
+    },
+    {
+        "file": "plugins/MediaNative/www/Media.js",
+        "hash": "2fb7245b36b37575e720befe87922962"
+    },
+    {
+        "file": "plugins/Push/www/push.js",
+        "hash": "a32adb42498f5df82da5988e3fd792da"
+    },
+    {
+        "file": "plugins/Camera/www/Camera.js",
+        "hash": "4f18f1be0796961e23fa21d9d94a05d5"
+    },
+    {
+        "file": "plugins/Camera/www/CameraPopoverOptions.js",
+        "hash": "bfa4c4fe43fa1fc630dfafd3426760ba"
+    },
+    {
+        "file": "plugins/Camera/www/CameraConstants.js",
+        "hash": "6f93968fb69c8ea0b994257a3bbae191"
+    },
+    {
+        "file": "plugins/Camera/www/ios/CameraPopoverHandle.js",
+        "hash": "98fd397b56ab9e5fed7b818f6e5c4a5d"
+    },
+    {
+        "file": "plugins/AppVersion/www/AppVersionPlugin.js",
+        "hash": "361f0e29712a903671b08a9b5b240e86"
+    },
+    {
+        "file": "plugins/Navigator/www/navigator.js",
+        "hash": "6dc3268899be952a336116074dfc6535"
+    },
+    {
+        "file": "plugins/Device/www/device.js",
+        "hash": "8eadc3e3a6277a720370943415e81266"
+    },
+    {
+        "file": "plugins/Keyboard/www/ios/keyboard.js",
+        "hash": "3d07e45e675f629c715d5797ef2fe181"
+    },
+    {
+        "file": "plugins/Insomnia/www/Insomnia.js",
+        "hash": "04f301ad2f3ccaf0e594681f717a7dd3"
+    },
+    {
+        "file": "plugins/Permissions/www/permissions-dummy.js",
+        "hash": "0e945e8ea28a6ffd989347101dc9e227"
+    },
+    {
+        "file": "plugins/Promises/www/promise.js",
+        "hash": "7ad8b8b6ba18c56f73548a6ebfd96b19"
+    },
+    {
+        "file": "plugins/IonicWebview/src/www/util.js",
+        "hash": "df5aecaf42d3d55886df30a2576b1a1e"
+    },
+    {
+        "file": "plugins/IonicWebview/src/www/ios/ios-wkwebview-exec.js",
+        "hash": "21ae396ed877db305e761774d88bec2e"
+    },
+    {
+        "file": "plugins/AdmobPro/www/AdMob.js",
+        "hash": "7858fff47dc3d1af04423691d269c5d7"
+    },
+    {
+        "file": "plugins/Geolocation/www/Position.js",
+        "hash": "10604521635dc17b2bb74a8cbd2ce78d"
+    },
+    {
+        "file": "plugins/Geolocation/www/PositionError.js",
+        "hash": "c03086aac3c7e17fd981af2742b1a6fd"
+    },
+    {
+        "file": "plugins/Geolocation/www/Coordinates.js",
+        "hash": "67d8028f3518b3d100c446a1c1d86e21"
+    },
+    {
+        "file": "plugins/Geolocation/www/geolocation.js",
+        "hash": "51e10378a32b5122d4661a018de9b26a"
+    },
+    {
+        "file": "plugins/LocalNotification/www/local-notification.js",
+        "hash": "14834284e24387617016326b5a3797ce"
+    },
+    {
+        "file": "plugins/InAppBrowser/www/inappbrowser.js",
+        "hash": "2a487d11357f5c1fe50199dfff717256"
+    },
+    {
+        "file": "plugins/BarcodeScanner/www/barcodescanner.js",
+        "hash": "515e87ab8a00be304795c19d6171bc18"
+    },
+    {
+        "file": "plugins/Toast/www/Toast.js",
+        "hash": "0c848f9c1bbc4175649a2abd5c609067"
+    },
+    {
+        "file": "lib/ngCordova/dist/ng-cordova.js",
+        "hash": "e14b2826d8e533b3d43cd4b8380a52b4"
+    },
+    {
+        "file": "lib/polyfills.js",
+        "hash": "58805a92a73e1dae98a3b240a2dad43c"
+    },
+    {
+        "file": "lib/ionic/fonts/ionicons.woff",
+        "hash": "0cf6c1684ba4c48a543187573d9cf942"
+    },
+    {
+        "file": "lib/ionic/fonts/ionicons.ttf",
+        "hash": "8f785226ccebfdf1685db3b51dc8b723"
+    },
+    {
+        "file": "lib/ionic/fonts/ionicons.svg",
+        "hash": "2d5dac1b81ac0fdc8a9ae1d7c8339cef"
+    },
+    {
+        "file": "lib/ionic/fonts/ionicons.eot",
+        "hash": "5b6e2271a9256f252f7e2a437a81f730"
+    },
+    {
+        "file": "lib/utils.js",
+        "hash": "ab3b9e394614148ec17945c6bdceb82a"
+    },
+    {
+        "file": "wk-plugin.js",
+        "hash": "797a14b4ea81c0c59ecf1c84681cce6d"
+    },
+    {
+        "file": "index.html",
+        "hash": "b81e837aaafc330284824349b464e778"
+    },
+    {
+        "file": "index-prod.html",
+        "hash": "132986ae4a5f0bf67874d91afab70683"
+    },
+    {
+        "file": "cordova-js-src/plugin/ios/logger.js",
+        "hash": "bea3d8d9ae10196533ba9f8c8cf54e1e"
+    },
+    {
+        "file": "cordova-js-src/plugin/ios/console.js",
+        "hash": "6ee2fdce7eca5b573f761b019e9d70b6"
+    },
+    {
+        "file": "cordova-js-src/exec.js",
+        "hash": "e765dbae35eb64cb67e2e8dd815fb57b"
+    },
+    {
+        "file": "cordova-js-src/.eslintrc.yml",
+        "hash": "c94262aa8a87691fcfbee031ce10b3f7"
+    },
+    {
+        "file": "cordova-js-src/platform.js",
+        "hash": "ccd58d72accb55c81734987a6d014fa4"
+    },
+    {
+        "file": "cordova.js",
+        "hash": "a5807ed9a523c2b2d0d62d38093c6231"
+    },
+    {
+        "file": "img/drop-alpha.png",
+        "hash": "8d8801c96ea057e11881d96f69867217"
+    },
+    {
+        "file": "img/pictos/sprite-play.png",
+        "hash": "9b05a1ac5a31da5ef1963a457e7ee6bd"
+    },
+    {
+        "file": "img/weather/texture-rain-bg.png",
+        "hash": "b73d0153f6d457c20163e32b5eeec122"
+    },
+    {
+        "file": "img/weather/texture-storm-lightning-fg.png",
+        "hash": "bc969c9632e5c9d395a18e43ff833565"
+    },
+    {
+        "file": "img/weather/texture-sun-fg.png",
+        "hash": "a5995e3198c6bb46c79af3590294a4b0"
+    },
+    {
+        "file": "img/weather/texture-fallout-bg.png",
+        "hash": "4e53632ba9ac77cf018650cccb5b602f"
+    },
+    {
+        "file": "img/weather/texture-storm-lightning-bg.png",
+        "hash": "7bd70a2c9048c60a34960e7a0bb468db"
+    },
+    {
+        "file": "img/weather/texture-fallout-fg.png",
+        "hash": "2cd8a516e555901b5abfa8bd77792a66"
+    },
+    {
+        "file": "img/weather/texture-rain-fg.png",
+        "hash": "422d37823e739b8c005e8ad5a427c877"
+    },
+    {
+        "file": "img/weather/texture-sun-bg.png",
+        "hash": "8456b749ed872438f633a17140e7eeeb"
+    },
+    {
+        "file": "img/weather/texture-drizzle-fg.png",
+        "hash": "717dcf6b83e61b23e7fb7b70cb8fb4a0"
+    },
+    {
+        "file": "img/weather/texture-drizzle-bg.png",
+        "hash": "60519e338aa41ef66c2a73e4b9a68cdb"
+    },
+    {
+        "file": "img/water/texture-bg.png",
+        "hash": "95b64218d9da812fd558bef348d3ffc9"
+    },
+    {
+        "file": "img/water/texture-fg.png",
+        "hash": "77e7f998d4e5713e9364999829d7c6f7"
+    },
+    {
+        "file": "img/placeholder/530.272.png",
+        "hash": "7ab094f7aab336c0d572d9aca6f8a7f6"
+    },
+    {
+        "file": "img/placeholder/white-1.png",
+        "hash": "9ac991680c03278d321e0062b1985c8e"
+    },
+    {
+        "file": "img/placeholder/blank-512.png",
+        "hash": "a6ff25e8192212ea93698d02692a9ea7"
+    },
+    {
+        "file": "img/drop-color.png",
+        "hash": "e47fd57e8abbc38713af8f14a98826a1"
+    },
+    {
+        "file": "img/drop-shine2.png",
+        "hash": "5598e59d9a835dd878aac2de36b7fdaf"
+    },
+    {
+        "file": "img/cluster/m5.png",
+        "hash": "52ccee156df03d352192a57cb5cf1d08"
+    },
+    {
+        "file": "img/cluster/m4.png",
+        "hash": "dc81d55abcbb32eb8de2cf471c7e3735"
+    },
+    {
+        "file": "img/cluster/m1.png",
+        "hash": "fe953f48d20a57a5155040dd7c8c41bc"
+    },
+    {
+        "file": "img/cluster/m3.png",
+        "hash": "4c6afbabe37e08ce966a66dc5031375c"
+    },
+    {
+        "file": "img/cluster/m2.png",
+        "hash": "558853d99c4fe2738843b60824a9eda9"
+    },
+    {
+        "file": "img/drop-shine.png",
+        "hash": "ee4839555b1a4e86b949d731925c017c"
+    },
+    {
+        "file": "img/loyaltycard/point-validated.png",
+        "hash": "3c932b259e976bc80e3629c79dba8618"
+    },
+    {
+        "file": "img/loyaltycard/point.png",
+        "hash": "50796b4e58e98e953294dcd5a4427bbc"
+    }
+]

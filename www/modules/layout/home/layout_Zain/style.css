@@ -1,0 +1,327 @@
+.layout.layout_zain {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.layout.layout_zain .zain-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  display: none;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon {
+  border-color: #fff;
+  transition: all .3s ease;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon span {
+  background: #fff;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon span:nth-child(1) {
+  opacity: 0;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 28px;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 28px;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon span:nth-child(4) {
+  opacity: 0;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon span.label {
+  background: none;
+  color: #fff;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon:hover {
+  border-color: #00c3e2;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon:hover span {
+  background: #00c3e2;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon:hover span.label {
+  background: none;
+  color: #00c3e2;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon.normal {
+  border-color: transparent;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu nav ul li {
+  opacity: 1;
+  bottom: 0;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu nav ul li:nth-child(1) {
+  transition-delay: 0.3s;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu nav ul li:nth-child(2) {
+  transition-delay: 0.6s;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu nav ul li:nth-child(3) {
+  transition-delay: 0.9s;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu nav ul li:nth-child(4) {
+  transition-delay: 1.2s;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-fade-in {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-fade-in nav ul li {
+  opacity: 1;
+  bottom: 0;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-slide-in-top {
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-slide-in-top nav ul li {
+  opacity: 1;
+  bottom: 0;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-slide-in-bottom {
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-slide-in-bottom nav ul li {
+  opacity: 1;
+  bottom: 0;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-slide-in-left {
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-slide-in-left nav ul li {
+  opacity: 1;
+  right: 0;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-slide-in-right {
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.layout.layout_zain .zain-trigger:checked ~ .zain-menu.effect-slide-in-right nav ul li {
+  opacity: 1;
+  right: 0;
+}
+.layout.layout_zain .zain-menu-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  line-height: 62px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 3;
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px;
+}
+.layout.layout_zain .zain-menu-icon.top {
+  top: 30px;
+}
+.layout.layout_zain .zain-menu-icon.bottom {
+  top: auto;
+  bottom: 30px;
+}
+.layout.layout_zain .zain-menu-icon.left {
+  right: auto;
+  left: 30px;
+}
+.layout.layout_zain .zain-menu-icon.right {
+  left: auto;
+  right: 30px;
+}
+.layout.layout_zain .zain-menu-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  background: #000;
+  opacity: 1;
+  left: 15px;
+  right: 15px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+}
+.layout.layout_zain .zain-menu-icon span:nth-child(1) {
+  top: 18px;
+}
+.layout.layout_zain .zain-menu-icon span:nth-child(2) {
+  top: 28px;
+}
+.layout.layout_zain .zain-menu-icon span:nth-child(3) {
+  top: 28px;
+}
+.layout.layout_zain .zain-menu-icon span:nth-child(4) {
+  top: 38px;
+}
+.layout.layout_zain .zain-menu-icon span.label {
+  height: auto;
+  background: none;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  top: 45px;
+  left: 0;
+  right: 0;
+}
+.layout.layout_zain .zain-normal {
+  border-color: transparent;
+  border: none;
+}
+
+.layout.layout_zain .zain-circle {
+  border-radius: 50%;
+}
+
+.layout.layout_zain .zain-squared {
+
+}
+
+@media (max-width: 767px) {
+  .layout.layout_zain .zain-menu-icon {
+    top: 20px;
+    right: 20px;
+  }
+}
+.layout.layout_zain .zain-menu {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s;
+  white-space: nowrap;
+  z-index: 2;
+  transition-delay: 1.2s;
+  overflow: hidden;
+}
+.layout.layout_zain .zain-menu .effect-fade-in {
+  top: 50%;
+  left: 50%;
+  bottom: 50%;
+  right: 50%;
+}
+.layout.layout_zain .zain-menu .effect-fade-in nav ul li {
+  opacity: 0;
+  bottom: -30px;
+}
+.layout.layout_zain .zain-menu .effect-slide-in-top {
+  height: 0;
+}
+.layout.layout_zain .zain-menu .effect-slide-in-top nav ul li {
+  opacity: 0;
+  bottom: -30px;
+}
+.layout.layout_zain .zain-menu .effect-slide-in-bottom {
+  height: 0;
+  top: auto;
+  bottom: 0;
+}
+.layout.layout_zain .zain-menu .effect-slide-in-bottom nav ul li {
+  opacity: 0;
+  bottom: 30px;
+}
+.layout.layout_zain .zain-menu .effect-slide-in-left {
+  width: 0;
+  left: auto;
+  right: 0;
+}
+.layout.layout_zain .zain-menu .effect-slide-in-left nav ul li {
+  opacity: 0;
+  right: 30px;
+  bottom: auto;
+}
+.layout.layout_zain .zain-menu .effect-slide-in-right {
+  width: 0;
+}
+.layout.layout_zain .zain-menu .effect-slide-in-right nav ul li {
+  opacity: 0;
+  right: -30px;
+  bottom: auto;
+}
+.layout.layout_zain .zain-menu nav {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+}
+.layout.layout_zain .zain-menu nav ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.layout.layout_zain .zain-menu nav ul li {
+  display: block;
+  margin: 40px 0;
+  position: relative;
+  transition: all .4s;
+  opacity: 0;
+  bottom: -30px;
+}
+.layout.layout_zain .zain-menu nav ul li a {
+  transition: all .3s;
+}
+.layout.layout_zain .zain-menu nav ul li a:hover {
+  color: #00c3e2;
+}
+.layout.layout_zain .zain-menu nav ul li:nth-child(1) {
+  transition-delay: 0.9s;
+}
+.layout.layout_zain .zain-menu nav ul li:nth-child(2) {
+  transition-delay: 0.6s;
+}
+.layout.layout_zain .zain-menu nav ul li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.layout.layout_zain .zain-menu nav ul li:nth-child(4) {
+  transition-delay: 0s;
+}
+
+@media (max-width: 767px) {
+  .layout.layout_zain .zain-menu nav {
+    font-size: 40px;
+  }
+  .layout.layout_zain .zain-menu nav ul li {
+    margin: 25px 0;
+  }
+}
+.layout.layout_zain .zain-menu a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+.layout.layout_zain .title-lowcase {
+  text-transform: inherit;
+}
+.layout.layout_zain .title-uppercase {
+  text-transform: uppercase;
+}

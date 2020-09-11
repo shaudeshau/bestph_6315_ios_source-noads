@@ -1,0 +1,35 @@
+<div class="layout layout_videotwo">
+
+  <div class="Videotwo-header"></div>
+    <input type="checkbox" class="openSidebarMenu" id="Videotwo-openSidebarMenu">
+    <label for="Videotwo-openSidebarMenu" class="Videotwo-sidebarIconToggle">
+      <div class="Videotwo-spinner Videotwo-diagonal part-1"></div>
+      <div class="Videotwo-spinner Videotwo-horizontal"></div>
+      <div class="Videotwo-spinner Videotwo-diagonal part-2"></div>
+    </label>
+    <div id="Videotwo-sidebarMenu">
+      <ul class="Videotwo-sidebarMenuInner">
+        <li tabbar-items ng-repeat="feature in features.overview.options" option="feature" go-to-url="goTo(feature);"><a>{{ feature.name }}</a></li>
+      </ul>
+    </div>
+    <div class="Videotwo-main">
+      <video autoplay loop playsinline muted id="Videotwo-background" poster="{{ features.layoutOptions.videotwoposter.replace('http', 'https') | trustUrl }}">
+        <source ng-src="{{ features.layoutOptions.videotwourl.replace('http', 'https') | trustUrl }}" type="video/mp4">
+      </video>
+    </div>
+
+</div>
+
+
+<style>
+  .layout.layout_videotwo .Videotwo-header {
+      background-color: {{ features.layoutOptions.VideoTwoHeaderBG }} !important;
+  }
+  .layout.layout_videotwo #Videotwo-sidebarMenu {
+      background: {{ features.layoutOptions.VideoTwoMenuBG }} !important;
+  }
+  .layout.layout_videotwo .Videotwo-sidebarMenuInner li a{
+      color: {{ features.layoutOptions.VideoTwoText }} !important;
+      text-transform: {{ features.layoutOptions.VideoTwotextTransform }} !important;
+  }
+</style>

@@ -1,0 +1,106 @@
+<ion-view sb-page-background
+          class="invitefriend invitefriend-view"  ng-controller="InviteFriendViewController" cache-view="false">
+    <ion-nav-title> {{ page_title }}</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+        <button class="button button-clear header-item how-its-work" ng-if="settings.how_its_work" ng-click="fulltextDetails('hw')">
+            <i class="ion-help-circled"></i>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header" ng-show="!is_loading">   
+
+        <div class="list {{ settings.is_card_view == 1 ? 'card' : ''}}" ng-if="content && is_logged_in && !is_loading">         
+         <div class="item item-body item-custom">
+         	<img class="cover-image full-image" ng-if="content.cover_image !='' && content.cover_image != '_delete_'" ng-src="{{coverImageURL}}{{content.cover_image}}">
+         	<h2 class="title" ng-if="content.title" ng-bind-html="content.title"></h2>
+		    <p class="description text-center" ng-if="content.description" ng-bind-html="content.description"></p>
+         </div>
+
+        <div class="item item-body item-custom apply-code-box" ng-if="!is_used_coupon && settings.enable_point_features == 1">
+            <a  ng-click="ApplyCodeModal()">
+                <span class="icon-active-custom">{{ "I have referral code!" | translate }}</span>
+            </a>
+        </div>
+
+        <div class="item item-body item-custom refer-code-box" ng-if="settings.enable_point_features == 1">
+            <h2 class="refer-code" ng-if="referCode"> 
+                <p class="refer-code-title" ng-if="referCode">{{ "Your invite code" | translate }}</p>
+            	<span class="icon-active-custom">{{ referCode }}</span>
+            </h2>
+	    </div>
+
+         <div class="item item-body item-custom refer-social-box" ng-if="settings.enable_by_social_button == 1">
+             <button ng-click="shareSocial()" class="button button-block button-positive button-positive-custom icon ion-share"> {{ "Invite friends" | translate }}</button>
+        </div>
+
+         <div class="item item-body item-custom text-center refer-social-icon" ng-if="settings.enable_by_social_icon == 1">
+            <div class="row">
+                <div class="col col-33 social-icon-box">
+                    <button ng-click="shareSocial('whatsapp')" class="social-icon button button-icon icon ion-social-whatsapp-outline"></button>
+                </div>
+                <div class="col col-33 social-icon-box">
+                    <button ng-click="shareSocial('facebook')" class="social-icon button button-icon icon ion-social-facebook-outline"></button>
+                </div>
+                <div class="col col-33 social-icon-box">
+                    <button ng-click="shareSocial('twitter')" class="social-icon button button-icon icon ion-social-twitter-outline"></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-33 social-icon-box">
+                    <button ng-click="shareSocial('instagram')" class="social-icon button button-icon icon ion-social-instagram-outline"></button>
+                </div>
+                <div class="col col-33 social-icon-box">
+                    <button ng-click="shareSocial('sms')" class="social-icon button button-icon icon ion-ios-email-outline"></button>
+                </div>
+                <div class="col col-33 social-icon-box">
+                    <button  ng-click="shareSocial()" class="social-icon button button-icon icon ion-more"></button>
+                </div>
+            </div>
+        </div>
+
+       <div class="item item-body item-custom text-center or-divider" ng-if="settings.enable_by_email == 1 && (settings.enable_by_social_icon == 1 || settings.enable_by_social_button == 1)">
+            <p class="orline text-center">
+              {{ "OR" | translate }} 
+            </p>
+        </div>
+
+	    <label class="item item-body item-input item-floating-label item-custom" ng-if="settings.enable_by_email == 1">
+		    <span class="input-label">{{ "Email Address" | translate }}</span>
+		    <input style="text-align: center;" type="email" ng-model="inviteEmail.email" placeholder='{{ "Enter email address" | translate }}'>
+	 	</label>
+        <div class="item item-body item-custom" ng-if="settings.enable_by_email == 1">
+                <button class="button button-block button-positive button-positive-custom icon ion-email"  ng-click="sendByEmail(inviteEmail)" >  {{ "Send Invite" | translate }}</button>
+        </div>
+
+
+	    <div class="item item-body item-custom">
+            <p ng-if="settings.term_conditions" class="termandconditions">
+		    	<a  ng-click="fulltextDetails('tc')" class="subdued">{{ "Term & Conditions" | translate }}</a>
+		    </p>
+	    </div>
+
+       </div>
+
+     	<div class="list" ng-if="!content && is_logged_in && !is_loading">
+     		<div class="item item-body item-custom">
+     			<p class="text-center">{{ "No items found" | translate }}</p>
+     		</div>
+     	</div>
+
+
+        <div class="list" ng-if="!content && is_logged_in && !is_loading">
+            <div class="item item-body item-custom">
+                <p class="text-center">{{ "No items found" | translate }}</p>
+            </div>
+        </div>
+
+        <div class="list" ng-if="!is_logged_in && !is_loading">
+            <div class="item item-body item-custom">
+               <button ng-click="login()" class="button button-block button-positive button-positive-custom">{{ "Click here to log-in" | translate }}</button>
+            </div>
+        </div>
+ 
+   </ion-content>
+
+</ion-view>
+ 

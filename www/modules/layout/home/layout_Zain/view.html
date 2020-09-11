@@ -1,0 +1,57 @@
+<ion-content class="layout layout_zain" overflow-scroll="true">
+
+<input id="zain-trigger" type="checkbox" class="zain-trigger">
+
+<label for="zain-trigger">
+
+<span class="zain-menu-icon {{ features.layoutOptions.iconShape }} {{ features.layoutOptions.menuPosition }} {{ features.layoutOptions.menuDirection }}">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</span>
+</label>
+
+<header class="zain-menu">
+<nav>
+  <ul>
+    <li tabbar-items ng-repeat="feature in features.overview.options" option="feature" go-to-url="goTo(feature);">
+      <a class="{{ features.layoutOptions.textTransform }}">{{ feature.name }}</a>
+    </li>
+  </ul>
+</nav>
+</header>
+
+<style type="text/css">
+.layout.layout_zain .zain-menu a {
+  color: {{ features.layoutOptions.titleTextColor }} !important;
+}
+.layout.layout_zain .zain-menu {
+  background: {{ features.layoutOptions.backgroundColor }} !important;
+}
+.layout.layout_zain .zain-menu nav ul li a:hover {
+  color: {{ features.layoutOptions.hoverColor }} !important;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon:hover {
+  border-color: {{ features.layoutOptions.hoverColor }} !important;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon:hover span {
+  background: {{ features.layoutOptions.hoverColor }} !important;
+}
+.layout.layout_zain .zain-trigger:checked ~ label .zain-menu-icon:hover span.label {
+  background: none;
+  color: {{ features.layoutOptions.hoverColor }} !important;
+}
+
+.layout.layout_zain .zain-menu-icon span {
+  background: {{ features.layoutOptions.burgerColor }} !important;
+}
+
+.layout.layout_zain .zain-menu-icon {
+  border-color: {{ features.layoutOptions.burgerColor }} !important;
+}
+
+</style>
+
+
+</ion-content>

@@ -1,0 +1,95 @@
+<ion-view cache-view="false" class="phonebook phonebook-list"  sb-page-background>
+    <ion-nav-title>{{ page_title }}</ion-nav-title>
+    
+    <ion-nav-buttons side="secondary">
+         <a  ng-if="customer_is_logged_in && phonebook_settings.enable_message == 1" ui-sref="phonebook-messages({value_id: value_id })"
+                class="button button-clear header-item phonebook-header-item">
+           <i class="icon ion-email"></i>
+            <span class="badge badge-assertive badge-assertive-custom badge-message"
+                  ng-show="unread_message_count">{{unread_message_count}}</span>
+        </a>
+    </ion-nav-buttons>
+
+    <ion-content id="phonebook-content has-header" scrollbar-y="false" overflow-scroll="false" delegate-handle="mainScroll">
+
+        <div class="loader" ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+        
+        <ion-refresher ng-if="use_pull_refresh"
+                       class="spinner-custom"
+                       pulling-text="{{ 'Pull to refresh...' | translate }}"
+                       on-refresh="pullToRefresh()">
+        </ion-refresher>
+
+        <div class="list list-inset" ng-if="phonebook_settings.enable_search == 1 && !is_loading">
+            <label class="item item-input" ng-click="seachContactModal()">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="{{ forTranslate('Search by name') }}" >
+            </label>
+        </div>
+
+        <div class="list" ng-if="customer_is_logged_in && phonebook_settings.myaccount == 1 && !is_loading">
+            <div class="item item-divider item-divider-custom">
+                {{ ::"MY ACCOUNT" | translate:"phonebook" }} 
+            </div>
+            <a class="item item-custom item-avatar item-icon-left item-icon-right" ui-sref="phonebook-info({value_id: value_id, friend_id: customer.id })" >
+                <img  ng-src="{{ customer_avatar(customer.image) }}" >
+                <h2>{{ customer.firstname }} {{ customer.lastname }}</h2>
+                <p> {{ customer.email }} </p>            
+             </a>
+        </div>
+
+        <div class="list" ng-if="!is_loading">
+         <div  class="all-contact-list" id="index_{{letter}}" data-ng-repeat="(letter, all_customers) in repeaterObject">
+            <div class="item item-divider item-divider-custom">
+                {{letter}}
+            </div>
+            <div class="customer-info" ng-repeat="value in all_customers">
+                <a  id="c-{{value.customer_id}}" class="item item-custom item-avatar item-icon-left item-icon-right" ui-sref="phonebook-info({value_id: value_id, friend_id: value.customer_id })">
+                <img  ng-src="{{ customer_avatar(value.image) }}" />
+                    <h2 class="phonebook-customer-name">{{ value.firstname }} {{ value.lastname }}</h2>  <p ng-if="value.about_me == null">Hey there! i am using {{app_name}}.</p>
+                      <p ng-if="value.about_me != null">{{value.about_me}}</p>
+                 </a>
+            </div>
+        </div>
+       </div>
+        <div class="list" ng-if="!is_loading && !collection.length">
+            <div class="item text-center item-custom">
+                {{ ::"No items found" | translate:"phonebook" }}
+            </div>
+        </div>
+
+        <ion-infinite-scroll ng-if="can_load_older_posts"
+            on-infinite="backgroundCustomersCall()"
+            immediate-check="false"
+            distance="50%"
+            class="spinner-custom">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+    <div ng-if="AtoZ && !is_loading && phonebook_settings.enable_atoz == 1" class="list phonebook-alphabet-list has-header">
+        <ion-scroll scrollbar-y="false">
+            <a class="item item-custom right-char-list" ng-click="listByAlphabet(list_tag)" ng-repeat="list_tag in AtoZ"> 
+            {{ list_tag }}
+            </a>
+        </ion-scroll>
+    </div>
+
+    <style type="text/css">
+        .phonebook-alphabet-list{
+            position: absolute!important;
+            right: 0!important;
+            max-width: 10% !important;
+           /* height: 100vh!important;*/
+        }
+        .phonebook-alphabet-list a.item {
+            border: medium none!important;
+            padding: 0 5px!important;
+            text-align: center!important;
+           background-color: #fff0 !important;
+        }
+    </style>
+ 
+</ion-view>

@@ -1,0 +1,51 @@
+<ion-view sb-page-background
+          class="ewallet ewallet-add-wallet">
+        <ion-nav-title></ion-nav-title>
+   
+    <ion-content class="has-header">
+      
+        <div class="loader" ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>  
+
+        <div class="list remove-margin-bottom" ng-if="!is_loading">
+            <a  class="item item-custom remove-border add-money-box">
+                <p>{{ ::"Add Money to" | translate:"ewallet" }}</p>
+                <h2 class="app_name">{{ application.app_name }} {{ ::"Wallet" | translate:"ewallet" }}</h2>
+                <p class="display-available-balnce">
+                  {{ ::"Available Balance" | translate:"ewallet" }} : <i>{{cart.currency_code}}</i>{{current_balance}}
+                </p>
+            </a>
+        </div>
+
+        <div class="list amount-enter-box">
+          <label class="item  item-input remove-border amount-enter-item">
+            <i class="icon placeholder-icon " ng-class="{'opacity-1': cart.amount != ''}" ng-init="cart.amount == ''">{{cart.currency_code}}</i>
+            <input class="amount-enter-input" ng-init="cart.amount" autocomplete="off" ng-model="cart.amount" type="number" placeholder='{{ ::"Enter Amount" | translate:"ewallet" }}'>
+        </label> 
+
+        <a class="item item-custom remove-border" ng-if="!cart.promo_status">
+          <span class="icon-active-custom pull-right promocode-title" ng-click="goToPromocode()">{{ ::"Have a promocode" | translate:"ewallet" }}?</span>
+        </a>
+
+          <a class="item item-custom remove-border item-icon-right item-body icon-active-custom" ng-if="cart.promo_status">
+              {{cart.promo_message}}
+              <i class="icon ion-close promocode-close" ng-click="removePromocode()"></i>
+          </a>
+         
+        </div>
+
+        <div class="list add-money-button-box">
+          <div class="item item-custom remove-border">
+             <p>
+                <button ng-click="addToCard()" ng-disabled="(cart.amount > 0) ? false : true" class="button button-full button-positive-custom">
+                    {{ ::"Procced to add Money" | translate:"ewallet" }}
+                </button>
+            </p>
+          </div>          
+        </div>
+
+    </ion-content>
+
+ 
+</ion-view>

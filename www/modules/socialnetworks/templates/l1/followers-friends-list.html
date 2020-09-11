@@ -1,0 +1,50 @@
+<ion-view class=" module-fanwall fanwall-list fanwall-list-l1 pane has-background-image">
+    <ion-nav-title ><div>{{ pageTitle }}</div></ion-nav-title>
+    <ion-content class="fanwall-profile scroll-content" sb-background-image>
+       <ion-item ng-show="!is_loading" class="item-custom" style='width: 99%; font-weight: bold;'>{{ listType }}</ion-item>
+       
+       <div class="loader" ng-show="is_loading">
+           <ion-spinner class="spinner-custom"></ion-spinner>
+       </div>
+       <div class="scroll">
+
+    <div ng-if="!is_loading && collection.length > 0" ng-repeat="(key, customer) in collection track by customer.id">
+        <ion-item class="item-custom" style='text-align: center;' ng-click="showProfile({{ customer.customer_id }})">
+            <div class="item-avatar post-author">
+                <img ng-src="{{ customerImagePath(customer.image) }}" />
+            </div>
+            <h2>
+                {{ customer.firstname }}  {{ customer.lastname }}
+            </h2>
+        </ion-item>
+    </div>
+
+</div>
+
+      <style type="text/css" data-feature="fanwall2">
+    
+     .item-custom{
+         float:left;
+         width: 130px;
+         margin: 10px 10px !important;
+         text-align: center !important;
+         padding: 8px !important;
+     }
+     .item-avatar{
+         display: inline-block !important;
+         padding-left: 0px !important;
+         min-height: 50px !important;
+     }
+     .item-avatar img{
+        position: relative !important;
+        left: 0px !important;
+        top: 0px !important;
+     }
+     .item-custom h2{
+         font-size: 12px !important;
+     }
+    </style>  
+    </ion-content>
+
+    
+</ion-view>

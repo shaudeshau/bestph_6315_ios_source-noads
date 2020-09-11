@@ -1,0 +1,44 @@
+<ion-content overflow-scroll=”true”>
+
+  <div class="layout_dream_main">
+      <div class="overlay">
+          <img ng-src="{{ features.layoutOptions.LogoImage.replace('http', 'https') }}">
+          <h2 style="color:{{features.layoutOptions.DreamHeaderTitleColor}} !important;">{{features.layoutOptions.HeaderTitle}}</h2>
+          <h4 style="color:{{features.layoutOptions.DreamHeaderSubTitleColor}} !important;">{{features.layoutOptions.HeaderSubTitle}}</h4>
+      </div>
+  </div>
+
+<div class="layout_dream">
+    <div class="dream_child" tabbar-items ng-repeat="feature in features.overview.options" option="feature" go-to-url="goTo(feature);" style="background-image: url('{{ feature.icon_url }}')">
+      <div class="overlay">
+            <p>{{ feature.name }}</p>
+      </div>
+    </div>
+</div>
+
+	<style>
+    .layout_dream .dream_child .overlay {
+      background: {{ features.layoutOptions.DreamOverlay }};
+    }
+    .layout_dream .dream_child .overlay {
+      text-transform: {{ features.layoutOptions.DreamtextTransform }} !important;
+    }
+    .layout_dream .dream_child  {
+      border: solid {{features.layoutOptions.DreamBorderColor}} 1px;
+    }
+    .layout_dream .overlay p {
+      font-size: {{ features.layoutOptions.DreamTitleSize }} !important;
+      color: {{ features.layoutOptions.DreamTitleColor }} !important;
+    }
+    .layout_dream_main {
+        background-image: url({{ features.layoutOptions.HeaderBackground }} )!important;
+    }
+    .layout_dream_main .overlay h2 {
+      font-size: {{ features.layoutOptions.DreamHeaderTitleSize }} !important;
+    }
+    .layout_dream_main .overlay h4 {
+      font-size: {{ features.layoutOptions.DreamHeaderSubTitleSize }} !important;
+    }
+	</style>
+
+</ion-content>

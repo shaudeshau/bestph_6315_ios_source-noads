@@ -1,0 +1,151 @@
+.layout.l39 .sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.layout.l39 .sidenav .closebtn {
+position: absolute;
+top: 10px;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+.layout.l39 #main {
+transition: margin-left .5s;
+}
+
+.layout.l39 #main p.title {
+font-size: 25px !important;
+padding-top: 12px; 
+text-align: center;  
+}
+
+.layout.l39 #main .row {
+padding: 0 !important;
+}
+
+
+.layout.l39 #main .navbtn {
+display: block;
+width: 20px;
+margin-bottom: 0;
+margin-top: 3px;
+font-size: 36px !important;
+}
+
+.layout.l39 .sidenav ul.items li  { 
+display: -webkit-flex;
+display: flex;
+-webkit-align-items: center;
+align-items:center;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+width: 100%;
+height: 70px;
+padding: 10px 5px;
+}
+
+.layout.l39 .sidenav ul.items li p { 
+font-size: 13px;	
+margin: 0 0 0 10px;
+}
+
+.layout.l39 .sidenav li img {
+width: 30px;
+height: 30px;	
+margin: 0 0 0 10px;
+max-height: 100%;
+}
+
+.layout.l39 .sidenav li p {
+font-size: 10px; 
+line-height: 20px; 
+height: 20px; 
+overflow: hidden; 
+}
+
+.layout.l39 .sbox {
+width: 100%;
+height: 50%;
+}
+
+.layout.l39 .slider {
+height: 250px;
+top: 50px;
+}
+
+.layout.l39 .slider-slide {
+padding-top: 20px;
+text-align: center;
+}
+
+.layout.l39 .slider-pager {
+background-color: transparent;
+}
+
+.layout.l39 .sbox .sicon {
+display: none;
+}
+
+.layout.l39 .sbox .stext h2 {
+display: none;
+}
+
+.layout.l39 .r3menu ion-content {
+position: absolute; 
+width: 100%; 
+height: 40%; 
+bottom: 0; 
+top: initial;
+}
+
+.layout.l39 .r3menu .inner-scroll {
+width: 100%; 
+height: 100%;
+}
+
+.layout.l39 .r3menu ul {
+padding-left: 10px; 
+padding-top: 4px;
+}
+
+.layout.l39 .r3menu li {
+float: left;  
+width: 27%; 
+height: 110px;  
+margin: 0 2% 5px 3%;
+}
+
+.layout.l39 .r3menu li .item {
+height: 85px; 
+padding: 15px; 
+border-width: 1px; 
+border-style: solid;
+}
+
+.layout.l39 .r3menu li img {
+width: 55px; 
+height: 55px; 
+height: 100%; 
+max-width: 100%;
+}
+
+.layout.l39 .r3menu li p {
+text-transform: uppercase; 
+line-height: 20px; 
+height: 20px; 
+overflow: hidden; 
+font-size: 12px;
+}
+
+.layout.l39 .r3menu .no-border{
+border:none !important
+}

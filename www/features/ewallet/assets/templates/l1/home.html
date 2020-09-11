@@ -1,0 +1,110 @@
+<ion-view sb-page-background cache-view="false"
+          class="ewallet ewallet-home">
+    <ion-nav-title> {{ page_title }}</ion-nav-title>
+   
+    <ion-content class="has-header has-footer" id="ewallet-content" scrollbar-y="false" overflow-scroll="false" delegate-handle="mainScroll">
+   
+    <div class="list" ng-if="!is_logged_in && !is_loading">
+      <div class="item item-body item-custom">
+         <button class="button button-block button-positive button-positive-custom" ng-click="login()">
+          {{ ::"Click here for Login!" | translate:"ewallet" }}
+        </button>
+      </div>       
+    </div>
+
+    <div class="loader" ng-show="is_loading">
+        <ion-spinner class="spinner-custom"></ion-spinner>
+    </div>  
+
+    <div class="list ewallet-balance-box" ng-show="!is_loading && is_logged_in">
+		    <div class="item item-avatar item-custom ewallet-balance-item">
+		      <img ng-src="{{ customer_avatar(customer.image) }}" ui-sref="ewallet-myqr({value_id: value_id })">
+		      <h2 class="ewallet-balance"><span>{{currency_code}}</span>{{currentBalance}}</h2>
+		      <p class="ewallet-balance-title">{{ ::"Available balance" | translate:"ewallet" }}</p>
+		    </div>		 
+		</div>
+
+    <div class="list ewallet-menu-box" ng-show="!is_loading && is_logged_in">
+        <div class="item item-custom ewallet-menu-item">           
+            <div class="row">
+                <div class="col">
+                  <a class="tab-item" ui-sref="ewallet-paycontact({value_id: value_id})">
+                    <i class="icon ion-arrow-up-c icon-active-custom rotate-45"></i>
+                    {{ ::"Pay" | translate:"ewallet" }}
+                  </a>
+                </div>
+
+                <div class="col">
+                    <a class="tab-item" ui-sref="ewallet-addMoney({value_id: value_id })">
+                    <i class="icon ion-plus-round icon-active-custom"></i>
+                      {{ ::"Add Money" | translate:"ewallet" }}
+                  </a>
+                </div>
+
+                 <div class="col" ng-if="settings.transfer_enable == 1">
+                    <a class="tab-item" ui-sref="ewallet-transfer({value_id: value_id})">
+                    <i class="icon ion-arrow-swap icon-active-custom"></i>
+                      {{ ::"Transfer" | translate:"ewallet" }}
+                  </a>
+                </div>
+                
+                <div class="col">
+                  <a class="tab-item" ui-sref="ewallet-history({value_id: value_id })">
+                    <i class="icon ion-navicon-round icon-active-custom"></i>
+                    {{ ::"History" | translate:"ewallet" }}
+                  </a>
+                </div>
+
+            </div>        
+        </div>     
+    </div>
+
+    <div class="list ewallet-slider-box" ng-show="!is_loading && is_logged_in">
+        <div class="item item-custom ewallet-slider-item">
+          <ion-slide-box id="ewallet_slider"
+                               auto-play="true"
+                               ng-if="homedatas.sliders.length > 0"
+                               slide-interval="3000"
+                               show-pager="true" ,
+                               does-continue="true"
+                               style="height: 120px;">
+                    <ion-slide ng-repeat="image in homedatas.sliders">
+                        <img ng-src="{{ sliderImages(image.image) }}" style="width:100%;"/>
+                    </ion-slide>
+                </ion-slide-box>
+        </div>
+      </div>
+
+
+      <div class="list" ng-show="!is_loading && is_logged_in">
+        <div class="item item-divider">
+           {{ ::"Recent Activity" | translate:"ewallet" }}
+        </div>
+       
+      <div class="item item-icon-left" ng-if="recent_collection.length" ng-repeat="value in recent_collection"   ng-click="tnxDetails(value)">
+          <span class="item-note icon-active-custom font-bold">
+            <i>{{currency_code}}</i>{{value.amount}}
+          </span>
+          <i class="icon ion-arrow-up-c rotate-45 icon-active-custom" ng-if="(value.payment_type == 'credit') && (value.status == 'success') "></i>
+          <i class="icon ion-arrow-down-c rotate-45 icon-danger-custom" ng-if="(value.payment_type == 'debit') && (value.status == 'success')"></i>          
+          <i ng-if="(value.status == 'failed') ? true : false" class="icon ion-close-circled icon-danger-custom"></i>
+          <i ng-if="(value.status == 'pending') ? true : false" class="icon icon ion-ios-timer-outline icon-warning-custom"></i>
+           
+          <h2 ng-if="(value.method == 'payToPlc' || value.method == 'payInviteAFriend' || value.method == 'payToWallet') ? true : false">{{value.remark}}</h2>
+          <h2 ng-if="(value.method == 'payToCustomer' || value.method == 'payToStore') ? true : false">
+            {{ value.customer.firstname }} {{ value.customer.lastname }}
+          </h2>
+          <p>{{value.created_at}}</p>
+      </div>
+  
+   </div>
+
+   <div class="list"
+           ng-if="!is_loading && !recent_collection.length && is_logged_in">
+          <div class="item text-center item-custom">
+              {{ ::"No recent activity!" | translate:"ewallet" }}
+          </div>
+      </div>
+
+   </ion-content>
+</ion-view>

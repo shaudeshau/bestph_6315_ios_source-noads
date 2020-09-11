@@ -1,0 +1,45 @@
+<ion-view   sb-page-background class="view_appointment" >
+    <ion-nav-title>{{ "Checkout" | translate }}</ion-nav-title>
+    <ion-content   class="appointment_checkout_page" >
+        <div class="loader" ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+        <div class="list" ng-show="!is_loading">
+            <div class="item item-divider"> {{ "Services" | translate }} </div>
+            <a class="item" href="#" ng-repeat="service in selected_services">
+                <div class="row">
+                    <div class="col col-70">{{service.name}}</div>
+                    <div class="col col-20">{{currency}}{{service.price}} </div>
+                    <div class="col col-10"  >
+                        <span class="item-note ion-close-circled input-label custome_cross_label " style="color: #ff4949 !important;font-size: xx-large;text-align: right;padding-top: 0; padding-left: 0 !important;display: inline-block; width: auto !important;position: absolute; right: 0;z-index:10" ng-click="removefromcart(service.sreail_nuber,service.service_id)" aria-label="" id="_label-0"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <br>
+        <div class="list"  ng-show="!is_loading">
+            <div class="item item-divider"> {{ "Payment Summary" | translate }} </div>
+            <a class="item" href="#">
+                <div class="row">
+                    <div class="col col-70"> {{ "Total Amount" | translate }}</div>
+                    <div class="col col-30">{{currency}}{{total}} </div>
+                </div>
+            </a>
+            <a class="item" href="#">
+                <div class="row">
+                    <div class="col col-70"> {{ "Deposit" | translate }} ({{percentage}} )</div>
+                    <div class="col col-30">- {{currency}}{{deposit}} </div>
+                </div>
+            </a>
+            <a class="item" href="#">
+                <div class="row">
+                    <div class="col col-70"> {{ "Net due later" | translate }}</div>
+                    <div class="col col-30">{{currency}}{{net_due}} </div>
+                </div>
+            </a>
+        </div>
+        <button  ng-show="!is_loading" class="button button-block button-custom" ng-click="getPayment()">
+            {{ "Pay and Book Appointment" | translate }}
+        </button>
+    </ion-content>
+</ion-view>

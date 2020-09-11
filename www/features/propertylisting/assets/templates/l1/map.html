@@ -1,0 +1,42 @@
+<ion-view cache-view="false"
+          class="listing listing-home"
+          sb-page-background>
+    <ion-nav-title>{{ page_title }}</ion-nav-title>
+
+   <ion-content class="propertylisting-map"
+               scroll="false" ng-controller="PropertylistingHomeController">
+
+      <div class="loader"
+           ng-show="isLoading">
+          <ion-spinner class="spinner-custom"></ion-spinner>
+      </div>
+
+      <div id="google-maps"
+           class="map-canvas"
+           sb-maps
+           map="map"
+           config="mapConfig"
+           ng-if="mapConfig"
+           data-tap-disabled="true"></div>
+ 
+  </ion-content> 
+
+        <button class="fab button button-custom small button light button-gps-loading" ng-click="centerMap()">
+            <i class="icon ion-android-locate icon" ng-hide="gps_loading"></i>
+            <ion-spinner class="spinner-custom" ng-show="gps_loading"></ion-spinner>
+        </button>
+
+        <style type="text/css">
+          button.gm-control-active.gm-fullscreen-control {
+            display: none;
+          }
+         .gm-svpc {
+              display: none;
+          }
+          .gm-style-mtc {
+              display: none;
+          }
+        </style>
+</ion-view>
+
+ 

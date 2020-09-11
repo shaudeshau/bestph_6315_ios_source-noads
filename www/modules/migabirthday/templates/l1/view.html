@@ -1,0 +1,89 @@
+<ion-view class="migabirthday-view">
+    <ion-nav-title>{{ birthday_info.page_title }}</ion-nav-title>
+    <ion-content class="migabirthday-view">
+        <div class="card"
+             ng-show="birthday_info.cover">
+            <div class="item item-text-wrap item-custom center text-center">
+                <p><img ng-src="{{ birthday_info.cover }}"
+                        alt="{{ birthday_info.description | translate }}"
+                        style="width: 100%;height: auto;"/></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-text-wrap item-custom">
+                <h2>{{ "Description" | translate }}</h2>
+                <hr/>
+                <p>{{ birthday_info.description | translate }}</p>
+            </div>
+        </div>
+        <div class="card"
+             ng-show="is_logged_in && birthday_info.is_profile && birthday_info.birthdate_date">
+            <div class="item item-text-wrap item-custom">
+                <h2>{{ "Profile DOB" | translate }}</h2>
+                <hr/>
+                <p>{{ birthday_info.birthdate_date | translate }}</p>
+            </div>
+        </div>
+        <div class="card"
+             ng-show="is_logged_in && !birthday_info.is_profile">
+            <div class="item item-text-wrap item-custom">
+                <h2>{{ "D.O.B" | translate }}</h2>
+                <hr/>
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            {{ "Day" | translate }}
+                        </div>
+                        <select id="day" name="day" ng-model="birthday_info.day" ng-disabled="birthday_info.disable_dob">
+                            <option ng:repeat="day in days" value="{{ day.id }}" >{{ day.name }}</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            {{ "Month" | translate }}
+                        </div>
+                        <select id="month" name="month" ng-model="birthday_info.month" ng-disabled="birthday_info.disable_dob">
+                            <option ng:repeat="month in months" value="{{ month.id }}" >{{ month.name }}</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            {{ "Year" | translate }}
+                        </div>
+                        <select id="year" name="year" ng-model="birthday_info.year" ng-disabled="birthday_info.disable_dob">
+                            <option ng:repeat="year in years" value="{{ year.id }}" >{{ year.name }}</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="loader" ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+        <style>
+            .fontsize {
+                font-size: 11px !important;
+            }
+            .cp {
+                cursor: pointer !important;
+            }
+        </style>
+    </ion-content>
+    <ion-footer-bar class="bar bar-balanced tabs"
+                    style="padding-top: 0;"
+                    ng-show="is_logged_in">
+        <button ng-show="is_logged_in && !birthday_info.is_profile"
+                class="button button-block button-balanced"
+                ng-disabled="birthday_info.disable_dob"
+                ng-click="updateDOB()">{{ "Save Birthday" | translate }}
+        </button>
+        <button ng-show="is_logged_in && birthday_info.is_profile"
+                class="button button-block button-balanced"
+                ng-click="openProfile(birthday_info.profile_value_id)">{{ "Change DOB" | translate }}
+        </button>
+    </ion-footer-bar>
+</ion-view>

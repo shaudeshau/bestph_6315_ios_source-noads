@@ -1,0 +1,42 @@
+<div class="layout rbn">
+<ion-content>
+<ul>
+<li class="ribbon homepage-custom" ng-repeat="feature in features.options" tabbar-items option="feature" go-to-url="goTo(feature)">
+{{ feature.name }}
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+</li>
+
+</ul>
+</ion-content>
+</div>
+<style>
+.layout.rbn li p { 
+color: {{ features.layoutOptions.tclr }}; 
+}
+.layout.rbn .ribbon i:first-child { 
+border-right-color: {{ features.layoutOptions.bclr }};
+}
+
+.layout.rbn .ribbon i:nth-child(2) { 
+border-left-color: {{ features.layoutOptions.bclr }};
+}
+
+.layout.rbn .ribbon i:nth-child(3) {
+border: 30px solid {{ features.layoutOptions.bclr1 }};
+border-left-color: transparent;
+}
+
+.layout.rbn .ribbon i:last-child  {
+border: 30px solid {{ features.layoutOptions.bclr1 }};
+border-right-color: transparent;
+}
+
+.layout.rbn ion-content { 
+height: {{ features.layoutOptions.height }}; 
+bottom: {{ features.layoutOptions.bottom }}; 
+top: {{ features.layoutOptions.top }};
+}
+</style>

@@ -1,0 +1,69 @@
+<ion-modal-view cache-view="false"
+                sb-page-background
+                ng-controller="PropertylistingHomeController"
+                class="propertylisting propertylisting-messages listing">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeMessagesModal()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ messages_page_title }}</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header has-footer"
+                 delegate-handle="messageScroll">
+
+        <div class="list">
+
+            <div ng-if="messages.length"
+                 class="item item-body item-custom"
+                 ng-class="messageUserId == msg.sender_id ? 'text-right':'text-left'"
+                 ng-repeat="msg in messages">
+                <p ng-bind-html="msg.message"></p>
+                <p>
+                    <a class="subdued"
+                       ng-class="messageUserId == msg.sender_id ? 'text-right':'text-left'">
+                        {{ convertMessageDate(msg.created_at) }}</a>
+                </p>
+            </div>
+
+            <div ng-if="!messages.length"
+                 class="item item-body item-custom">
+                <p class="text-center">{{ ::"No messages yet!" | translate:"propertylisting" }}</p>
+            </div>
+
+        </div>
+
+    </ion-content>
+
+    <form name="sendMessageForm"
+          ng-submit="sendMessage(sentmessages)"
+          novalidate>
+        <ion-footer-bar class="bar-stable item-input-inset message-footer"
+                        keyboard-attach>
+            <label class="item-input-wrapper">
+                <input id="msg-input"
+                       ng-model="sentmessages.message"
+                       class="input-message"
+                       type="text"
+                       placeholder="{{ forTranslate('Type a message') }}"
+                       ng-disabled="sending_message"/>
+            </label>
+            <div class="footer-btn-wrap">
+                <button class="button button-icon icon ion-ios-paperplane footer-btn"
+                        type="submit"
+                        ng-disabled="!sentmessages.message || sentmessages.message === '' || sending_message">
+                </button>
+            </div>
+        </ion-footer-bar>
+    </form>
+
+    <style type="text/css">
+        a.subdued:last-child {
+            font-size: 10px;
+        }
+    </style>
+</ion-modal-view>

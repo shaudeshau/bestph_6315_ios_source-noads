@@ -1,0 +1,380 @@
+    <ion-view sb-page-background>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" ng-click="myGoBack()">
+            <i class="icon ion-ios-arrow-back"></i> {{ "Back" | translate }}
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-title>{{ page_title }}</ion-nav-title>
+    <ion-content>
+        <div class="loader" ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+        <div ng-show="!is_loading">
+            <div ng-if="card_is_locked">
+                <div class="list">
+                    <div class="item item-text-wrap item-custom">
+                        {{ "We are sorry but this card is temporarily blocked" | translate}}
+                    </div>
+                </div>
+            </div>
+            <div class="list" ng-if="!is_loading && !card.id">
+                <div class="item item-text-wrap item-custom">
+                    {{ "No cards available" | translate }}
+                </div>
+            </div>
+            <div ng-if="!card_is_locked && card.id" class="card_part">
+                <div class="list">
+                    <div class="cover_image">
+                        <img ng-if="cover_image" ng-src="{{cover_image}}" />
+                    </div>
+                </div>
+                <div ng-if="card.id">
+                    <div ng-if="layout_id == '1'">
+                        <div class="points text-center" ng-if="card && card.is_visible">
+                            <a class="point loyaltycard" ng-click="card.number_of_points <= $index && openPad(card)" ng-repeat="point in points">
+                                <img class="circle img_color" ng-if='point.is_validated' ng-src="{{point.image_url}}" width="75" />
+                                <img class="circle deactive_img_color" ng-if='!point.is_validated' ng-src="{{point.validated_image_url}}" width="75" />
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-if="layout_id == '2'">
+                        <div class="points text-center" ng-if="card && card.is_visible">
+                            <a class="point loyaltycard" ng-click="openPad(card)" ng-repeat="point in points">
+                                <img class="square img_color" ng-if='point.is_validated' ng-src="{{point.image_url}}" width="75" />
+                                <img class="square deactive_img_color" ng-if='!point.is_validated' ng-src="{{point.validated_image_url}}" width="75" />
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-if="layout_id == '3'" class="points_bar">
+                        <canvas width="280" height="280" id="myCanvas"></canvas>
+                        <div class="myCanvas_text_wrap">
+                            <div id="myCanvas_text"></div>
+                            <span>{{"POINTS" | translate}}</span>
+                        </div>
+                        <div><img id="reward_image"></div>
+                    </div>
+                    <div class="item item-text-wrap item-icon-left item-custom" ng-click="login()" ng-if="!is_logged_in">
+                        <i class="icon ion-ios-person-outline"></i> {{ "Click here to log-in" | translate }}
+                    </div>
+                    <div class="item item-text-wrap item-custom bkg_class">
+                        <div class="points text-center" ng-if="card && card.is_visible">
+                            <div>
+                                <button class="button button-custom stamp_btn common-btn" ng-click="openPad(card)">
+                                    {{ "STAMP" | translate }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reward_detail list" style="margin-bottom: 2px !important;">
+                    <div class="item item-divider item-divider-custom reward_text" ng-if="is_rewards.length">
+                        <b class="reward_inside_text">{{ "Rewards" | translate }}</b>
+                    </div>
+                    <div class="rewards_part" ng-repeat="rewards in current_rewards" ng-if="$parent.$eval(max_no_of_points) >= $parent.$eval(rewards.number_of_points_to_redeem) && rewards.is_redeem == '0'" >
+                        <div class="col all_rewards">
+                            <div class="item item-custom reward_div" ng-click="toggle_{{rewards.redeem_id + rewards.reward_id}} = !toggle_{{rewards.redeem_id + rewards.reward_id}}; open_description_current((rewards.redeem_id + rewards.reward_id),(rewards.image_active))"><i class="icon-right ion-chevron-down" ng-class="{{rewards.redeem_id + rewards.reward_id}} == rdm_rwd_id  ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                                <div>
+                                    <img class="reward_img" ng-if="$parent.$eval(no_of_points) >= $parent.$eval(rewards.number_of_points_to_redeem) && rewards.image_active" ng-src="{{ base_url }}/images/application{{rewards.image_active}}">
+                                    <img class="reward_img" ng-if="$parent.$eval(no_of_points) >= $parent.$eval(rewards.number_of_points_to_redeem) && rewards.image_active == ''" ng-src="{{active_reward_image}}">
+                                    <img class="reward_img" ng-if="$parent.$eval(rewards.number_of_points_to_redeem) > $parent.$eval(no_of_points) && rewards.image_inactive" ng-src="{{ base_url }}/images/application{{rewards.image_inactive}}">
+                                    <img class="reward_img" ng-if="$parent.$eval(rewards.number_of_points_to_redeem) > $parent.$eval(no_of_points) && rewards.image_inactive == ''" ng-src="{{deactive_reward_image}}">
+                                    <p class="reward_name">{{rewards.name}}</p>
+                                </div>
+                            </div>
+                            <div class="red_des" ng-if="(rewards.redeem_id + rewards.reward_id) == rdm_rwd_id">
+                                <div>
+                                    <p class="reward_des">{{rewards.description}}</p>
+                                    
+                                </div>
+                                <div ng-if="rewards.is_used == '0' && $parent.$eval(rewards.number_of_points_to_redeem) <= $parent.$eval(no_of_points)">
+                                    <div ng-if="rewards.expiry_days !=0" class="clr-div">
+                                        <p class="text-center clr-red">
+                                            {{ rewards.expiry_days }} {{"days validity" | translate}}
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="wrapper">
+                                    <button class="redeem disabled common-btn" ng-if="rewards.is_used == '0' && $parent.$eval(rewards.number_of_points_to_redeem) > $parent.$eval(no_of_points)" disabled>
+                                        {{ "REDEEM" | translate }}
+                                    </button>
+                                    <button class="redeem button button-custom common-btn" ng-click="redeem_coupan(rewards)" ng-if="rewards.is_used == '0' && $parent.$eval(rewards.number_of_points_to_redeem) <= $parent.$eval(no_of_points)">
+                                        {{ "REDEEM" | translate }}
+                                    </button>
+                                    <b ng-if="rewards.is_used != '0'">
+                                        {{ "REDEEMED" | translate }}
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rewards_part" ng-repeat="rewards in previous_rewards" ng-if="rewards.is_redeem == '0'" >
+                        <div class="col all_rewards">
+                            <div class="item item-custom reward_div" ng-click="toggle_{{rewards.redeem_id + rewards.reward_id}} = !toggle_{{rewards.redeem_id + rewards.reward_id}}; open_description_current((rewards.redeem_id + rewards.reward_id),(rewards.image_active))"><i class="icon-right ion-chevron-down" ng-class="{{rewards.redeem_id + rewards.reward_id}} == rdm_rwd_id  ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                                <div>
+                                    <img class="reward_img" ng-if="$parent.$eval(no_of_points) >= $parent.$eval(rewards.number_of_points_to_redeem) && rewards.image_active" ng-src="{{ base_url }}/images/application{{rewards.image_active}}">
+                                    <img class="reward_img" ng-if="$parent.$eval(no_of_points) >= $parent.$eval(rewards.number_of_points_to_redeem) && rewards.image_active == ''" ng-src="{{active_reward_image}}">
+                                    <img class="reward_img" ng-if="$parent.$eval(rewards.number_of_points_to_redeem) > $parent.$eval(no_of_points) && rewards.image_active" ng-src="{{ base_url }}/images/application{{rewards.image_active}}">
+                                    <img class="reward_img" ng-if="$parent.$eval(rewards.number_of_points_to_redeem) > $parent.$eval(no_of_points) && rewards.image_active == ''" ng-src="{{active_reward_image}}">
+                                    <p class="reward_name">{{rewards.name}}</p>
+                                </div>
+                            </div>
+                            <div class="red_des" ng-if="(rewards.redeem_id + rewards.reward_id) == rdm_rwd_id">
+                                <div>
+                                    <p class="reward_des">{{rewards.description}}</p>
+                                </div>
+                                <div ng-if="rewards.expiry_days !=0" class="clr-div">
+                                    <p class="text-center clr-red">
+                                        {{ rewards.expiry_days }} {{"days validity" | translate}}
+                                    </p>
+                                </div>
+                                <div class="wrapper">
+                                    <button class="button button-custom redeem common-btn" ng-click="redeem_coupan(rewards)">
+                                        {{ "REDEEM" | translate }}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-divider item-divider-custom reward_text" ng-if="current_rewards == null && previous_rewards == null">
+                        <b class="reward_inside_text">{{ "Coupons" | translate }}</b>
+                    </div>
+                </div>
+                
+                <div class="col text-center" >
+                    <b class="reward_inside_text">{{ "Coupons" | translate }}</b>
+                </div>
+                <div class="col" ng-repeat="rewards in current_rewards" ng-if="rewards.is_redeem == '1' && rewards.is_used == '0' && rewards.expires_in >0">
+                    <div ng-if="rewards.is_redeem == '1'">
+                        <div class="item item-icon-left item-text-wrap item-custom reward-heading">
+                           {{rewards.name}}
+                        </div>
+                        <div class="item item-icon-left item-text-wrap item-custom coupon_text">
+                            <img class="rwd_dt_img img_color" ng-src="{{ base_url }}/app/local/modules/ProgressiveLoyaltyCards/resources/media/library/gift.png">
+                            <p>{{ "Please give this to the store attendant to redeem this coupon" | translate }}</p>
+                            <p class="text-center clr-red">
+                                {{"Expires in " | translate }}{{ rewards.expires_in }} {{"days" | translate}}
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="button button-custom user_coupan common-btn" ng-click="openPad(rewards)">
+                                {{ "Use coupon" | translate }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ng-repeat="rewards in previous_rewards" ng-if="rewards.is_redeem == '1' && rewards.is_used == '0' && rewards.expires_in >0">
+                    <div ng-if="rewards.is_redeem == '1'">
+                        <div class="item item-icon-left item-text-wrap item-custom reward-heading">
+                            {{rewards.name}}
+                        </div>
+                        <div class="item item-icon-left item-text-wrap item-custom coupon_text">
+                            <img class="rwd_dt_img img_color" ng-src="{{ base_url }}/app/local/modules/ProgressiveLoyaltyCards/resources/media/library/gift.png">
+                            <p>{{ "Please give this to the store attendant to redeem this coupon" | translate }}</p>
+                            <p class="text-center clr-red">
+                                {{"Expires in " | translate }}{{ rewards.expires_in }} {{"days" | translate}}
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="button button-custom user_coupan common-btn" ng-click="openPad(rewards)">
+                                {{ "Use coupon" | translate }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <div class="item item-divider item-divider-custom reward_text" ng-if="card.term_conditions">
+                        <b class="reward_inside_text" ng-click="showTermConditions()">{{ "Terms & Conditions" | translate }} </b>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+        <sb-pad ng-if="show_pad" card="card"></sb-pad>
+    </ion-content>
+    <style type="text/css">
+        button.button.stamp_btn {
+            border-radius: 30px;
+        }
+        .reward_div {
+            width: auto;
+            text-align: left !important;
+            border-radius: 10px;
+            margin-top: 0px;
+            padding: 7px 15px;
+        }
+        .reward_des {
+            padding: 15px;
+        }
+        .wrapper {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .redeem {
+            border-radius: 25px;
+            margin-bottom: -22px;
+        }
+        .points_bar {
+            text-align: center;
+            position: relative;
+            margin-top: 25px;
+        }
+        .myCanvas_text_wrap {
+            position: absolute;
+            top: 35%;
+            left: 0;
+            right: 0;
+        }
+        .myCanvas_text_wrap #myCanvas_text {
+            font-size: 45px;
+            font-weight: 600;
+            line-height: 45px;
+        }
+        .myCanvas_text_wrap>span {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .item.item-text-wrap.item-custom.bkg_class {
+            background: none;
+            border-top: none;
+        }
+        .reward_img {
+            width: 10%;
+            vertical-align: middle;
+        }
+        p.reward_name.ng-binding {
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+        p.card_name {
+            color: #fff;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 65px 0px 0px 0px;
+        }
+        img#reward_image {
+            display: none;
+        }
+        button.redeem.disabled {
+            background-color: #dddddd;
+            border: none;
+        }
+        .reward_text {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+        .coupan_part {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        .item.cover_image {
+            min-height: 185px;
+        }
+        .cover_image img {
+            width: 100%;
+            display: block;
+        }
+        .points.text-center {
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        img.circle {
+            padding: 10px;
+            background-color: #bfbfbf;
+            border-radius: 50%;
+        }
+        img.square {
+            padding: 10px;
+            background-color: #bfbfbf;
+            border-radius: 10px;
+        }
+        .red_des {
+            background: #fff;
+            border-radius: 0px 0px 10px 10px;
+            position: relative;
+            top: -5px;
+            border: 1px solid #ccc;
+        }
+        .all_rewards {
+            margin-bottom: 25px;
+            border-radius: 12px;
+        }
+        .reward_inside_text {
+            font-size: 15px;
+        }
+        i.icon-right {
+            float: right;
+            vertical-align: middle;
+            display: inline-block;
+            line-height: 2;
+        }
+        button.redeem.disabled.ng-binding {
+            height: 45px;
+        }
+        .rwd_dt_img {
+            width: 50px;
+            float: left;
+            border-radius: 23px;
+            margin-right: 15px;
+            padding: 5px;
+        }
+        .item.item-icon-left.item-text-wrap.item-custom.coupon_text {
+            padding: 30px 15px;
+            position: relative;
+        }
+        .coupon_part {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight:bold;
+        }
+        .user_coupan {
+            margin-top: 10px;
+            border-radius: 25px;
+        }
+        .common-btn{
+            padding: 0px 43px;
+            height: auto;
+            line-height: 36px;
+        }
+        .reward-heading{
+            padding: 10px 0px;
+            text-align: center;
+        }
+        .reward_div .reward_name {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .red_des .wrapper {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        a.point.loyaltycard {
+            display: inline-block;
+            margin: 10px;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+        p.text-center.clr-red {
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            right: 0;
+            font-weight: bold;
+        }
+        .clr-div {
+            color: #666;
+            position: relative;
+            bottom: -10px;
+            margin-bottom: 17px;
+        }
+
+        {{COLOR_BUTTON}}
+    </style>
+</ion-view>

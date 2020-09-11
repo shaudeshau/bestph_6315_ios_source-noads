@@ -1,0 +1,35 @@
+<ion-modal-view cache-view="false"
+                sb-page-background
+                ng-controller="InviteFriendViewController"
+                class="invitefriend invitefriend-apply-code">
+   
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeCodeModal()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+    <h1 class="title">{{ page_title }}</h1>
+   </ion-header-bar>
+
+    <ion-content class="has-header"> 
+      <div class="list">
+          <div class="item item-body item-custom text-center">
+             <h2>{{ "Enter your friends referral code here!" | translate }}</h2>
+          </div>
+
+         <label class="item item-body item-input item-floating-label item-custom padding">
+            <span class="input-label">{{ "Friends Referral Code" | translate }}</span>
+            <input style="text-align: center;" type="text" ng-model="inputCode" placeholder='{{ "Enter referral code" | translate }}'>
+           
+        </label>
+
+        <div class="item item-body item-custom text-center">
+             <button ng-click="verifyCode(inputCode)" class="button button-block button-positive button-positive-custom">{{ "Apply" | translate }}</button>
+        </div>
+
+      </div> 
+    </ion-content> 
+
+</ion-modal-view>

@@ -1,0 +1,38 @@
+<ion-modal-view cache-view="false"
+                ng-controller="PropertylistingEditController"
+                class="listing propertylisting propertylisting-edit image">
+
+    <ion-header-bar class="bar-custom">
+        <div class="buttons">
+            <button class="button button-clear"
+                    ng-click="closeAddImageModal()">
+                <i class="icon ion-sb-close-modal"></i>
+            </button>
+        </div>
+        <h1 class="title">{{ ::"Add image" | translate:"propertylisting" }}</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header ">
+        <form name="edit_property_images">
+            <div class="list">
+                <br>
+                  <div class="item item-custom item-body" ng-if="property_image!=''">
+                    <img class="full-image" src="{{property_image}}">  
+                  </div>
+                  <div class="item item-icon-left item-custom" ng-click="addPic()">
+                    <i class="icon ion-camera" > </i> {{ "Upload Photo" | translate:"propertylisting" }}
+                  
+                   <p> {{ ::"Best size of slider image is 600*320 pixel" | translate:"propertylisting" }} </p>
+                  </div>
+                   
+                <button ng-disabled="edit_property_images.$invalid" class="button button-block button-positive button-positive-custom"
+                ng-click="addImages(property_image)">
+                    {{ ::"Save" | translate:"propertylisting" }}
+                </button>
+                
+              </div>
+            </form>
+
+    </ion-content>
+
+</ion-modal-view>

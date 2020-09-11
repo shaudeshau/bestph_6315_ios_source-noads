@@ -1,0 +1,23 @@
+<ion-view sb-background-image>
+    <ion-nav-title>SMS Gateway</ion-nav-title>
+    <ion-content class="smsgateway">
+        <div style="padding: 10px;">
+            <form class="model-form" method="post" name="smsform" class="smsform" method="post" ng-submit="sendMessage(smsform.$valid, sendsms)" novalidate>
+                <div class="list">
+				  	<label>
+				    	<div style="margin-bottom: 15px;display: flex;">
+				    		<input type="number" ng-model="sendsms.mobile_country_code" required style="width: 20% !important;border-right: 1px solid #858585;text-align: center;">
+				    		<input type="number" placeholder="Mobile Phone" ng-model="sendsms.telephone" required style="width: 80% !important;">
+				    	</div>
+				  	</label>
+				  	<label class="item item-input">
+				    	<textarea placeholder="Message" ng-model="sendsms.message"></textarea>
+				  	</label>
+				</div>
+                <div class="padding">
+			        <button type="submit" class="button button-block button-positive">Send</button>
+			     </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

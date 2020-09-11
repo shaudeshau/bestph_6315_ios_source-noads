@@ -1,0 +1,37 @@
+<div class="layout l101" class="{{ features.layoutOptions+' ' }}" ng-controller="101Ctrl">
+
+<div ng-show = "IsVisible">
+    <div class="sbox" ng-style="{'bottom':''+features.layoutOptions.bottom+'%', 'top':''+features.layoutOptions.top+'%'}" ng-show="tabbar_is_visible" ng-class="{ 'no-border': tabbar_is_transparent }">
+        <ion-content>
+            <ul class="items">
+                <li ng-repeat="feature in features.options" class="homepage-custom translucent border-custom" tabbar-items option="feature" go-to-url="goTo(feature)" ng-class="{ 'no-border': tabbar_is_transparent }">
+                    <img ng-src="{{ feature.icon_url }}" />
+                    <p class="{{ features.layoutOptions.title }}">{{ feature.name }}</p>
+                    <div ng-if="feature.code == 'push_notification' && push_badge" class="badge-custom">{{ push_badge }}</div>
+                </li>
+            </ul>
+        </ion-content>
+    </div>
+</div>	
+
+<div class="tbox">
+    <ul class="row homepage-custom border-custom tabs tabs-icon-top" ng-class="{ 'background-transparent' : tabbar_is_transparent }" ng-show="tabbar_is_visible">
+        <li tabbar-items class="col col-20 tab-item">
+        <a ng-href="tel:{{ features.layoutOptions.phonenumber }}"><i class="{{ features.layoutOptions.phoneicon }}"></i></a>   
+        </li>
+		<li tabbar-items class="col col-20 tab-item">
+		<a ng-href="https://api.whatsapp.com/send?phone={{ features.layoutOptions.whatsappnumber }}" onclick="window.open(this.href, '_system', 'location=yes'); return false;"><i class="{{ features.layoutOptions.whatsappicon }}"></i></a>
+        </li>
+		<li tabbar-items class="col col-20 tab-item">
+		<a ng-href="{{ features.layoutOptions.weblink1 }}" onclick="window.open(this.href, '_system', 'location=yes'); return false;"><i class="{{ features.layoutOptions.webicon1 }}"></i></a>
+        </li>
+		<li tabbar-items class="col col-20 tab-item">
+        <a ng-href="{{ features.layoutOptions.weblink2 }}" onclick="window.open(this.href, '_system', 'location=yes'); return false;"><i class="{{ features.layoutOptions.webicon2 }}"></i></a>   
+        </li>
+		<li tabbar-items class="col col-20 tab-item">
+        <a ng-click="ShowHide()"><i class="{{ features.layoutOptions.menuicon }}"></i></a>   
+        </li>
+    </ul>
+</div>
+
+</div>

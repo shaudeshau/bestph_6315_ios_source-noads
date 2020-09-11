@@ -1,0 +1,36 @@
+<ion-view sb-page-background class="view_appointment">
+    <ion-nav-title>{{ page_title }}</ion-nav-title>
+   
+    <ion-content  class="appointment">
+        <div class="loader" ng-show="is_loading">
+            <ion-spinner class="spinner-custom"></ion-spinner>
+        </div>
+        <div class="card" ng-show="!is_loading">
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col">{{ "Total" | translate }}</div>
+                    <div class="col">{{transaction.total}} {{transaction.currency}}</div>
+                </div>
+            </div>
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col">{{ "Deposit" | translate }}</div>
+                    <div class="col"> - {{transaction.deposit}} {{transaction.currency}} ( {{transaction.deposit_percentage}}% )</div>
+                </div>
+            </div>
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col">{{ "Due Later" | translate }}</div>
+                    <div class="col"> {{transaction.due_later}} {{transaction.currency}}</div>
+                </div>
+            </div>
+        
+            <div class="item item-text-wrap">
+                <div class="row">
+                     <div class="col">{{ "Payment Mode" | translate }}</div>
+                    <div class="col">{{transaction.payment_type}}</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

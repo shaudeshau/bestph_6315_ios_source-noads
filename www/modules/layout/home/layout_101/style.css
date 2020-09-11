@@ -1,0 +1,69 @@
+.layout.l101 ion-content { 
+height: 100%; 
+}
+
+.layout.l101 li img {
+width: 30px; 
+height: 30px;  
+margin: 0 0 0 10px; 
+max-height: 100%;
+}
+
+.layout.l101 li p {
+font-size: 10px; 
+line-height: 20px; 
+height: 20px; 
+overflow: hidden; 
+margin: 0 0 0 10px;
+}
+
+.layout.l101 .sbox {
+position: absolute;  
+top: 20px;  
+right: 10px;  
+bottom: 20%;  
+width: 200px;
+}
+
+.layout.l101 .sbox ul.items li {
+display: -webkit-flex;
+display: flex;
+-webkit-align-items: center;
+align-items:center;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+padding: 10px 5px;  
+text-align: center;
+position: relative; 
+width: 200px;  
+height: 50px;  
+margin-bottom: 5px;  
+}
+
+.layout.l101 .sbox ul.items li p {
+font-size: 13px; 
+margin-top: 4px; 
+}
+
+.layout.l101 .tbox .tabs{
+height: 55px; 
+padding-top: 5px; 
+padding-left: 0px; 
+padding-right: 0px;
+padding-bottom: 0px; 
+}
+
+.layout .l101 .tbox .tab-item {
+border: 1px;
+border-style: solid; 
+margin-top: -5px;  
+height: 51px;  
+}
+
+.layout.l101 .tbox .tab-item img {
+width: 30px; 
+height: 30px; 
+max-height: 80%;
+}
+
+

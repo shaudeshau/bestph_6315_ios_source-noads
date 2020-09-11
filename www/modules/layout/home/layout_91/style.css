@@ -1,0 +1,140 @@
+/* Side Menu CSS */
+.layout.l91 #sidebar{
+position: fixed; 
+height: 100%; 
+transition: 400ms;
+}
+
+.layout.l91 #sidebar ul{
+list-style: none; 
+margin-top: 0px;
+}
+
+.layout.l91 #sidebar ul li{
+width: 100%; 
+padding: 10px 20px;  
+box-sizing: border-box; 
+text-decoration: none; 
+}
+
+.layout.l91 .toggle-btn{ 
+position: absolute; 
+padding: 8px 8px; 
+top: 10px; 
+cursor: pointer; 
+margin-left: 5px;
+}
+
+.layout.l91 .active{left: 00px !important;} 
+
+.layout.l91 .r99 {
+position: absolute;  
+top: 0;  
+left: 0;  
+bottom: 0;  
+width: 100%;  
+border: 0;
+}
+
+.layout.l91 .r99 ion-content.homepage-custom.scroll-content.ionic-scroll {
+background-position: center;
+background-attachment: fixed;
+background-repeat:no-repeat;
+}
+
+.layout.l91 .r99 ul.items li {
+display: -webkit-flex;
+display: flex;
+-webkit-align-items: center;
+align-items:center;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+width: 100%;
+height: 70px;
+padding: 10px 5px;
+}
+
+.layout.l91 .r99 li img {
+width: 30px;
+height: 30px;	
+margin: 0;
+max-height: 100%;
+}
+
+.layout.l91 .r99 li p {
+font-size: 10px; 
+line-height: 20px; 
+height: 20px; 
+overflow: hidden; 
+}
+
+.layout.l91 .r99 ul.items li p {
+font-size: 13px;	
+margin: 0 0 0 10px;
+}
+
+.layout.l91 .r9 ion-content.homepage-custom.scroll-content.ionic-scroll {
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+}
+
+.layout.l91 .r9 li img {
+width: 30px;
+height: 30px;
+margin: 0 auto;
+max-height: 100%;
+}
+
+.layout.l91 .r9 li p {
+font-size: 10px;
+line-height: 20px;
+height: 20px;
+overflow: hidden;
+}
+
+.layout.l91 .r9 {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+width: 100%;
+border: 0;
+}
+
+.layout.l91 .r9 ul.items li {
+position: relative;
+display: block;
+width: 100%;
+height: 70px;
+padding: 10px 5px;
+text-align: center;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+}
+
+.layout.l91 .r9 ul.items li p {
+font-size: 13px;
+}
+
+/* Footer Menu CSS */
+.layout.l91 #tboxhide { display: block; }
+
+.layout.l91 .tbox .tabs{
+height: 55px; 
+padding-top: 12px; 
+padding-left: 0px; 
+padding-right: 0px;
+padding-bottom: 0px; 
+}
+
+.layout.l91 .tbox .tab-item {
+margin-top: -5px;  
+height: 50px;  
+}
+
+.layout.l91 .tbox .tab-item img {
+width: 30px; 
+height: 30px; 
+max-height: 80%;
+}
